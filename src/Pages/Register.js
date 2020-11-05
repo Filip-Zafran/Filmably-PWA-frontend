@@ -34,6 +34,7 @@ function Registration() {
     const handleChange = e => {
         //with set input, update the state of name and value together
         setInput({
+
             ...values,
             [e.target.name]: e.target.value
         })
@@ -49,6 +50,7 @@ function Registration() {
                 <input type='email' name='email' placeholder='Email' onInput={e => setInput(e.target.value)} onChange={handleChange} />
                 <input type='password' name='pw' placeholder="Password" onInput={e => setInput(e.target.value)} onChange={handleChange} />
                 <button onClick={submit} > Register </button>
+                <p> Already a member ?<a href='/login'>Login</a></p>
             </div>
         </React.Fragment>
     )
