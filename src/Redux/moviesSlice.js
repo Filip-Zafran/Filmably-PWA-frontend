@@ -14,7 +14,7 @@ const initialState = moviesAdapter.getInitialState({
 
 export const fetchMovies = createAsyncThunk("movies/fetchMovies", async () => {
   const response = await axios.get(
-    `https://imdb-api.com/en/API/Top250Movies/${process.env.IMDB_KEY}`
+    `https://imdb-api.com/en/API/Top250Movies/${process.env.REACT_APP_IMDB_KEY}`
   );
   return response;
 });

@@ -1,11 +1,11 @@
 const express = require("express");
 const app = express();
-const MongoClient = require("mongodb").MongoClient;
 const cors = require("cors");
 const parser = require("body-parser");
 const userRouter = require("./userRouter");
+const MongoClient = require("mongodb").MongoClient;
 
-MongoClient.connect(
+/*MongoClient.connect(
   process.env.MONGO_URI,
   { useUnifiedTopology: true },
   (err, client) => {
@@ -25,4 +25,23 @@ MongoClient.connect(
       );
     }
   }
-);
+);*/
+
+const uri = process.env.MONGO_URI;
+const client = new MongoClient(uri, { useUnifiedTopology: true });
+client.connect((err) => {
+  err
+    ? console.log("database err:" + err)
+    : console.log("successful database connection");
+
+  const collection = client.db("movies").collection("devices");
+
+  app.use(parser.json());
+  app.use(cors());
+
+  app.listen(process.env.PORT || 4000, () =>
+    console.log("Server is running...")
+  );
+
+  client.close();
+});
