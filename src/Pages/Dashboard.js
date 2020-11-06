@@ -20,9 +20,10 @@ export default function Dashboard() {
     history.replace("/");
   }
 
+  //pulling the top 250 movies list and putting them in the redux store under "movies"//
   useEffect(() => {
     store.dispatch(fetchMovies());
-  });
+  }, []);
 
   return (
     <div>
