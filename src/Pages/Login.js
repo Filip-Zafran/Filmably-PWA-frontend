@@ -25,7 +25,7 @@ export default function Login() {
 			<input type="text" />
 			<br />
 			<br />
-		<button onClick={login}> LOG IN </button>
+		<button onClick={login}> Login </button>
 		</>
 	);
 }
