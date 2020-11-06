@@ -5,6 +5,8 @@ import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
 import Login from './Pages/Login';
 
+
+
 const App = () => {
 	return (
 		<Router>
