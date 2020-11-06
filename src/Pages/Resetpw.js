@@ -1,41 +1,96 @@
 import React, { useState } from 'react';
 import axios from 'axios';
+import Login from './Login';
+import { Link } from 'react-router-dom'
 
 
 export default function Resetpw() {
 
-    console.log("Iam a resetpw bitch")
+    // console.log('Iam a resetpw bitch')
 
-    const [values, setValue] = useState({})
-    const [error, setError] = useState()
+    //bugs on the 2Nd display about the prefilled input
+    // bug on the third display no showing up
 
-    const submitPW = () => {
-        axios.Post("/verifyemail", {
-            email: values.email
+    const [values, setValue] = useState('');
+    const [error, setError] = useState();
+    const [step, setSteps] = useState(0)
+
+    const submitEmail = () => {
+        setSteps({
+            step: 1
         })
+        //    `     console.log("step", step)
+        //         //console.log('values.email', values.email)
 
-        return [error, submitPW()]
+        //         console.log(values)`
+        // axios
+        //     .post('/verifyemail', {
+        //         email: values.email
+        //     })
+        //     .then(({ data }) => {
+        //         if (data.success) {
+        //             // setSteps({
+        //             //     step: 1
+        //             // })
+        //             //need to make another form visible that requests to write the code they received and to add a new code and hide the
+        //             // need to send email to the recovery email (ses with amazon)
+        //             // need to compare if the code that is entereed from the email is matching the one currently set up in the db => meaning that the db needs to be updated with the new code 
+        //         } else {
+        //             setError(true)
+        //         }
+        //     })
+
+        // return [error, submitEmail()]
     }
 
+    const submitCode = (e) => {
+        // console.log(e.target.value)
+        console.log("something")
+        setSteps({
+            step: 2
+        })
 
+    }
 
     const handleChange = (e) => {
+        // console.log("value", e.target.value)
+        // console.log("name", e.target.name)
         setValue({
             ...values,
             [e.target.name]: e.target.value
         })
-
         return [values, setValue()]
     }
 
+    const getCurrentDisplay = () => {
+        console.log("step in ftecurrentdisplay", step)
+        if (step == 0) {
+            return (
+                <React.Fragment >
+                    <input type='email' name='email' placeholder='Please enter your email' onInput={e => setValue(e.target.value)} onChange={handleChange} />
+                    <button onClick={submitEmail}> Next </button >
+                </React.Fragment>
+            )
+        } else if ({ step: 1 }) {
+            return (
+                <React.Fragment>
+                    <input type='password' name='code' placeholder='Please enter the code you received' onInput={e => setValue(e.target.value)} onChange={handleChange} />
+                    <input type='password' name='Newcode' placeholder='Please enter your new PW' onInput={e => setValue(e.target.value)} onChange={handleChange} />
+                    <button onClick={submitCode}> Next </button >
+                </React.Fragment>
+            )
+        } else if ({ step: 2 }) {
+            <React.Fragment>
+                <p>Successfully updated</p>
+                <Link to='/login'>Login</Link>
+            </React.Fragment>
+        }
+    }
 
     return (
-
-        <React.Fragment>
-            {error && <div> Woops something went wrong! </div>}
-            <input name="email" placeholder="Please enter your email" onInput={e => setValue(e)} onChange={handleChange} />
-        </React.Fragment >
-
+        <React.Fragment >
+            {getCurrentDisplay()}
+        </React.Fragment>
     )
 
 }

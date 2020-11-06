@@ -56,7 +56,6 @@ function Registration() {
             </div>
         </React.Fragment>
     )
-
 }
 
 export default Registration;
