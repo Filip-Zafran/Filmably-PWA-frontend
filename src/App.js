@@ -14,10 +14,10 @@ const App = () => {
 				<PrivateRoute path="/dashboard">
 					<Dashboard />
 				</PrivateRoute>
-
+				{/* 
 				<Route path="/">
 					<Login />
-				</Route>
+				</Route> */}
 			</Switch>
 		</Router>
 	);

@@ -50,7 +50,9 @@ function Registration() {
                 <input type='email' name='email' placeholder='Email' onInput={e => setInput(e.target.value)} onChange={handleChange} />
                 <input type='password' name='pw' placeholder="Password" onInput={e => setInput(e.target.value)} onChange={handleChange} />
                 <button onClick={submit} > Register </button>
-                <p> Already a member ?<a href='/login'>Login</a></p>
+                <Link to="/login"> Log In</Link>
+                <Link to="/resetpw">Reset PW</Link>
+
             </div>
         </React.Fragment>
     )
