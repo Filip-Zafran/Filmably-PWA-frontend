@@ -1,6 +1,6 @@
 import React from "react";
 
-export function Thunder() {
+export function Thunder({ fill, stroke }) {
   return (
     <svg
       width="24"
@@ -11,7 +11,8 @@ export function Thunder() {
     >
       <path
         d="M12.8889 3L4 13.8H12L11.1111 21L20 10.2H12L12.8889 3Z"
-        stroke="#9D9D9D"
+        fill={fill}
+        stroke={stroke}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

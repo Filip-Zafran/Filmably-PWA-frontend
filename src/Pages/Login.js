@@ -22,7 +22,7 @@ export default function Login() {
       withCredentials: true,
       url: "http://localhost:5000/authenticate/login",
     }).then((res) => {
-      if (res.data === "Successfully Authenticated") {
+      if (res.data.message === "Successfully Authenticated") {
         setUsername("");
         setPassword("");
         localStorage.setItem("isAuthenticated", true);

@@ -1,5 +1,4 @@
 export { Thunder } from "./Thunder";
-export { ThunderActive } from "./ThunderActive";
 export { Heart } from "./Heart";
 export { HeartActive } from "./HeartActive";
 export { Star } from "./Star";

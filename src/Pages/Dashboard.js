@@ -8,7 +8,6 @@ import {
 import Movies from "./Movies";
 import Friends from "./Friends";
 import MatchPage from "./MatchPage";
-//import "../App.css";
 import "./Dashboard.css";
 import BottomNav from "../components/common/BottomNav";
 
@@ -23,12 +22,12 @@ export default function Dashboard() {
   return (
     <div>
       <Router>
-        <BottomNav />
         <Switch>
           <Route path="/Movies" component={Movies} />
           <Route path="/Friends" component={Friends} />
           <Route path="/MatchPage" component={MatchPage} />
         </Switch>
+        <BottomNav />
       </Router>
     </div>
   );
