@@ -2,3 +2,8 @@
   text-align: center;
 }
 
+/*--------COLOR VARIABLES---------*/
+
+:root {
+  --main-black: black;
+}
