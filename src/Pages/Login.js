@@ -26,7 +26,11 @@ export default function Login() {
 			<input type="text" />
 			<br />
 			<br />
+<<<<<<< HEAD
 			<button onClick={login}> LOG IN </button>
+=======
+		<button onClick={login}> Login </button>
+>>>>>>> 4b3fd3c25353bae9eefd4fade2a75abaa0e17e20
 		</>
 	);
 }
