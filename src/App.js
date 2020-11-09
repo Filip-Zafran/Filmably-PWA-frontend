@@ -4,6 +4,7 @@ import Dashboard from "./Pages/Dashboard";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
 import TestLogin from "./Pages/TestLogin";
+import BottomNav from "./components/common/BottomNav";
 
 const App = () => {
   return (
@@ -15,6 +16,7 @@ const App = () => {
 
         <Route path="/">
           <TestLogin />
+          <BottomNav />
         </Route>
       </Switch>
     </Router>

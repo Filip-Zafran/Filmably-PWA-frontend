@@ -1,6 +1,7 @@
 import Axios from "axios";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
+import "./TestLogin.css";
 
 export default function TestLogin() {
   const [username, setUsername] = useState("");
@@ -77,8 +78,8 @@ export default function TestLogin() {
   }
 
   return (
-    <div>
-      <div className="login">
+    <div className="testLogin">
+      <div className="testLogin__section">
         <h1>Login Page</h1>
         <label>username</label>
         <input
@@ -87,7 +88,7 @@ export default function TestLogin() {
           onChange={(e) => setUsername(e.target.value)}
           value={username}
         />
-        <label> password </label>
+        <label>password</label>
         <input
           type="password"
           onChange={(e) => setPassword(e.target.value)}
@@ -95,7 +96,7 @@ export default function TestLogin() {
         />
         <button onClick={login}> Login </button>
       </div>
-      <div className="register">
+      <div className="testLogin__section">
         <h1>Register Page</h1>
         <label>username</label>
         <input
@@ -112,11 +113,11 @@ export default function TestLogin() {
         />
         <button onClick={register}>Register</button>
       </div>
-      <div className="logout">
+      <div className="testLogin__section">
         <h1>LogOut</h1>
         <button onClick={logout}>Logout</button>
       </div>
-      <div className="getUser">
+      <div className="testLogin__section">
         <h1>Get User</h1>
         <button onClick={getUser}>Get User</button>
         {user}

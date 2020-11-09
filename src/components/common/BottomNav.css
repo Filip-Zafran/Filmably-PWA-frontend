@@ -1,9 +1,12 @@
 .bottomNav {
   position: fixed;
-  bottom: 30px;
+  bottom: 0px;
+  padding-bottom: 30px;
+  padding-top: 20px;
   width: 100%;
   display: flex;
   justify-content: space-evenly;
+  background-color: var(--main-black);
 }
 
 /*.bottomNav > a:active {
