@@ -11,7 +11,7 @@ function Registration() {
     const submit = () => {
         //post route to backend
         axios
-            .post('/register', {
+            .post('/authenticate/register', {
                 first: values.first,
                 last: values.last,
                 email: values.email,
