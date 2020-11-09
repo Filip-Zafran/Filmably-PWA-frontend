@@ -2,7 +2,7 @@ import Axios from "axios";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
-export default function Login() {
+export default function TestLogin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [regName, setRegName] = useState("");
@@ -23,8 +23,8 @@ export default function Login() {
         password: password,
       },
       withCredentials: true,
-      url: "http://localhost:5000/authenticate/login",
-      //url: "http://filmably-app-backend.herokuapp.com/authenticate/login",
+      //url: "http://localhost:5000/authenticate/login",
+      url: "https://filmably-app-backend.herokuapp.com/authenticate/login",
     }).then((res) => {
       if (res.data.message === "Successfully Authenticated") {
         setUsername("");
@@ -43,8 +43,8 @@ export default function Login() {
         password: regPass,
       },
       withCredentials: true,
-      url: "http://localhost:5000/authenticate/register",
-      //url: "http://filmably-app-backend.herokuapp.com/authenticate/register",
+      //url: "http://localhost:5000/authenticate/register",
+      url: "https://filmably-app-backend.herokuapp.com/authenticate/register",
     }).then((res) => {
       if (res.data === "User Created") {
         setRegName("");
@@ -59,8 +59,8 @@ export default function Login() {
     Axios({
       method: "GET",
       withCredentials: true,
-      url: "http://localhost:5000/authenticate/logout",
-      //url: "http://filmably-app-backend.herokuapp.com/authenticate/logout",
+      //url: "http://localhost:5000/authenticate/logout",
+      url: "https://filmably-app-backend.herokuapp.com/authenticate/logout",
     });
   }
 
@@ -68,8 +68,8 @@ export default function Login() {
     Axios({
       method: "GET",
       withCredentials: true,
-      url: "http://localhost:5000/authenticate/user",
-      //url: "http://filmably-app-backend.herokuapp.com/authenticate/user",
+      //url: "http://localhost:5000/authenticate/user",
+      url: "https://filmably-app-backend.herokuapp.com/authenticate/user",
     }).then((res) => {
       console.log(res);
       setUser(res.data.username);
