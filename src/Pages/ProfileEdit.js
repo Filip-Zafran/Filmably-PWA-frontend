@@ -3,8 +3,7 @@ import React from 'react';
 export default function ProfileEdit() {
     return (
         <>
-            
-            
+                    
 			<br />
 			<br /> <br /> <br />
             <h1> name profile</h1> 

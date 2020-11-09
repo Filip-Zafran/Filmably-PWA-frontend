@@ -1,20 +1,14 @@
 import React from 'react';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css'
+import DoubleClickTextEdit from '../components/DoubleClickTextEdit'
 
 
 export default function Profile() {
 
-  // state = {
-  //   name: "Lucky Luke"
-  //   age: ""
-
-  // }
-
 
 	// const [ modal, setModal ] = useState(false);
 	// const toggle = () => setModal(!modal);
-
 
 const options = [
         'newb ( < 18)', 
@@ -24,12 +18,11 @@ const options = [
         'golden age (40 - 50)',
         'old yeller (50+)'
   ];
-const defaultOption = options[0];
+const defaultOption = options[0]
 
-
-    return (
-        <>
-                        
+  return (
+  <>
+                       
 			<br />
 			<br /> <br /> <br />
             <h1> Lucky Luke</h1> 
@@ -41,26 +34,27 @@ const defaultOption = options[0];
       />
       <br />
 			<br />
-        <label> Age Range: DROPDOWN  </label>
-      <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select your age range" />
+        <label> Age Range:   </label>
+      {/* <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select your age range" /> */}
 
 					<br />
           <br />
-            	<label> Fav movie: Dune  </label>
-	
-			<br />
+      <label> Fav movie: Dune  </label>
       <br />
+
+      <DoubleClickTextEdit />
+			    <br />
+          <br />
             	<label> Fav movie quote: "I just can't do it captain"  </label>
-		
-			<br />
-      <br />
+			    <br />
+          <br />
                <label> Current filters: adventure, action, sfx, 1990 - 2000  </label>
-				<br />
-        <br />
+			  	<br />
+          <br />
          	
 			<button> EDIT </button>
-			<br />
-			<br />
+			  <br />
+		  	<br />
     
       <h1> MOVIE LIST</h1>
   	<table>
