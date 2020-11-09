@@ -9,7 +9,6 @@ import Movies from "./Movies";
 import Friends from "./Friends";
 import MatchPage from "./MatchPage";
 import "./Dashboard.css";
-import BottomNav from "../components/BottomNav/BottomNav";
 
 export default function Dashboard() {
   const history = useHistory();
@@ -27,7 +26,6 @@ export default function Dashboard() {
           <Route path="/Friends" component={Friends} />
           <Route path="/MatchPage" component={MatchPage} />
         </Switch>
-        <BottomNav />
       </Router>
     </div>
   );

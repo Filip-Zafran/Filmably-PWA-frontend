@@ -4,7 +4,7 @@ import Dashboard from "./Pages/Dashboard";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
 import TestLogin from "./Pages/TestLogin";
-import BottomNav from "./components/BottomNav/BottomNav";
+import { BottomNav } from "./components/BottomNav";
 
 const App = () => {
   return (
@@ -12,6 +12,7 @@ const App = () => {
       <Switch>
         <PrivateRoute path="/dashboard">
           <Dashboard />
+          <BottomNav />
         </PrivateRoute>
 
         <Route path="/">

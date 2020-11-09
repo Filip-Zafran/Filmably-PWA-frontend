@@ -4,7 +4,7 @@ import { Link, useLocation } from "react-router-dom";
 import "./BottomNav.css";
 import { Ripple } from "./RippleButton";
 
-function BottomNav() {
+export function BottomNav() {
   const location = useLocation();
 
   return (
@@ -57,5 +57,3 @@ function BottomNav() {
     </div>
   );
 }
-
-export default BottomNav;
