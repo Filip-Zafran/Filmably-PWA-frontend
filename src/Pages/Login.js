@@ -20,7 +20,7 @@ export default function Login() {
         password: password,
       },
       withCredentials: true,
-      url: "http://localhost:5000/authenticate/login",
+      url: "http://filmably-app-backend.herokuapp.com/authenticate/login",
     }).then((res) => {
       if (res.data.message === "Successfully Authenticated") {
         setUsername("");
