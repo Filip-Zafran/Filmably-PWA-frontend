@@ -9,7 +9,7 @@ import Movies from "./Movies";
 import Friends from "./Friends";
 import MatchPage from "./MatchPage";
 import "./Dashboard.css";
-import BottomNav from "../components/common/BottomNav";
+import BottomNav from "../components/BottomNav/BottomNav";
 
 export default function Dashboard() {
   const history = useHistory();

@@ -21,7 +21,7 @@ const styleSpan = {
   animation: "ripple 850ms",
 };
 
-class Ripple extends React.Component {
+export class Ripple extends React.Component {
   initializeState = () => {
     return {
       spanStyles: {},
@@ -107,9 +107,9 @@ class Ripple extends React.Component {
 
 export const RippleButton = () => {
   return (
-    <div className="center">
+    <div className="rippleButtonDemo">
       <h1 className="demo"></h1>
-      <Ripple classes="btn">Click Me</Ripple>
+      <Ripple classes="bottomNavButton">Click Me</Ripple>
     </div>
   );
 };
