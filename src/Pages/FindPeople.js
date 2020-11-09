@@ -3,11 +3,9 @@ import axios from 'axios';
 
 
 export default function FindPeople() {
-    // [users, setUsers] = useState('')
-    const [errors, setError] = useState();
-    const [values, setValue] = useState('');
-    const [people, setPeople] = useState(false)
-    // const [searchPeople, setSearchPeople] = useState()
+    const [errors, setError] = useState(false);
+    const [people, setPeople] = useState([])
+    const [searchPeople, setSearchPeople] = useState()
 
     console.log('I am finding friends')
     // useEffect is there in order to make the request when component mount
@@ -15,7 +13,7 @@ export default function FindPeople() {
     useEffect(() => {
         console.log('getpeople')
         axios
-            .get('/users')
+            .get('/users.json')
             .then((data) => {
                 if (data) {
                     console.log("people", people)
@@ -27,41 +25,45 @@ export default function FindPeople() {
                     setError(true)
                 }
             })
-    }, [people])
+    }, [])
 
     //when user looks for friend on an input field, should do a post request 
-    const searchPeople = () => {
+
+    useEffect(() => {
+        if (searchPeople === undefined) return;
+        let ignore = false;
         console.log('search')
-        console.log('values', values.searchFriends)
+        // console.log('values', values.searchFriends)
         axios
-            .get('/searchPeople', {
-                searchLetter: values.searchFriends
-            })
+            .get(`/findProfile/${searchPeople}`,)
             .then((data) => {
-                if (data) {
-                    setPeople(data.people)
-                    //need to display the result of the search
-                }
-                else {
+                // no match found btw the typed Char and the list of people
+                if (data.length === 0) {
+                    setPeople(people)
+                } else if (!ignore && data.data) {
+                    //if match found, should send name, pictures.... to DOM
+                    setPeople(data.data)
+                } else if (!data.data && !ignore) {
+                    //if none of the previous conditions are met, it means there has been an issue somewhere
                     setError(true)
                 }
             })
-    }
+        return () => {
+            ignore = true;
+        };
+    }, [searchPeople])
 
 
     const handleChange = (e) => {
-        setValue({
-            ...values,
-            [e.target.name]: e.target.value
-        })
+        setSearchPeople(e.target.value)
     }
 
 
     return (
         <React.Fragment>
             <h2>Find friends!</h2>
-            <input type='text' name='searchFriends' onInput={e => setValue(e)} onChange={handleChange} />
-            <button onClick={searchPeople}>Search</button>
+            <input type='text' name='searchFriends' onChange={handleChange} />
+            <button onClick={setSearchPeople}>Search</button>
             {people && people.map(person => {
                 return (
                     <div>
