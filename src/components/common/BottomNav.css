@@ -9,30 +9,6 @@
   background-color: var(--main-black);
 }
 
-/*.bottomNav > a:active {
-  background: var(--grey-dark);
-  border-radius: 50%;
-  box-shadow: 0 0 0 0 var(--grey-light);
-  animation: pulse 2s;
-}
-
-@keyframes pulse {
-  0% {
-    transform: scale(0.95);
-    box-shadow: 0 0 0 0 var(--grey-dark);
-  }
-
-  70% {
-    transform: scale(2);
-    box-shadow: 0 0 0 10px var(--grey-light);
-  }
-
-  100% {
-    transform: scale(1.5);
-    box-shadow: 0 0 0 0 var(--grey-middle);
-  }
-}*/
-
 .bottomNav__activeLabel,
 .bottomNav__label {
   margin-top: 6px;
