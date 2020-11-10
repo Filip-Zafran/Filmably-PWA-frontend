@@ -2,7 +2,7 @@ import React from 'react';
 
 const Test = () => {
 	// Use state to store value of text input.
-	const [ value, setValue ] = React.useState('test text' /* initial value */);
+	const [ value, setValue ] = React.useState('change me' /* initial value */);
 
 	// Use state to store whether component is in edit mode or not.
 	const [ editMode, setEditMode ] = React.useState(false /* initial value */);
@@ -37,7 +37,11 @@ const Test = () => {
 	if (editMode) {
 		return (
 			// I changed the component to controlled can be left as uncontrolled if prefered.
-			<input type="text" autoFocus value={value} onChange={updateValue} onBlur={toggleEditMode} />
+			<div>
+				<input type="text" autoFocus value={value} onChange={updateValue} onBlur={toggleEditMode} />
+				{/* <button onClick={this.changeEditMode}>X</button>
+				<button onClick={this.updateComponentValue}>OK</button> */}
+			</div>
 		);
 	}
 

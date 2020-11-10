@@ -10,6 +10,8 @@ function Uploader() {
 	//     });
 	// }
 
+	function onDrop() {}
+
 	return (
 		<ImageUploader
 			withIcon={true}

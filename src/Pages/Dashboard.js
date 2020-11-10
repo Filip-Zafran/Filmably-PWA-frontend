@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Switch, Link, useHistory } from 'react-router-dom';
-import Profile from '../components/Profile/Profile';
+import { ProfilePage } from '../components/Profile';
 import Friends from './Friends';
 import MatchPage from './MatchPage';
 
@@ -40,7 +40,7 @@ export default function Dashboard() {
 					</ul>
 				</nav>
 				<Switch>
-					<Route path="/Profile" component={Profile} />
+					<Route path="/profile" component={ProfilePage} />
 					<Route path="/Friends" component={Friends} />
 					<Route path="/MatchPage" component={MatchPage} />
 				</Switch>
