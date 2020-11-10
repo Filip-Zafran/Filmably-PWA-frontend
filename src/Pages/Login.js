@@ -42,12 +42,19 @@ export default function Login() {
 				value={username}
 			/>
 			<label> password </label>
+<<<<<<< HEAD
 			<input
 				type="password"
 				onChange={(e) => setPassword(e.target.value)}
 				value={password}
 			/>
 			<button onClick={login}> Login </button>
-		</div>
+		</div >
+=======
+			<input type="text" />
+			<br />
+
+			<button onClick={login}> Login </button>		</>
+>>>>>>> main
 	);
 }
