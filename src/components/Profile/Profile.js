@@ -1,7 +1,7 @@
 import React from 'react';
-import Dropdown from 'react-dropdown';
-import 'react-dropdown/style.css'
-import DoubleClickTextEdit from './DoubleClickTextEdit'
+// import Dropdown from 'react-dropdown';
+// import 'react-dropdown/style.css'
+import OnClickTextEdit from './OnClickTextEdit'
 
 
 export default function Profile() {
@@ -45,7 +45,7 @@ const defaultOption = options[0]
       <label> Fav movie: Dune  </label>
       <br />
 
-      <DoubleClickTextEdit />
+      <OnClickTextEdit />
 			    <br />
           <br />
             	<label> Fav movie quote: "I just can't do it captain"  </label>
@@ -63,7 +63,8 @@ const defaultOption = options[0]
   	<table>
     <tr>
     <th>LIKES</th>
-    <th>DISLIKES</th>
+          <th>DISLIKES</th>
+          	<br />
           </tr>
 {/*           
           // maps through the movie list and creates the list
@@ -78,7 +79,7 @@ const defaultOption = options[0]
     <td>Twilight</td>
             <td>Parasite</td>
             
-            // creates a little X, when you click on it - it removes the movie from the list
+            {/* // creates a little X, when you click on it - it removes the movie from the list */}
              {/* <td>
 								<button className="remove-movie-button-x">
 									<span className="span-x" value={movie} onClick={() => deleteClicked(movie)}>

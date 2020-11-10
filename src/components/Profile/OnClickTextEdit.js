@@ -42,7 +42,7 @@ const Test = () => {
 	}
 
 	// Do non-edit mode render.
-	return <div onDoubleClick={toggleEditMode}>{value}</div>;
+	return <div onClick={toggleEditMode}>{value}</div>;
 };
 
 export default Test;
