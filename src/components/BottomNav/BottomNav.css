@@ -1,0 +1,20 @@
+.bottomNav {
+  position: fixed;
+  bottom: 0px;
+  padding-bottom: 30px;
+  padding-top: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+  background-color: var(--transparent-black);
+}
+
+.bottomNav__activeLabel,
+.bottomNav__label {
+  margin-top: 6px;
+  font-size: 14px;
+}
+
+.bottomNav__activeLabel {
+  color: var(--text-bright);
+}
