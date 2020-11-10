@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, BrowserRouter as Router, Switch, Link, useHistory } from 'react-router-dom';
-import Profile from './Profile';
+import Profile from '../components/Profile/Profile';
 import Friends from './Friends';
 import MatchPage from './MatchPage';
 

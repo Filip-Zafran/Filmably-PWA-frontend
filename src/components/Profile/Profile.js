@@ -1,7 +1,7 @@
 import React from 'react';
 import Dropdown from 'react-dropdown';
 import 'react-dropdown/style.css'
-import DoubleClickTextEdit from '../components/DoubleClickTextEdit'
+import DoubleClickTextEdit from './DoubleClickTextEdit'
 
 
 export default function Profile() {
@@ -32,6 +32,9 @@ const defaultOption = options[0]
                 alt="new"
                 style={{height: "250px"}}
       />
+
+    
+      
       <br />
 			<br />
         <label> Age Range:   </label>
