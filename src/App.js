@@ -5,7 +5,7 @@ import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
 
 import { TestLogin } from "./Pages/TestLogin";
-import { CirclesBackground } from "./components/CirclesBackground";
+import { CirclesBackground } from "./components/styleElements/CirclesBackground";
 import { BottomNav } from "./components/BottomNav";
 
 const App = () => {

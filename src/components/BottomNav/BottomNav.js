@@ -1,5 +1,11 @@
 import React from "react";
-import { Thunder, Heart, HeartActive, Star, StarActive } from "../common/icons";
+import {
+  Thunder,
+  Heart,
+  HeartActive,
+  Star,
+  StarActive,
+} from "../styleElements/icons";
 import { Link, useLocation } from "react-router-dom";
 import "./BottomNav.css";
 import { Ripple } from "./RippleButton";
