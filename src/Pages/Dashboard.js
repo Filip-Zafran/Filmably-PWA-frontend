@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useEffect } from "react";
 import {
   Route,
   BrowserRouter as Router,
   Switch,
   useHistory,
+  Link,
 } from "react-router-dom";
 import Movies from "./Movies";
 import Friends from "./Friends";
@@ -18,11 +19,6 @@ export default function Dashboard() {
     localStorage.removeItem("isAuthenticated");
     history.replace("/");
   }
-
-  //pulling the top 250 movies list and putting them in the redux store under "movies"//
-  useEffect(() => {
-    store.dispatch(fetchMovies());
-  }, []);
 
   return (
     <div>
