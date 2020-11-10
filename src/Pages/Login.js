@@ -1,7 +1,8 @@
-import React from 'react';
-import { useHistory } from 'react-router-dom';
+import React from "react";
+import { useHistory } from "react-router-dom";
 
 export default function Login() {
+	const history = useHistory();
 
 	const history = useHistory()
 
@@ -25,12 +26,7 @@ export default function Login() {
 			<label> password </label>
 			<input type="text" />
 			<br />
-			<br />
-<<<<<<< HEAD
-			<button onClick={login}> LOG IN </button>
-=======
-		<button onClick={login}> Login </button>
->>>>>>> 4b3fd3c25353bae9eefd4fade2a75abaa0e17e20
-		</>
+
+			<button onClick={login}> Login </button>		</>
 	);
 }
