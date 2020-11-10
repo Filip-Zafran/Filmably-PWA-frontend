@@ -9,20 +9,20 @@ import { CirclesBackground } from "./components/styleElements/CirclesBackground"
 import { BottomNav } from "./components/BottomNav";
 
 const App = () => {
-  return (
-    <Router>
-      <Switch>
-        <PrivateRoute path="/dashboard">
-          <Dashboard />
-        </PrivateRoute>
 
-        <Route path="/">
-          <CirclesBackground />
-          <BottomNav />
-        </Route>
-      </Switch>
-    </Router>
-  );
+	return (
+		<Router>
+			<Switch>
+				<PrivateRoute path="/dashboard">
+					<Dashboard />
+				</PrivateRoute>
+				{/* 
+				<Route path="/">
+					<Login />
+				</Route> */}
+			</Switch>
+		</Router>
+	);
 };
 
 export default App;
