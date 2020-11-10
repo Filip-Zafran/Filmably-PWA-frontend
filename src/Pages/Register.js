@@ -11,17 +11,20 @@ function Registration() {
     const submit = () => {
         //post route to backend
         axios
-            .post('/authenticate/register', {
-                first: values.first,
-                last: values.last,
-                email: values.email,
-                pw: values.pw
+            .post('http://localhost:5000/authenticate/register', {
+                // first: values.first,
+                // last: values.last,
+                username: values.email,
+                // username: values.username,
+                password: values.pw
             })
             .then(({ data }) => {
+                // console.log(data)
                 //data is the response from backend
-                if (data.success) {
+                if ({ data }) {
                     //should send user to its account
-                    window.location.replace('/')
+                    console.log(data)
+                    window.location.replace('/dashboard')
                 } else {
                     setError(true)
                 }

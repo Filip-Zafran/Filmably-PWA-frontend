@@ -42,7 +42,6 @@ export default function Login() {
 				value={username}
 			/>
 			<label> password </label>
-<<<<<<< HEAD
 			<input
 				type="password"
 				onChange={(e) => setPassword(e.target.value)}
@@ -50,11 +49,5 @@ export default function Login() {
 			/>
 			<button onClick={login}> Login </button>
 		</div >
-=======
-			<input type="text" />
-			<br />
-
-			<button onClick={login}> Login </button>		</>
->>>>>>> main
 	);
 }
