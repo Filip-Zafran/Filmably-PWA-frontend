@@ -3,7 +3,10 @@ import "./App.css";
 import Dashboard from "./Pages/Dashboard";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
-import Login from "./Pages/Login";
+
+import { TESTLogin } from "./Pages/TESTLogin";
+import { CirclesBackground } from "./components/styleElements/CirclesBackground";
+import { BottomNav } from "./components/BottomNav";
 
 const App = () => {
   return (
@@ -14,7 +17,8 @@ const App = () => {
         </PrivateRoute>
 
         <Route path="/">
-          <Login />
+          <CirclesBackground />
+          <BottomNav />
         </Route>
       </Switch>
     </Router>

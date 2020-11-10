@@ -1,16 +1,15 @@
-import React, { useEffect } from "react";
+import React from "react";
 import {
   Route,
   BrowserRouter as Router,
   Switch,
-  Link,
   useHistory,
 } from "react-router-dom";
 import Movies from "./Movies";
 import Friends from "./Friends";
 import MatchPage from "./MatchPage";
-import store from "../Redux/store";
-import { fetchMovies } from "../Redux/moviesSlice";
+
+import "./Dashboard.css";
 
 export default function Dashboard() {
   const history = useHistory();
@@ -52,6 +51,7 @@ export default function Dashboard() {
             </li>
           </ul>
         </nav>
+
         <Switch>
           <Route path="/Movies" component={Movies} />
           <Route path="/Friends" component={Friends} />

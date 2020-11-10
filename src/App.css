@@ -1,4 +1,29 @@
-.App {
+@import url("https://rsms.me/inter/inter.css");
+
+html {
+  margin: 0;
   text-align: center;
+  background-color: var(--main-black);
+  color: var(--text-dim);
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+    "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
 }
 
+a {
+  text-decoration: none;
+  color: var(--text-dim);
+}
+
+/*--------COLOR VARIABLES---------*/
+
+:root {
+  --main-black: rgba(5, 5, 5, 1);
+  --transparent-black: rgba(5, 5, 5, 0.6);
+  --grey-light: rgba(32, 32, 32, 1);
+  --grey-middle: rgba(22, 22, 22, 1);
+  --grey-dark: rgba(14, 14, 14, 1);
+
+  --text-bright: rgba(255, 255, 255, 1);
+  --text-dim: rgba(186, 186, 186, 1);
+}
