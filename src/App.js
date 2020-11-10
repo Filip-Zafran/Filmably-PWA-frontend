@@ -3,7 +3,9 @@ import "./App.css";
 import Dashboard from "./Pages/Dashboard";
 import { Route, BrowserRouter as Router, Switch } from "react-router-dom";
 import PrivateRoute from "./components/PrivateRoute";
-import TestLogin from "./Pages/TestLogin";
+
+import { TestLogin } from "./Pages/TestLogin";
+import { CirclesBackground } from "./components/CirclesBackground";
 import { BottomNav } from "./components/BottomNav";
 
 const App = () => {
@@ -12,11 +14,10 @@ const App = () => {
       <Switch>
         <PrivateRoute path="/dashboard">
           <Dashboard />
-          <BottomNav />
         </PrivateRoute>
 
         <Route path="/">
-          <TestLogin />
+          <CirclesBackground />
           <BottomNav />
         </Route>
       </Switch>

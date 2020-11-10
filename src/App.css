@@ -22,7 +22,7 @@ a {
   --transparent-black: rgba(5, 5, 5, 0.6);
   --grey-light: rgba(32, 32, 32, 1);
   --grey-middle: rgba(22, 22, 22, 1);
-  --grey-dark: rgba(22, 22, 22, 1);
+  --grey-dark: rgba(14, 14, 14, 1);
 
   --text-bright: rgba(255, 255, 255, 1);
   --text-dim: rgba(186, 186, 186, 1);
