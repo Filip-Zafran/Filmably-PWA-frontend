@@ -6,7 +6,7 @@
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  background-color: var(--main-black);
+  background-color: var(--transparent-black);
 }
 
 .bottomNav__activeLabel,

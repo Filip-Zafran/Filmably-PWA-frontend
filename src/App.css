@@ -18,7 +18,8 @@ a {
 /*--------COLOR VARIABLES---------*/
 
 :root {
-  --main-black: #000000;
+  --main-black: rgba(5, 5, 5, 1);
+  --transparent-black: rgba(5, 5, 5, 0.6);
   --grey-light: rgba(32, 32, 32, 1);
   --grey-middle: rgba(22, 22, 22, 1);
   --grey-dark: rgba(22, 22, 22, 1);

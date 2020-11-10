@@ -18,7 +18,7 @@
   bottom: 0;
   left: 0;
 }
-.ripple .rippleContainer span {
+.ripple .rippleContainer > span {
   transform: scale(0);
   border-radius: 100%;
   position: absolute;

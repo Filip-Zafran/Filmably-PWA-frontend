@@ -1,7 +1,7 @@
 import React from "react";
 import "./RippleButton.css";
 
-const styleRipple = {
+/*const styleRipple = {
   position: "relative",
   //overflow: "hidden",
 };
@@ -20,6 +20,7 @@ const styleSpan = {
   backgroundColor: "#ffffff",
   animation: "ripple 850ms",
 };
+*/
 
 export class Ripple extends React.Component {
   initializeState = () => {
@@ -67,7 +68,7 @@ export class Ripple extends React.Component {
   };
 
   renderRippleSpan = () => {
-    const { showRipple = false, spanStyles = {} } = this.state;
+    const { /*showRipple = false,*/ spanStyles = {} } = this.state;
     const spanArray = Object.keys(spanStyles);
     if (spanArray && spanArray.length > 0) {
       return spanArray.map((key, index) => {
@@ -108,7 +109,6 @@ export class Ripple extends React.Component {
 export const RippleButton = () => {
   return (
     <div className="rippleButtonDemo">
-      <h1 className="demo"></h1>
       <Ripple classes="bottomNavButton">Click Me</Ripple>
     </div>
   );
