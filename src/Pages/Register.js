@@ -34,7 +34,6 @@ function Registration() {
     const handleChange = e => {
         //with set input, update the state of name and value together
         setInput({
-
             ...values,
             [e.target.name]: e.target.value
         })
