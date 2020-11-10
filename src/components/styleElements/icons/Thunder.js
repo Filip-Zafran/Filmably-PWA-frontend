@@ -1,6 +1,8 @@
 import React from "react";
 
-export function Thunder({ fill, stroke }) {
+//active is true or false
+
+export function Thunder({ active }) {
   return (
     <svg
       width="24"
@@ -11,8 +13,8 @@ export function Thunder({ fill, stroke }) {
     >
       <path
         d="M12.8889 3L4 13.8H12L11.1111 21L20 10.2H12L12.8889 3Z"
-        fill={fill}
-        stroke={stroke}
+        fill={active ? "white" : "none"}
+        stroke={active ? "white" : "#9D9D9D"}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
