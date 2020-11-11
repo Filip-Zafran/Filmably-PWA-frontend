@@ -3,8 +3,8 @@
 html {
   margin: 0;
   text-align: center;
-  background-color: var(--main-black);
-  color: var(--text-dim);
+  background-color: var(--dark-900);
+  color: var(--light-500);
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -12,7 +12,7 @@ html {
 
 a {
   text-decoration: none;
-  color: var(--text-dim);
+  color: var(--light-500);
 }
 
 /*--------COLOR VARIABLES---------*/
@@ -65,7 +65,7 @@ a {
   --warm-900: rgba(184, 33, 192, 1);
   --warm-500: rgba(214, 63, 222, 1);
   --warm-100: rgba(229, 133, 234, 1);
-  --warm-500-25: rgba(214, 63, 222, 25);
+  --warm-500-25: rgba(214, 63, 222, 25);i
 
   /* Old color scheme, stays as long as not all components with the new color scheme have been replaced */
 
