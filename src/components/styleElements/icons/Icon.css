@@ -1,0 +1,27 @@
+.inactiveIcon {
+  stroke: var(--text-dim);
+  fill: none;
+}
+
+.activeIcon {
+  stroke: var(--text-bright);
+  fill: var(--text-bright);
+}
+
+.activeLogo {
+  stroke: var(--text-bright);
+}
+
+.iconSvg {
+  width: 24px;
+  height: 24px;
+}
+
+.activeLogoGold {
+  stroke: var(--logo-gold);
+}
+
+.activeIconGold {
+  stroke: var(--logo-gold);
+  fill: var(--logo-gold);
+}
