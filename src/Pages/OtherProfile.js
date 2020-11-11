@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
-import Profile from 'Profile'
+// import Profile from 'Profile'
 
 
 export default function OtherProfile() {
@@ -8,15 +8,33 @@ export default function OtherProfile() {
     console.log("I am a child components")
     const [profiles, setProfile] = useState()
     const [error, setError] = useState(false)
+    const [url, setUrl] = useState()
+    const [id, setId] = useState();
+    const [otherId, setOtherId] = useState()
 
     useEffect(() => {
         // do an ajax request to 
+        // const id = match.params.id;
+        // console.log(params)
         axios
-            .get('/user/:id')
+            .get(`/user/${id}.json`)
             .then((data) => {
-                if (data) {
+                if (data.redirect) {
+                    //note sure about TypeOF data here
+                    setUrl(
+                        url.history.push('/')
+                    )
 
+                } else if (data) {
                     //need here to get the data from the DB in order to display the information about the current user being visited
+                    setProfile({
+                        first: data.first,
+                        last: data.last,
+                        url: data.url_profile,
+                        currentUrl: data.url_profile,
+                        id: data.id
+                    })
+
                 } else {
                     setError(true)
                 }
@@ -33,6 +51,7 @@ export default function OtherProfile() {
 
             })
             }
+            {/* Will nee to add friendbutton <FriendButton otherUserId={this.props.match.params.id} /> */}
 
         </React.Fragment >
     )
