@@ -4,7 +4,7 @@ import Dashboard from './Pages/Dashboard';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
 import TestLogin from './Pages/TestLogin';
-import { ProfilePage } from './components/Profile';
+import { Profile } from './components/Profile';
 import { CirclesBackground } from './components/styleElements/CirclesBackground';
 import { BottomNav } from './components/BottomNav';
 
@@ -16,7 +16,7 @@ const App = () => {
 					<Dashboard />
 				</PrivateRoute>
 				<PrivateRoute path="/profile">
-					<ProfilePage />
+					<Profile />
 				</PrivateRoute>
 
 				<Route path="/">

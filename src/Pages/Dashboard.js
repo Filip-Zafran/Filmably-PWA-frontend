@@ -3,7 +3,7 @@ import { Route, BrowserRouter as Router, Switch, useHistory, Link } from 'react-
 import Movies from './Movies';
 import Friends from './Friends';
 import MatchPage from './MatchPage';
-import { ProfilePage } from '../components/Profile';
+import { Profile } from '../components/Profile';
 
 import './Dashboard.css';
 
@@ -43,7 +43,7 @@ export default function Dashboard() {
 					</ul>
 				</nav>
 				<Switch>
-					<Route path="/profile" component={ProfilePage} />
+					<Route path="/profile" component={Profile} />
 					<Route path="/Friends" component={Friends} />
 					<Route path="/MatchPage" component={MatchPage} />
 				</Switch>

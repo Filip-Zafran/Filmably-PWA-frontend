@@ -5,7 +5,7 @@ import OnClickTextEdit from './OnClickTextEdit'
 
 
 
-export function ProfilePage() {
+export function Profile() {
 
 
 	// const [ modal, setModal ] = useState(false);
