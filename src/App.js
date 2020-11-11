@@ -8,8 +8,6 @@ import { TESTLogin } from "./Pages/TESTLogin";
 import { CirclesBackground } from "./components/styleElements/CirclesBackground";
 import { BottomNav } from "./components/BottomNav";
 
-import { ShotsButton } from "./components/styleElements/buttons/ShotsButton/ShotsButton";
-
 const App = () => {
   return (
     <Router>
@@ -17,7 +15,6 @@ const App = () => {
         <PrivateRoute path="/dashboard">
           <Dashboard />
         </PrivateRoute>
-        <ShotsButton />
         {/* 
 				<Route path="/">
 					<Login />
