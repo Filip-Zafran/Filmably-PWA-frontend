@@ -75,9 +75,9 @@ export function Profile() {
 				</div>
 			</div>
 
-			<div>
-				<h1>friends</h1>
-				<h1>dislikes</h1>
+			<div className="profile__footer">
+				<h1>friends ></h1>
+				<h1>dislikes ></h1>
 			</div>
 
 			<BottomNav />

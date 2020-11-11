@@ -1,5 +1,5 @@
 .profile__container {
-   height: auto;
+   height: 150%;
 }
 
 .profile__header-container {
@@ -18,7 +18,7 @@ height: 200px;
 
 
 .profile__name-box {
-    position: fixed;
+    position: absolute;
     /* dark 500 */
     background-color: #161616;
     left: 32px;
@@ -60,7 +60,7 @@ height: 200px;
 
 #profile__likes-container, 
 #profile__matches-container {
-    position: fixed;
+    position: absolute;
     top: 350px;
     left: 15px;
     width: 90%;
@@ -86,4 +86,11 @@ top: 500px
     height: 90px;
     width: auto;
     border-radius: 15px;
+  }
+
+  .profile__footer {
+    position: absolute;
+    top: 650px;
+    left: 0px;
+    width: 90%;
   }
