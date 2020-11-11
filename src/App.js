@@ -8,21 +8,23 @@ import { TESTLogin } from "./Pages/TESTLogin";
 import { CirclesBackground } from "./components/styleElements/CirclesBackground";
 import { BottomNav } from "./components/BottomNav";
 
-const App = () => {
+import { ShotsButton } from "./components/styleElements/buttons/ShotsButton/ShotsButton";
 
-	return (
-		<Router>
-			<Switch>
-				<PrivateRoute path="/dashboard">
-					<Dashboard />
-				</PrivateRoute>
-				{/* 
+const App = () => {
+  return (
+    <Router>
+      <Switch>
+        <PrivateRoute path="/dashboard">
+          <Dashboard />
+        </PrivateRoute>
+        <ShotsButton />
+        {/* 
 				<Route path="/">
 					<Login />
 				</Route> */}
-			</Switch>
-		</Router>
-	);
+      </Switch>
+    </Router>
+  );
 };
 
 export default App;
