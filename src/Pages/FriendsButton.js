@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios'
 
 
-export default function FriendsButton(props) {
+export default function FriendsButton({ otherUserId }) {
 
     const [buttonText, setButtonText] = useState("Send friend request")
     const [errors, setError] = useState(false)
@@ -10,9 +10,8 @@ export default function FriendsButton(props) {
     // const [otherId, setOtherId] = useState('');
 
     //props should be replaced by otherUserId
-    useEffect((props) => {
+    useEffect(() => {
         console.log("mounted ")
-        console.log("props", props)
         axios
             .get(`/getFriendsStatus/${otherUserId}`)
 
@@ -26,7 +25,7 @@ export default function FriendsButton(props) {
             //     A simple way to accomplish this would be to create a table for friend requests that has columns for the id of the sender, the id of the recipient, and a boolean indicating whether or not the request has been accepted.When one user sends another a friend request, a row would be inserted with the ids of the sender and receiver in the appropriate columns and the boolean set to false.When a user accepts a friend request, the appropriate row would be updated to set the boolean to true.When a user unfriends or cancels a pending request, the row for the request can be deleted(deleting these rows means that we will lose potentially valuable historical information, but that is probably acceptable for our purposes).
 
 
-            .then((data) => {
+            .then(data => {
                 //define the orignal "state" of the message 
                 if (data && data.addFriend === true) {
                     setButtonText("Send friend request")
@@ -42,36 +41,35 @@ export default function FriendsButton(props) {
             })
     }, [])
 
-    const handleClicke = (e) => {
-        console.log("in handleCLick", e.target.outerText)
-        //for this function, one route to backend will be created per button title 
-        if (buttonText === 'Send friend request') {
+    const handleClicke = () => {
+        //for this function, one route to backend will be created per button title
+        if (buttonText == 'Send friend request') {
             axios
                 .post(`/makeFriendRequest/${otherUserId}`)
                 .then(data => {
-                    if (data) {
+                    if (data == true) {
                         setButtonText('Cancel Friend Request')
                     } else {
                         setError(true)
                     }
                 })
 
-        } else if (buttonText === 'Cancel Friend Request' || buttonText === "Unfriend") {
+        } else if (buttonText == 'Cancel Friend Request' || buttonText == "Unfriend") {
             axios
                 .post(`/unfriend/${otherUserId}`)
                 .then(data => {
-                    if (data) {
+                    if (data == true) {
                         setButtonText('Send friend request')
                     } else {
                         setError(true)
                     }
                 })
-        } else if (e.target.outerText === "Accept Friend Request") {
+        } else if (buttonText == "Accept Friend Request") {
             axios
                 .post(`/acceptFriendRequest/${otherUserId}`)
                 .then(data => {
-                    if (data) {
-                        setButtonText('unfriend')
+                    if (data == true) {
+                        setButtonText('Unfriend')
                     } else {
                         setError(true)
                     }
@@ -111,7 +109,7 @@ export default function FriendsButton(props) {
     return (
         <React.Fragment>
             {errors && <div>There was an issue with your request, please try again!</div>}
-            <button style={{ color: "red", fontSize: "16px", width: "200px", height: "200px" }} onClick={e => handleClicke(e)}>{buttonText}</button>
+            <button style={{ color: "red", fontSize: "16px", width: "200px", height: "200px" }} onClick={handleClicke}>{buttonText}</button>
         </React.Fragment>
     )
 

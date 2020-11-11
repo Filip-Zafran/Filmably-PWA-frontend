@@ -12,7 +12,7 @@ export default function OtherProfile(props) {
     const [error, setError] = useState(false)
     const [url, setUrl] = useState()
     // const [id, setId] = useState();
-    const [otherId, setOtherId] = useState()
+    const [otherUserId, setOtherUserId] = useState()
     //
 
     useEffect(() => {
@@ -56,7 +56,7 @@ export default function OtherProfile(props) {
             })
             }
             {/* <FriendButton otherId={props.match.params.id} /> */}
-            <FriendButton />
+            <FriendButton otherUserId={props.match.params.id} />
         </React.Fragment >
     )
 }
