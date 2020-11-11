@@ -65,10 +65,10 @@ a {
   --warm-900: rgba(184, 33, 192, 1);
   --warm-500: rgba(214, 63, 222, 1);
   --warm-100: rgba(229, 133, 234, 1);
-  --warm-500-25: rgba(214, 63, 222, 25);i
+  --warm-500-25: rgba(214, 63, 222, 25);
 
   /* Old color scheme, stays as long as not all components with the new color scheme have been replaced */
-
+  /*
   --main-black: rgba(5, 5, 5, 1);
   --transparent-black: rgba(5, 5, 5, 0.5);
   --grey-light: rgba(32, 32, 32, 1);
@@ -77,4 +77,6 @@ a {
 
   --text-bright: rgba(255, 255, 255, 1);
   --text-dim: rgba(186, 186, 186, 1);
+
+*/
 }
