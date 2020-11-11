@@ -19,7 +19,7 @@ a {
 
 :root {
   --main-black: rgba(5, 5, 5, 1);
-  --transparent-black: rgba(5, 5, 5, 0.6);
+  --transparent-black: rgba(5, 5, 5, 0.5);
   --grey-light: rgba(32, 32, 32, 1);
   --grey-middle: rgba(22, 22, 22, 1);
   --grey-dark: rgba(14, 14, 14, 1);
