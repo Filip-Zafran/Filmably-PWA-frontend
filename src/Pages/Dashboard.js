@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Route, BrowserRouter as Router, Switch, useHistory, Link } from 'react-router-dom';
-import Movies from './Movies';
+// import Movies from './Movies';
 import Friends from './Friends';
 import MatchPage from './MatchPage';
 import { Profile } from '../components/Profile';
