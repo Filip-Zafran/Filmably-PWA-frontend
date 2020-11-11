@@ -62,10 +62,10 @@ a {
   --cold-100: rgba(153, 170, 255, 1);
   --cold-500-25: rgba(92, 119, 255, 25);
 
-  --success-900: rgba(184, 33, 192, 1);
-  --success-500: rgba(214, 63, 222, 1);
-  --success-100: rgba(229, 133, 234, 1);
-  --success-500-25: rgba(214, 63, 222, 25);
+  --warm-900: rgba(184, 33, 192, 1);
+  --warm-500: rgba(214, 63, 222, 1);
+  --warm-100: rgba(229, 133, 234, 1);
+  --warm-500-25: rgba(214, 63, 222, 25);
 
   /* Old color scheme, stays as long as not all components with the new color scheme have been replaced */
 
