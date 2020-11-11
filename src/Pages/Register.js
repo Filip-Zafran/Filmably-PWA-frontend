@@ -34,7 +34,6 @@ function Registration() {
     const handleChange = e => {
         //with set input, update the state of name and value together
         setInput({
-
             ...values,
             [e.target.name]: e.target.value
         })
@@ -52,11 +51,9 @@ function Registration() {
                 <button onClick={submit} > Register </button>
                 <Link to="/login"> Log In</Link>
                 <Link to="/resetpw">Reset PW</Link>
-
             </div>
         </React.Fragment>
     )
-
 }
 
 export default Registration;

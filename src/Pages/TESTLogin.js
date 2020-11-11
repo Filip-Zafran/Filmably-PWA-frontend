@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import "./TestLogin.css";
 
-export default function TestLogin() {
+export function TESTLogin() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [regName, setRegName] = useState("");

@@ -1,12 +1,14 @@
 .circlesBackground {
   z-index: -1;
-  height: 100vh;
+  height: 85vh;
   width: 100vw;
+  padding-bottom: 15vh;
   overflow: hidden;
-  position: relative;
+  position: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
+  top: 0px;
 }
 
 .circlesBackground__bigC {
@@ -14,8 +16,8 @@
   background-color: var(--grey-dark);
   z-index: -3;
   border-radius: 50%;
-  width: 189vw;
-  height: 189vw;
+  width: 190vw;
+  height: 190vw;
 }
 
 .circlesBackground__midC {
@@ -23,8 +25,8 @@
   background-color: var(--grey-middle);
   border-radius: 50%;
   z-index: -2;
-  width: 124.33vw;
-  height: 124.33vw;
+  width: 125vw;
+  height: 125vw;
 }
 
 .circlesBackground__smallC {
@@ -32,6 +34,6 @@
   background-color: var(--grey-light);
   border-radius: 50%;
   z-index: -1;
-  width: 63.11vw;
-  height: 63.11vw;
+  width: 60vw;
+  height: 60vw;
 }
