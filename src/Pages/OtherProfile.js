@@ -1,21 +1,25 @@
 import React, { useEffect, useState } from 'react';
+// import { useParams } from "react-router-dom";
+
 import axios from 'axios';
 // import Profile from 'Profile'
+import FriendButton from './FriendsButton'
 
-
-export default function OtherProfile() {
+export default function OtherProfile(props) {
     //this is a child component of the profile page
     console.log("I am a child components")
     const [profiles, setProfile] = useState()
     const [error, setError] = useState(false)
     const [url, setUrl] = useState()
-    const [id, setId] = useState();
+    // const [id, setId] = useState();
     const [otherId, setOtherId] = useState()
+    //
 
     useEffect(() => {
         // do an ajax request to 
-        // const id = match.params.id;
-        // console.log(params)
+        const { id } = props.match.params.id;
+        // console.log(id)
+
         axios
             .get(`/user/${id}.json`)
             .then((data) => {
@@ -51,8 +55,8 @@ export default function OtherProfile() {
 
             })
             }
-            {/* Will nee to add friendbutton <FriendButton otherUserId={this.props.match.params.id} /> */}
-
+            {/* <FriendButton otherId={props.match.params.id} /> */}
+            <FriendButton />
         </React.Fragment >
     )
 }
