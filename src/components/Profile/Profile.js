@@ -51,11 +51,33 @@ export function Profile() {
 				{/* <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder="Select your age range" /> */}
 			</div>
 
-			<div className="profile__likes-container">
+			<div id="profile__likes-container">
 				<div className="profile__text-container">
 					<p>Likes</p>
 					<p>Show All ></p>
 				</div>
+				<div className="profile__likes-picture">
+					<img className="profile__likes-picture" src="https://shmector.com/_ph/4/270476539.png" alt="new" />
+					<img className="profile__likes-picture" src="https://shmector.com/_ph/4/270476539.png" alt="new" />
+					<img className="profile__likes-picture" src="https://shmector.com/_ph/4/270476539.png" alt="new" />
+				</div>
+			</div>
+
+			<div id="profile__matches-container">
+				<div className="profile__text-container">
+					<p>Top Matches</p>
+					<p>Show All ></p>
+				</div>
+				<div className="profile__likes-picture">
+					<img className="profile__likes-picture" src="https://shmector.com/_ph/4/270476539.png" alt="new" />
+					<img className="profile__likes-picture" src="https://shmector.com/_ph/4/270476539.png" alt="new" />
+					<img className="profile__likes-picture" src="https://shmector.com/_ph/4/270476539.png" alt="new" />
+				</div>
+			</div>
+
+			<div>
+				<h1>friends</h1>
+				<h1>dislikes</h1>
 			</div>
 
 			<BottomNav />
