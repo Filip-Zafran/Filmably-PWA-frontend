@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  Thunder,
-  Heart,
-  HeartActive,
-  Star,
-  StarActive,
-} from "../styleElements/icons";
+import { Thunder, Heart, Star } from "../styleElements/icons";
 import { Link, useLocation } from "react-router-dom";
 import "./BottomNav.css";
 import { Ripple } from "./RippleButton";
@@ -17,7 +11,7 @@ export function BottomNav() {
     <div className="bottomNav">
       <Link to="/Movies">
         <Ripple classes="bottomNavButton">
-          {location.pathname === "/Movies" ? <StarActive /> : <Star />}
+          <Star active={location.pathname === "/Movies" ? true : false} />
           <p
             className={
               location.pathname === "/Movies"
@@ -31,10 +25,7 @@ export function BottomNav() {
       </Link>
       <Link to="/MatchPage">
         <Ripple classes="bottomNavButton">
-          <Thunder
-            fill={location.pathname === "/MatchPage" ? "white" : "none"}
-            stroke={location.pathname === "/MatchPage" ? "white" : "#9D9D9D"}
-          />
+          <Thunder active={location.pathname === "/MatchPage" ? true : false} />
           <p
             className={
               location.pathname === "/MatchPage"
@@ -48,7 +39,7 @@ export function BottomNav() {
       </Link>
       <Link to="/Friends">
         <Ripple classes="bottomNavButton">
-          {location.pathname === "/Friends" ? <HeartActive /> : <Heart />}
+          <Heart active={location.pathname === "/Friends" ? true : false} />
           <p
             className={
               location.pathname === "/Friends"

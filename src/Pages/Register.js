@@ -54,11 +54,9 @@ function Registration() {
                 <button onClick={submit} > Register </button>
                 <Link to="/login"> Log In</Link>
                 <Link to="/resetpw">Reset PW</Link>
-
             </div>
         </React.Fragment>
     )
-
 }
 
 export default Registration;

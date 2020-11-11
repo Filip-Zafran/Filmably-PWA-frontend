@@ -13,7 +13,7 @@ let elem;
 
 // identify what is the current path and serve the appropriate component. Welcome is the not logged component
 if (window.location.pathname === "/Welcome") {
-	console.log("window", window)
+	// console.log("window", window)
 	elem = <Welcome />
 } else {
 	//init(store) socket will only work if user is logged
