@@ -4,16 +4,10 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 
 export default function Login() {
-<<<<<<< HEAD
-	const history = useHistory();
-
-	const history = useHistory()
-=======
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
 
 	const history = useHistory();
->>>>>>> a04be862107ff8a98c60b0c098ff02e34f3c55e9
 
 	//this could be changed to an async function
 	//this verification route will work if you run the server from index.js on your local machine
