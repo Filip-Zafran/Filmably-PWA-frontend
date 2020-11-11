@@ -3,8 +3,8 @@
 html {
   margin: 0;
   text-align: center;
-  background-color: var(--main-black);
-  color: var(--text-dim);
+  background-color: var(--dark-900);
+  color: var(--light-500);
   font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
     "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -12,12 +12,63 @@ html {
 
 a {
   text-decoration: none;
-  color: var(--text-dim);
+  color: var(--light-500);
 }
 
 /*--------COLOR VARIABLES---------*/
 
 :root {
+  /* New color scheme align with the design file */
+
+  --dark-900: rgba(5, 5, 5, 1);
+  --dark-700: rgba(14, 14, 14, 1);
+  --dark-500: rgba(22, 22, 22, 1);
+  --dark-300: rgba(32, 32, 32, 1);
+  --dark-100: rgba(55, 55, 55, 1);
+  --dark-900-25: rgba(5, 5, 5, 25);
+  --dark-900-50: rgba(5, 5, 5, 50);
+  --dark-900-75: rgba(5, 5, 5, 75);
+
+  --light-900: rgba(157, 157, 157, 1);
+  --light-700: rgba(186, 186, 186, 1);
+  --light-500: rgba(212, 212, 212, 1);
+  --light-300: rgba(237, 237, 237, 1);
+  --light-100: rgba(255, 255, 255, 1);
+  --light-100-25: rgba(255, 255, 255, 25);
+  --light-100-50: rgba(255, 255, 255, 50);
+  --light-100-75: rgba(255, 255, 255, 75);
+
+  --prime-900: rgba(204, 156, 0, 1);
+  --prime-700: rgba(245, 188, 0, 1);
+  --prime-500: rgba(255, 203, 31, 1);
+  --prime-300: rgba(255, 212, 71, 1);
+  --prime-100: rgba(255, 222, 112, 1);
+  --prime-500-25: rgba(255, 203, 31, 25);
+  --prime-500-50: rgba(255, 203, 31, 50);
+  --prime-500-75: rgba(255, 203, 31, 75);
+
+  --error-900: rgba(235, 63, 51, 1);
+  --error-500: rgba(238, 98, 88, 1);
+  --error-100: rgba(244, 150, 144, 1);
+  --error-500-25: rgba(238, 98, 88, 25);
+
+  --success-900: rgba(44, 160, 96, 1);
+  --success-500: rgba(53, 192, 115, 1);
+  --success-100: rgba(111, 216, 158, 1);
+  --success-500-25: rgba(53, 192, 115, 25);
+
+  --cold-900: rgba(31, 68, 255, 1);
+  --cold-500: rgba(92, 119, 255, 1);
+  --cold-100: rgba(153, 170, 255, 1);
+  --cold-500-25: rgba(92, 119, 255, 25);
+
+  --warm-900: rgba(184, 33, 192, 1);
+  --warm-500: rgba(214, 63, 222, 1);
+  --warm-100: rgba(229, 133, 234, 1);
+  --warm-500-25: rgba(214, 63, 222, 25);
+
+  /* Old color scheme, stays as long as not all components with the new color scheme have been replaced */
+  /*
   --main-black: rgba(5, 5, 5, 1);
   --transparent-black: rgba(5, 5, 5, 0.5);
   --grey-light: rgba(32, 32, 32, 1);
@@ -26,6 +77,5 @@ a {
 
   --text-bright: rgba(255, 255, 255, 1);
   --text-dim: rgba(186, 186, 186, 1);
-
-  --logo-gold: rgba(245, 188, 0, 1);
+*/
 }

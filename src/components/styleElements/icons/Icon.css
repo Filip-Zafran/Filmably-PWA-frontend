@@ -1,15 +1,15 @@
 .inactiveIcon {
-  stroke: var(--text-dim);
+  stroke: var(--light-500);
   fill: none;
 }
 
 .activeIcon {
-  stroke: var(--text-bright);
-  fill: var(--text-bright);
+  stroke: var(--light-100);
+  fill: var(--light-100);
 }
 
 .activeLogo {
-  stroke: var(--text-bright);
+  stroke: var(--light-100);
 }
 
 .iconSvg {
@@ -18,10 +18,10 @@
 }
 
 .activeLogoGold {
-  stroke: var(--logo-gold);
+  stroke: var(--prime-500);
 }
 
 .activeIconGold {
-  stroke: var(--logo-gold);
-  fill: var(--logo-gold);
+  stroke: var(--prime-500);
+  fill: var(--prime-500);
 }

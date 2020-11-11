@@ -13,7 +13,7 @@
 
 .circlesBackground__bigC {
   position: absolute;
-  background-color: var(--grey-dark);
+  background-color: var(--dark-700);
   z-index: -3;
   border-radius: 50%;
   width: 190vw;
@@ -22,7 +22,7 @@
 
 .circlesBackground__midC {
   position: absolute;
-  background-color: var(--grey-middle);
+  background-color: var(--dark-500);
   border-radius: 50%;
   z-index: -2;
   width: 125vw;
@@ -31,7 +31,7 @@
 
 .circlesBackground__smallC {
   position: absolute;
-  background-color: var(--grey-light);
+  background-color: var(--dark-300);
   border-radius: 50%;
   z-index: -1;
   width: 60vw;
