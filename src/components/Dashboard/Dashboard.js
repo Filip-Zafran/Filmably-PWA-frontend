@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { Route, BrowserRouter as Router, Switch, useHistory, Link } from 'react-router-dom';
 // import Movies from './Movies';
-import Friends from '../components/Friends/Friends';
-import MatchPage from './MatchPage';
-import { Profile } from '../components/Profile';
+import Friends from '../Friends/Friends';
+import MatchPage from '../MatchMovies/MatchPage';
+import { Profile } from '../Profile';
 
 import './Dashboard.css';
 

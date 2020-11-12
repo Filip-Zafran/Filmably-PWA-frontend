@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import Dashboard from './Pages/Dashboard';
+import Dashboard from './components/Dashboard/Dashboard';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
 import { Profile } from './components/Profile'
