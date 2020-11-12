@@ -3,8 +3,34 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 function Registration() {
-	const [ values, setInput ] = useState('');
-	const [ error, setError ] = useState();
+
+    const [values, setInput] = useState('')
+    const [error, setError] = useState();
+
+    // func expression to post the data gathered in the inputfield
+    const submit = () => {
+        //post route to backend
+        axios
+            .post('http://localhost:5000/authenticate/register', {
+                // first: values.first,
+                // last: values.last,
+                username: values.email,
+                // username: values.username,
+                password: values.pw
+            })
+            .then(({ data }) => {
+                // console.log(data)
+                //data is the response from backend
+                if ({ data }) {
+                    //should send user to its account
+                    console.log(data)
+                    window.location.replace('/dashboard')
+                } else {
+                    setError(true)
+                }
+            })
+        return [submit, error];
+    }
 
 	// func expression to post the data gathered in the inputfield
 	const submit = () => {
