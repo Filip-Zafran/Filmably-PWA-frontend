@@ -6,7 +6,7 @@ import PrivateRoute from './components/PrivateRoute';
 import Login from './Pages/Login';
 import FindPeople from './Pages/FindPeople'
 import OtherProfile from './Pages/OtherProfile'
-import { TestLogin } from './Pages/TestLogin';
+import { TestLogin } from './Pages/TESTLogin';
 import { CirclesBackground } from "./components/styleElements/CirclesBackground";
 import { BottomNav } from "./components/BottomNav";
 
@@ -31,5 +31,9 @@ const App = () => {
 		</Router>
 	);
 };
+
+//redo the register, login and stuff //unprotiected route login page
+
+
 
 export default App;
