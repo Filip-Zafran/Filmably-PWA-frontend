@@ -54,7 +54,7 @@ export function Profile() {
 			<div id="profile__likes-container">
 				<div className="profile__text-container">
 					<p>Likes</p>
-					<p>Show All ></p>
+					<p>Show All </p>
 				</div>
 				<div className="profile__likes-picture">
 					<img className="profile__likes-picture" src="https://shmector.com/_ph/4/270476539.png" alt="new" />
@@ -66,7 +66,7 @@ export function Profile() {
 			<div id="profile__matches-container">
 				<div className="profile__text-container">
 					<p>Top Matches</p>
-					<p>Show All ></p>
+					<p>Show All </p>
 				</div>
 				<div className="profile__likes-picture">
 					<img className="profile__likes-picture" src="https://shmector.com/_ph/4/270476539.png" alt="new" />
@@ -76,8 +76,8 @@ export function Profile() {
 			</div>
 
 			<div className="profile__footer">
-				<h1>friends ></h1>
-				<h1>dislikes ></h1>
+				<h1>friends </h1>
+				<h1>dislikes </h1>
 			</div>
 
 			<BottomNav />

@@ -4,55 +4,55 @@ import axios from 'axios';
 
 function Registration() {
 
-    const [values, setInput] = useState('')
-    const [error, setError] = useState();
-
-    // func expression to post the data gathered in the inputfield
-    const submit = () => {
-        //post route to backend
-        axios
-            .post('http://localhost:5000/authenticate/register', {
-                // first: values.first,
-                // last: values.last,
-                username: values.email,
-                // username: values.username,
-                password: values.pw
-            })
-            .then(({ data }) => {
-                // console.log(data)
-                //data is the response from backend
-                if ({ data }) {
-                    //should send user to its account
-                    console.log(data)
-                    window.location.replace('/dashboard')
-                } else {
-                    setError(true)
-                }
-            })
-        return [submit, error];
-    }
+	const [values, setInput] = useState('')
+	const [error, setError] = useState();
 
 	// func expression to post the data gathered in the inputfield
 	const submit = () => {
 		//post route to backend
 		axios
-			.post('/register', {
-				first: values.first,
-				last: values.last,
-				email: values.email,
-				pw: values.pw
+			.post('http://localhost:5000/authenticate/register', {
+				// first: values.first,
+				// last: values.last,
+				username: values.email,
+				// username: values.username,
+				password: values.pw
 			})
 			.then(({ data }) => {
+				// console.log(data)
 				//data is the response from backend
-				if (data.success) {
+				if ({ data }) {
 					//should send user to its account
-					window.location.replace('/');
+					console.log(data)
+					window.location.replace('/dashboard')
 				} else {
-					setError(true);
+					setError(true)
 				}
-			});
-		return [ submit, error ];
-	};
+			})
+		return [submit, error];
+	}
+
+	// func expression to post the data gathered in the inputfield
+	// const submit = () => {
+	// 	//post route to backend
+	// 	axios
+	// 		.post('/register', {
+	// 			first: values.first,
+	// 			last: values.last,
+	// 			email: values.email,
+	// 			pw: values.pw
+	// 		})
+	// 		.then(({ data }) => {
+	// 			//data is the response from backend
+	// 			if (data.success) {
+	// 				//should send user to its account
+	// 				window.location.replace('/');
+	// 			} else {
+	// 				setError(true);
+	// 			}
+	// 		});
+	// 	return [ submit, error ];
+	// };
 
 	//will handle the fact that many letters can be written and update to the lastest version
 	const handleChange = (e) => {
@@ -61,7 +61,7 @@ function Registration() {
 			...values,
 			[e.target.name]: e.target.value
 		});
-		return [ values, handleChange ];
+		return [values, handleChange];
 	};
 
 	return (

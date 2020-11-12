@@ -3,11 +3,11 @@ import './App.css';
 import Dashboard from './Pages/Dashboard';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 import PrivateRoute from './components/PrivateRoute';
-
+import { Profile } from './components/Profile'
 import Login from './Pages/Login';
-import FindPeople from './Pages/FindPeople'
-import OtherProfile from './Pages/OtherProfile'
-import Profile from './components/Profile'
+import FindPeople from './components/Friends/FindPeople'
+import OtherProfile from './components/Friends/OtherProfile'
+// import Profile from './components/Profile'
 import { TestLogin } from './Pages/TestLogin';
 import { CirclesBackground } from "./components/styleElements/CirclesBackground";
 import { BottomNav } from "./components/BottomNav";
@@ -19,7 +19,7 @@ const App = () => {
 				<PrivateRoute path='/dashboard'>
 					<Dashboard />
 				</PrivateRoute>
-        <PrivateRoute path='/profile'>
+				<PrivateRoute path='/profile'>
 					<Profile />
 				</PrivateRoute>
 				{/* 
