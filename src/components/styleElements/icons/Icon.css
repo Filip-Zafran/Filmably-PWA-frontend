@@ -1,0 +1,27 @@
+.inactiveIcon {
+  stroke: var(--light-500);
+  fill: none;
+}
+
+.activeIcon {
+  stroke: var(--light-100);
+  fill: var(--light-100);
+}
+
+.activeLogo {
+  stroke: var(--light-100);
+}
+
+.iconSvg {
+  width: 24px;
+  height: 24px;
+}
+
+.activeLogoGold {
+  stroke: var(--prime-500);
+}
+
+.activeIconGold {
+  stroke: var(--prime-500);
+  fill: var(--prime-500);
+}
