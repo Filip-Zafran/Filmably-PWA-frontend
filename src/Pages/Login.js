@@ -1,4 +1,3 @@
-
 import Axios from "axios";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
@@ -49,6 +48,6 @@ export default function Login() {
 				value={password}
 			/>
 			<button onClick={login}> Login </button>
-		</div>
+		</div >
 	);
 }
