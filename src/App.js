@@ -9,25 +9,25 @@ import FindPeople from './Pages/FindPeople';
 import OtherProfile from './Pages/OtherProfile';
 
 const App = () => {
-  return (
-    <Router>
-      <Switch>
-        <PrivateRoute path="/dashboard">
-          <Dashboard />
-        </PrivateRoute>
+	return (
+		<Router>
+			<Switch>
+				<PrivateRoute path='/dashboard'>
+					<Dashboard />
+				</PrivateRoute>
 
-        <Route path="/findpeople">
-          <FindPeople />
-        </Route>
+				<Route path='/findpeople'>
+					<FindPeople />
+				</Route>
 
-        <Route path="/">
-          <Login />
-        </Route>
+				<Route path='/'>
+					<Login />
+				</Route>
 
-        <Route path="/user/:id" component={OtherProfile}></Route>
-      </Switch>
-    </Router>
-  );
+				<Route path='/user/:id' component={OtherProfile} />
+			</Switch>
+		</Router>
+	);
 };
 
 export default App;

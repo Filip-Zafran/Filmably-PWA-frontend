@@ -38,7 +38,7 @@ const Test = () => {
 		return (
 			// I changed the component to controlled can be left as uncontrolled if prefered.
 			<div>
-				<input type="text" autoFocus value={value} onChange={updateValue} onBlur={toggleEditMode} />
+				<input type='text' autoFocus value={value} onChange={updateValue} onBlur={toggleEditMode} />
 				{/* <button onClick={this.changeEditMode}>X</button>
 				<button onClick={this.updateComponentValue}>OK</button> */}
 			</div>
