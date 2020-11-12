@@ -4,8 +4,9 @@ import React from 'react';
 import OnClickTextEdit from './OnClickTextEdit';
 import { BottomNav } from '../BottomNav';
 import './Profile.css';
-import gearIcon from './gearIcon';
+import Settings from '../styleElements/icons/Settings';
 import uploadeIcon from './uploadIcon';
+import { Star } from '../styleElements/icons';
 
 export function Profile() {
 	// const [ modal, setModal ] = useState(false);
@@ -23,14 +24,19 @@ export function Profile() {
 
 	return (
 		<div className='profile__container'>
+			<div id='profile__settings'>
+				<Settings />
+			</div>
+
 			<div profile__header-container>
-				<gearIcon />
 				<img className='profile__profile-picture' src='https://shmector.com/_ph/4/270476539.png' alt='new' />
 				<uploadeIcon />
 			</div>
 			<div className='profile__name-box'>
 				<h2>Linda Bear</h2>
-				<h3>26 matches ★ 103 likes </h3>
+				<h3>
+					26 matches <Star style={{ height: '5%' }} /> 103 likes{' '}
+				</h3>
 				<h4>“It’s only after we’ve lost everything that we’re free to do anything.”</h4>
 			</div>
 
@@ -54,7 +60,7 @@ export function Profile() {
 			<div id='profile__likes-container'>
 				<div className='profile__text-container'>
 					<p>Likes</p>
-					<p>Show All ></p>
+					<p className='profile__show-all-text'>Show All ></p>
 				</div>
 				<div className='profile__likes-picture'>
 					<img className='profile__likes-picture' src='https://shmector.com/_ph/4/270476539.png' alt='new' />
@@ -66,7 +72,7 @@ export function Profile() {
 			<div id='profile__matches-container'>
 				<div className='profile__text-container'>
 					<p>Top Matches</p>
-					<p>Show All ></p>
+					<p className='profile__show-all-text'>Show All ></p>
 				</div>
 				<div className='profile__likes-picture'>
 					<img className='profile__likes-picture' src='https://shmector.com/_ph/4/270476539.png' alt='new' />
@@ -76,8 +82,15 @@ export function Profile() {
 			</div>
 
 			<div className='profile__footer'>
-				<h1>friends ></h1>
-				<h1>dislikes ></h1>
+				<div className='profile__footer-text'>
+					<h1>Friends </h1> <p>></p>
+				</div>
+
+				<hr className='profile__horizontal-line' />
+
+				<div className='profile__footer-text'>
+					<h1>Black List </h1> <p>></p>
+				</div>
 			</div>
 
 			<BottomNav />
