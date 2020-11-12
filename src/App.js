@@ -7,7 +7,6 @@ import PrivateRoute from './components/PrivateRoute';
 import Login from './Pages/Login';
 import FindPeople from './Pages/FindPeople';
 import OtherProfile from './Pages/OtherProfile';
-import { Profile } from './components/Profile';
 
 const App = () => {
   return (
@@ -16,16 +15,15 @@ const App = () => {
         <PrivateRoute path="/dashboard">
           <Dashboard />
         </PrivateRoute>
-        <PrivateRoute path="/profile">
-          <Profile />
-        </PrivateRoute>
+
+        <Route path="/findpeople">
+          <FindPeople />
+        </Route>
 
         <Route path="/">
           <Login />
         </Route>
-        <Route path="/findpeople">
-          <FindPeople />
-        </Route>
+
         <Route path="/user/:id" component={OtherProfile}></Route>
       </Switch>
     </Router>
