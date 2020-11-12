@@ -96,32 +96,32 @@ margin-bottom: ;
     margin-left: 10px;
   }
 
-  .profile__footer {  position: absolute;
-    top: 680px;
-    left: 0px;
+  .profile__footer {  
+    position: absolute;
+    top: 700px;
     width: 90%;
     padding-bottom: 150px;
     text-align: start;
   }
 
   .profile__footer-text {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      padding: 2px;
-      left: 15px;
-      position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2px;
+    left: 15px;
+    position: relative;
   }
 
 
   .profile__footer >h1 {
-      padding: 5px;
-      padding-left: 15px;
-      font-family: Inter;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 16px;
-      line-height: 145%;
+    padding: 5px;
+    padding-left: 15px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 145%;
   }
 .profile__horizontal-line {
    position: relative;
