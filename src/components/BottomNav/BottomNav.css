@@ -7,7 +7,7 @@
   width: 100%;
   display: flex;
   justify-content: space-evenly;
-  background-color: var(--transparent-black);
+  background-color: var(--dark-900-50);
 }
 
 .bottomNav__activeLabel,
@@ -17,5 +17,5 @@
 }
 
 .bottomNav__activeLabel {
-  color: var(--text-bright);
+  color: var(--light-100);
 }
