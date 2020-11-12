@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 
 function Registration() {
+	const [values, setInput] = useState('');
+	const [error, setError] = useState();
 
 	const [values, setInput] = useState('')
 	const [error, setError] = useState();

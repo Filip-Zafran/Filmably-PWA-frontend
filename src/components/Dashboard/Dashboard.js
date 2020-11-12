@@ -5,49 +5,25 @@ import Friends from '../Friends/Friends';
 import MatchPage from '../MatchMovies/MatchPage';
 import { Profile } from '../Profile';
 
-import './Dashboard.css';
-
-export default function Dashboard() {
-	const history = useHistory();
-
-	function logout() {
-		localStorage.removeItem('isAuthenticated');
-		history.replace('/');
-	}
+const Dashboard = () => {
+	//gets the logged in user and stores it in the REDUX store
+	useEffect(() => {
+		store.dispatch(fetchUser());
+	}, []);
 
 	return (
-		<div>
+		<div className="dashboard">
 			<Router>
-				<br />
-				<p> Dashboard </p>
-				<nav>
-					<ul>
-						<li>
-							<button onClick={logout}>Logout</button>
-						</li>
-					</ul>
-					<ul>
-						<li>
-							<Link to="/Profile">My Profile</Link>
-						</li>
-					</ul>
-					<ul>
-						<li>
-							<Link to="/Friends">Friends</Link>
-						</li>
-					</ul>
-					<ul>
-						<li>
-							<Link to="/MatchPage">GO!</Link>
-						</li>
-					</ul>
-				</nav>
+				<BottomNav />
 				<Switch>
 					<Route path="/profile" component={Profile} />
 					<Route path="/Friends" component={Friends} />
 					<Route path="/MatchPage" component={MatchPage} />
+					<Route path="/" component={Start} />
 				</Switch>
 			</Router>
 		</div>
 	);
-}
+};
+
+export default Dashboard;

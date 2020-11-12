@@ -29,13 +29,20 @@ const App = () => {
 				<Route path='/findpeople'>
 					<FindPeople />
 				</Route>
-				<Route path='/user/:id' component={OtherProfile}>
+				<Route path='/user/:id' component={OtherProfile} />
 
+				<Route path="/findpeople">
+					<FindPeople />
 				</Route>
+
+				<Route path="/">
+					<Login />
+				</Route>
+
+				<Route path="/user/:id" component={OtherProfile}></Route>
 			</Switch>
 		</Router>
 	);
-
 };
 
 export default App;

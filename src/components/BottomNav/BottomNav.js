@@ -1,22 +1,22 @@
-import React from "react";
-import { Thunder, Heart, Star } from "../styleElements/icons";
-import { Link, useLocation } from "react-router-dom";
-import "./BottomNav.css";
-import { Ripple } from "./RippleButton";
+import React from 'react';
+import { Thunder, Heart, Star } from '../styleElements/icons';
+import { Link, useLocation } from 'react-router-dom';
+import './BottomNav.css';
+import { Ripple } from './RippleButton';
 
 export function BottomNav() {
   const location = useLocation();
 
   return (
     <div className="bottomNav">
-      <Link to="/Movies">
+      <Link to="/Profile">
         <Ripple classes="bottomNavButton">
-          <Star active={location.pathname === "/Movies" ? true : false} />
+          <Star active={location.pathname === '/Profile' ? true : false} />
           <p
             className={
-              location.pathname === "/Movies"
-                ? "bottomNav__activeLabel"
-                : "bottomNav__label"
+              location.pathname === '/Profile'
+                ? 'bottomNav__activeLabel'
+                : 'bottomNav__label'
             }
           >
             My Lists
@@ -25,12 +25,12 @@ export function BottomNav() {
       </Link>
       <Link to="/MatchPage">
         <Ripple classes="bottomNavButton">
-          <Thunder active={location.pathname === "/MatchPage" ? true : false} />
+          <Thunder active={location.pathname === '/MatchPage' ? true : false} />
           <p
             className={
-              location.pathname === "/MatchPage"
-                ? "bottomNav__activeLabel"
-                : "bottomNav__label"
+              location.pathname === '/MatchPage'
+                ? 'bottomNav__activeLabel'
+                : 'bottomNav__label'
             }
           >
             Shots
@@ -39,12 +39,12 @@ export function BottomNav() {
       </Link>
       <Link to="/Friends">
         <Ripple classes="bottomNavButton">
-          <Heart active={location.pathname === "/Friends" ? true : false} />
+          <Heart active={location.pathname === '/Friends' ? true : false} />
           <p
             className={
-              location.pathname === "/Friends"
-                ? "bottomNav__activeLabel"
-                : "bottomNav__label"
+              location.pathname === '/Friends'
+                ? 'bottomNav__activeLabel'
+                : 'bottomNav__label'
             }
           >
             Friends
