@@ -1,53 +1,34 @@
 import React, { useEffect } from 'react';
-import { Route, BrowserRouter as Router, Switch, useHistory, Link } from 'react-router-dom';
-// import Movies from './Movies';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
+
+import { BottomNav } from '../components/BottomNav';
+import store from '../Redux/store';
+import { fetchUser } from '../Redux/userSlice';
+
+import { Start } from './Start';
 import Friends from './Friends';
 import MatchPage from './MatchPage';
 import { Profile } from '../components/Profile';
 
-import './Dashboard.css';
+const Dashboard = () => {
+  //gets the logged in user and stores it in the REDUX store
+  useEffect(() => {
+    store.dispatch(fetchUser());
+  }, []);
 
-export default function Dashboard() {
-	const history = useHistory();
+  return (
+    <div className="dashboard">
+      <Router>
+        <BottomNav />
+        <Switch>
+          <Route path="/profile" component={Profile} />
+          <Route path="/Friends" component={Friends} />
+          <Route path="/MatchPage" component={MatchPage} />
+          <Route path="/" component={Start} />
+        </Switch>
+      </Router>
+    </div>
+  );
+};
 
-	function logout() {
-		localStorage.removeItem('isAuthenticated');
-		history.replace('/');
-	}
-
-	return (
-		<div>
-			<Router>
-				<br />
-				<p> Dashboard </p>
-				<nav>
-					<ul>
-						<li>
-							<button onClick={logout}>Logout</button>
-						</li>
-					</ul>
-					<ul>
-						<li>
-							<Link to="/Profile">My Profile</Link>
-						</li>
-					</ul>
-					<ul>
-						<li>
-							<Link to="/Friends">Friends</Link>
-						</li>
-					</ul>
-					<ul>
-						<li>
-							<Link to="/MatchPage">GO!</Link>
-						</li>
-					</ul>
-				</nav>
-				<Switch>
-					<Route path="/profile" component={Profile} />
-					<Route path="/Friends" component={Friends} />
-					<Route path="/MatchPage" component={MatchPage} />
-				</Switch>
-			</Router>
-		</div>
-	);
-}
+export default Dashboard;
