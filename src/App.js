@@ -41,9 +41,9 @@ const App = () => {
 					<FindPeople />
 				</Route>
 				{/* <HashRouter> */}
-				{/* <Route path="/" >
+				<Route path="/" >
 					<Login />
-				</Route> */}
+				</Route>
 				{/* <Route exact path="/register" component={Registration}> Register </Route>
 				<Route exact path="/resetpw" component={Resetpw}> Reset PW</Route> */}
 				{/* </HashRouter> */}
