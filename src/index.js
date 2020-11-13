@@ -8,7 +8,7 @@ import { Provider } from 'react-redux';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Welcome from './Pages/Welcome.js';
+import Welcome from './components/Welcome';
 // import { useLocation } from "react-router-dom";
 
 //define a variable element that will hold the different routes to be taken based on if logged in or not

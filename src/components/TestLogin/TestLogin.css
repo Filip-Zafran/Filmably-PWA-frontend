@@ -1,0 +1,22 @@
+.testLogin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  margin-bottom: 100px;
+  background-color: (1, 1, 1, 0);
+}
+
+.testLogin__section {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.testLogin__section > input {
+  margin-bottom: 10px;
+}
+
+.testLogin__section > h1 {
+  margin-bottom: 15px;
+}
