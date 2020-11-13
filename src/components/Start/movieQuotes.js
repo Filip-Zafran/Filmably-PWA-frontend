@@ -50,7 +50,7 @@ export const movieQuotes = [
   ['Show me the money!', 'JERRY MAGUIRE', '1996'],
   ["Why don't you come up sometime and see me?", 'SHE DONE HIM WRONG', '1933'],
   ["I'm walking here! I'm walking here!", 'MIDNIGHT COWBOY', '1969'],
-  ["Play it, Sam. Play 'As Time Goes By.'", 'CASABLANCA', '1942'],
+  ['Play it, Sam. Play "As Time Goes By."', 'CASABLANCA', '1942'],
   ["You can't handle the truth!", 'FEW GOOD MEN, A', '1992'],
   ['I want to be alone.', 'GRAND HOTEL', '1932'],
   ['After all, tomorrow is another day!', 'GONE WITH THE WIND', '1939'],
@@ -97,40 +97,58 @@ export const movieQuotes = [
     'DIRTY HARRY',
     '1971',
   ],
+  ['You had me at "hello."', 'JERRY MAGUIRE', '1996'],
+  [
+    "One morning I shot an elephant in my pajamas. How he got in my pajamas, I don't know.",
+    'ANIMAL CRACKERS',
+    '1930',
+  ],
+  ["There's no crying in baseball!", 'LEAGUE OF THEIR OWN, A', '1992'],
+  ['La-dee-da, la-dee-da.', 'ANNIE HALL', '1977'],
+  ["A boy's best friend is his mother.", 'PSYCHO', '1960'],
+  ['Greed, for lack of a better word, is good.', 'WALL STREET', '1987'],
+  [
+    'Keep your friends close, but your enemies closer.',
+    'GODFATHER II, THE',
+    '1974',
+  ],
+  [
+    "As God is my witness, I'll never be hungry again.",
+    'GONE WITH THE WIND',
+    '1939',
+  ],
+  [
+    "Well, here's another nice mess you've gotten me into!",
+    'SONS OF THE DESERT',
+    '1933',
+  ],
+  ['Say "hello" to my little friend!', 'SCARFACE', '1983'],
+  ['What a dump.', 'BEYOND THE FOREST', '1949'],
+  [
+    "Mrs. Robinson, you're trying to seduce me. Aren't you?",
+    'GRADUATE, THE',
+    '1967',
+  ],
+  [
+    "Gentlemen, you can't fight in here! This is the War Room!",
+    'DR. STRANGELOVE',
+    '1964',
+  ],
+  ['Elementary, my dear Watson.', 'ADVENTURES OF SHERLOCK HOLMES, THE', '1939'],
+  [
+    'Take your stinking paws off me, you damned dirty ape.',
+    'PLANET OF THE APES',
+    '1960',
+  ],
+  [
+    'Of all the gin joints in all the towns in all the world, she walks into mine.',
+    'CASABLANCA',
+    '1942',
+  ],
+  ["Here's Johnny!", 'SHINING, THE', '1980'],
+  ["They're here!", 'POLTERGEIST', '1982'],
+  ['Is it safe?', 'MARATHON MAN', '1976'],
 ]; /*
-52 You had me at "hello." JERRY MAGUIRE 1996
-53
-One morning I shot an elephant in my
-pajamas. How he got in my pajamas, I don't
-know.
-ANIMAL CRACKERS 1930
-54 There's no crying in baseball! LEAGUE OF THEIR OWN,
-A 1992
-55 La-dee-da, la-dee-da. ANNIE HALL 1977
-56 A boy's best friend is his mother. PSYCHO 1960
-57 Greed, for lack of a better word, is good. WALL STREET 1987
-58 Keep your friends close, but your enemies
-closer. GODFATHER II, THE 1974
-59 As God is my witness, I'll never be hungry
-again. GONE WITH THE WIND 1939
-AFI’s 100 Years…100 Movie Quotes Page 3 of 4
-60 Well, here's another nice mess you've gotten
-me into! SONS OF THE DESERT 1933
-61 Say "hello" to my little friend! SCARFACE 1983
-62 What a dump. BEYOND THE FOREST 1949
-63 Mrs. Robinson, you're trying to seduce me.
-Aren't you? GRADUATE, THE 1967
-64 Gentlemen, you can't fight in here! This is the
-War Room! DR. STRANGELOVE 1964
-65 Elementary, my dear Watson. ADVENTURES OF
-SHERLOCK HOLMES, THE 1939
-66 Take your stinking paws off me, you damned
-dirty ape. PLANET OF THE APES 1968
-67 Of all the gin joints in all the towns in all the
-world, she walks into mine. CASABLANCA 1942
-68 Here's Johnny! SHINING, THE 1980
-69 They're here! POLTERGEIST 1982
-70 Is it safe? MARATHON MAN 1976
 71 Wait a minute, wait a minute. You ain't heard
 nothin' yet! JAZZ SINGER, THE 1927
 72 No wire hangers, ever! MOMMIE DEAREST 1981
@@ -188,9 +206,5 @@ starving to death! AUNTIE MAME 1958
 94 I feel the need — the need for speed! TOP GUN 1986
 95 Carpe diem. Seize the day, boys. Make your
 lives extraordinary. DEAD POETS SOCIETY 1989
-96 Snap out of it! MOONSTRUCK 1987
-97 My mother thanks you. My father thanks you.
-My sister thanks you. And I thank you. YANKEE DOODLE DANDY 1942
-98 Nobody puts Baby in a corner. DIRTY DANCING 1987
-99 ["I'll get you, my pretty, and your little dog, too!", "WIZARD OF OZ, THE", "1939"],["I'm king of the world!", "TITANIC", "1997"]]
+96 ["Snap out of it!","MOONSTRUCK","1987"],["My mother thanks you. My father thanks you. My sister thanks you. And I thank you.","YANKEE DOODLE DANDY","1942"],["Nobody puts Baby in a corner.","DIRTY DANCING","1987"],["I'll get you, my pretty, and your little dog, too!", "WIZARD OF OZ, THE", "1939"],["I'm king of the world!", "TITANIC", "1997"]]
 */

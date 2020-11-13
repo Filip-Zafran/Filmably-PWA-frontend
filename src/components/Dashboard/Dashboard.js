@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 // import Movies from './Movies';
 import Friends from '../Friends/Friends';
-import MatchPage from '../MatchPage/MatchPage';
+import { MatchPage } from '../MatchPage';
 import { Profile } from '../Profile/Profile';
 import { Start } from '../Start/Start';
 import store from '../../Redux/store';
