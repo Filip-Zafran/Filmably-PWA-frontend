@@ -80,7 +80,7 @@ export default function FindPeople() {
                     </div>
                 )
             })} */}
-            {errors && <div> Woopw, there was an error loading your search, please try again!</div>}
+            {errors && <div> Woops, there was an error loading your search, please try again!</div>}
 
             <div ></div>
         </React.Fragment>
