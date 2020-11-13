@@ -1,15 +1,47 @@
-.shotsButton {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  width: 70px;
-  height: 70px;
-}
 .shotsButtonLike {
   background: var(--success-500);
 }
 
+.likeInactive {
+  background: var(--success-500-25);
+}
+
 .shotsButtonDislike {
   background: var(--error-500);
+}
+
+.dislikeInactive {
+  background: var(--error-500-25);
+}
+
+.shotsButton__center {
+  top: -81px;
+  left: 11px;
+  pointer-events: none;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+}
+
+.shotsButton__boarder {
+  border-radius: 50%;
+  width: 92px;
+  height: 92px;
+}
+
+.shotsButBoarderLike {
+  background: var(--success-500-25);
+}
+
+.shotsButBoarderDislike {
+  background: var(--error-500-25);
+}
+
+.shotsButton__boarder:active {
+  transform: scale(1.33);
+  transition: transform 0.3s linear;
 }

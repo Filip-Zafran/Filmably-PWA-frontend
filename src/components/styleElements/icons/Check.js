@@ -14,7 +14,7 @@ export function Check({ width, height }) {
     >
       <path
         d="M17 1L6 12L1 7"
-        className="inactiveIcon"
+        className="activeLogo"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

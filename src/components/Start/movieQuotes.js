@@ -148,63 +148,82 @@ export const movieQuotes = [
   ["Here's Johnny!", 'SHINING, THE', '1980'],
   ["They're here!", 'POLTERGEIST', '1982'],
   ['Is it safe?', 'MARATHON MAN', '1976'],
-]; /*
-71 Wait a minute, wait a minute. You ain't heard
-nothin' yet! JAZZ SINGER, THE 1927
-72 No wire hangers, ever! MOMMIE DEAREST 1981
-73 Mother of mercy, is this the end of Rico? LITTLE CAESAR 1930
-74 Forget it, Jake, it's Chinatown. CHINATOWN 1974
-75 I have always depended on the kindness of
-strangers.
-STREETCAR NAMED
-DESIRE, A 1951
-76 Hasta la vista, baby. TERMINATOR 2:
-JUDGMENT DAY 1991
-77 Soylent Green is people! SOYLENT GREEN 1973
-78 Open the pod bay doors, HAL. 2001: A SPACE ODYSSEY 1968
-79
-Striker: Surely you can't be serious.
-Rumack: I am serious…and don't call me
-Shirley.
-AIRPLANE! 1980
-80 Yo, Adrian! ROCKY 1976
-81 Hello, gorgeous. FUNNY GIRL 1968
-82 Toga! Toga! NATIONAL LAMPOON'S
-ANIMAL HOUSE 1978
-83 Listen to them. Children of the night. What
-music they make. DRACULA 1931
-84 Oh, no, it wasn't the airplanes. It was Beauty
-killed the Beast. KING KONG 1933
-85 My precious. LORD OF THE RINGS: TWO
-TOWERS, THE 2002
-86 Attica! Attica! DOG DAY AFTERNOON 1975
-87 Sawyer, you're going out a youngster, but
-you've got to come back a star! 42ND STREET 1933
-88
-Listen to me, mister. You're my knight in
-shining armor. Don't you forget it. You're
-going to get back on that horse, and I'm going
-to be right behind you, holding on tight, and
-away we're gonna go, go, go!
-ON GOLDEN POND 1981
-AFI’s 100 Years…100 Movie Quotes Page 4 of 4
-89 Tell 'em to go out there with all they got and
-win just one for the Gipper.
-KNUTE ROCKNE ALL
-AMERICAN 1940
-90 A martini. Shaken, not stirred. GOLDFINGER 1964
-91 Who's on first. NAUGHTY NINETIES,
-THE 1945
-92
-Cinderella story. Outta nowhere. A former
-greenskeeper, now, about to become the
-Masters champion. It looks like a mirac…It's
-in the hole! It's in the hole! It's in the hole!
-CADDYSHACK 1980
-93 Life is a banquet, and most poor suckers are
-starving to death! AUNTIE MAME 1958
-94 I feel the need — the need for speed! TOP GUN 1986
-95 Carpe diem. Seize the day, boys. Make your
-lives extraordinary. DEAD POETS SOCIETY 1989
-96 ["Snap out of it!","MOONSTRUCK","1987"],["My mother thanks you. My father thanks you. My sister thanks you. And I thank you.","YANKEE DOODLE DANDY","1942"],["Nobody puts Baby in a corner.","DIRTY DANCING","1987"],["I'll get you, my pretty, and your little dog, too!", "WIZARD OF OZ, THE", "1939"],["I'm king of the world!", "TITANIC", "1997"]]
-*/
+  [
+    "Wait a minute, wait a minute. You ain't heard nothin' yet!",
+    'JAZZ SINGER, THE',
+    '1927',
+  ],
+  ['No wire hangers, ever!', 'MOMMIE DEAREST', '1981'],
+  ['Mother of mercy, is this the end of Rico?', 'LITTLE CAESAR', '1930'],
+  ["Forget it, Jake, it's Chinatown.", 'CHINATOWN', '1974'],
+  [
+    'I have always depended on the kindness of strangers.',
+    'STREETCAR NAMED DESIRE, A',
+    '1951',
+  ],
+  ['Hasta la vista, baby.', 'TERMINATOR 2: JUDGMENT DAY', '1991'],
+  ['Soylent Green is people!', 'SOYLENT GREEN', '1973'],
+  ['Open the pod bay doors, HAL.', '2001: A SPACE ODYSSEY', '1968'],
+  ["I am serious…and don't call me Shirley.", 'AIRPLANE!', '1980'],
+  ['Yo, Adrian!', 'ROCKY', '1976'],
+  ['Hello, gorgeous.', 'FUNNY GIRL', '1968'],
+  ['Toga! Toga!', "NATIONAL LAMPOON'S ANIMAL HOUSE", '1978'],
+  [
+    'Listen to them. Children of the night. What music they make.',
+    'DRACULA',
+    '1931',
+  ],
+  [
+    "Oh, no, it wasn't the airplanes. It was Beauty killed the Beast.",
+    'KING KONG',
+    '1933',
+  ],
+  ['My precious.', 'LORD OF THE RINGS: TWO TOWERS, THE', '2002'],
+  ['Attica! Attica!', 'DOG DAY AFTERNOON', '1975'],
+  [
+    "Sawyer, you're going out a youngster, but you've got to come back a star!",
+    '42ND STREET',
+    '1933',
+  ],
+  [
+    "Listen to me, mister. You're my knight in shining armor. Don't you forget it. You're going to get back on that horse, and I'm going to be right behind you, holding on tight, and away we're gonna go, go, go!",
+    'ON GOLDEN POND',
+    '1981',
+  ],
+  [
+    "Tell 'em to go out there with all they got and win just one for the Gipper.",
+    'KNUTE ROCKNE ALL AMERICAN',
+    '1940',
+  ],
+  ['A martini. Shaken, not stirred.', 'GOLDFINGER', '1964'],
+  ["Who's on first.", 'NAUGHTY NINETIES, THE', '1945'],
+  [
+    "Cinderella story. Outta nowhere. A former greenskeeper, now, about to become the Masters champion. It looks like a mirac… It's in the hole! It's in the hole! It's in the hole!",
+    'CADDYSHACK',
+    '1980',
+  ],
+  [
+    'Life is a banquet, and most poor suckers are starving to death!',
+    'AUNTIE MAME',
+    '1958',
+  ],
+  ['I feel the need — the need for speed!', 'TOP GUN', '1986'],
+  [
+    'Carpe diem. Seize the day, boys. Make your lives extraordinary.',
+    'DEAD POETS SOCIETY',
+    '1989',
+  ],
+  ['Snap out of it!', 'MOONSTRUCK', '1987'],
+  [
+    'My mother thanks you. My father thanks you. My sister thanks you. And I thank you.',
+    'YANKEE DOODLE DANDY',
+    '1942',
+  ],
+  ['Nobody puts Baby in a corner.', 'DIRTY DANCING', '1987'],
+  [
+    "I'll get you, my pretty, and your little dog, too!",
+    'WIZARD OF OZ, THE',
+    '1939',
+  ],
+  ["I'm king of the world!", 'TITANIC', '1997'],
+];

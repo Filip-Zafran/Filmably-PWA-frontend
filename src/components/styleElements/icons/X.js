@@ -13,14 +13,14 @@ export const X = ({ size }) => {
     >
       <path
         d="M18 6L6 18"
-        className="inactiveIcon"
+        className="activeLogo"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
         d="M6 6L18 18"
-        className="inactiveIcon"
+        className="activeLogo"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

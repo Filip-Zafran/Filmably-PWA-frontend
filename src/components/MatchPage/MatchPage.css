@@ -8,6 +8,13 @@
   align-items: center;
 }
 
+.matchPage__content {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .matchPage__buttons {
   width: 100%;
   margin-top: 30px;

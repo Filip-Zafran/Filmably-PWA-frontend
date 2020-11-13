@@ -2,12 +2,28 @@ import React from 'react';
 import { Check, X } from '../../icons';
 import './ShotsButton.css';
 
-export const ShotsButton = ({ like, active, inactive }) => {
+export const ShotsButton = ({ like, inactive, clickHandler, otherHandler }) => {
   return (
-    <div className={`shotsButBoarder`}>
+    <div className="shotsButton">
       <div
-        className={`shotsButton ${
-          like ? 'shotsButtonLike' : 'shotsButtonDislike'
+        onTouchStart={clickHandler}
+        onTouchEnd={clickHandler}
+        onMouseDown={clickHandler}
+        onMouseUp={otherHandler}
+        className={`shotsButton__boarder ${
+          like ? 'shotsButBoarderLike' : 'shotsButBoarderDislike'
+        }
+    }`}
+      ></div>
+      <div
+        className={`shotsButton__center ${
+          like && inactive
+            ? 'likeInactive'
+            : inactive
+            ? 'dislikeInactive'
+            : like
+            ? 'shotsButtonLike'
+            : 'shotsButtonDislike'
         }`}
       >
         {like ? <Check /> : <X />}
