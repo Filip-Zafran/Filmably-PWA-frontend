@@ -7,6 +7,7 @@ import './Profile.css';
 import Settings from '../styleElements/icons/Settings';
 // import uploadeIcon from './uploadIcon';
 import { Star } from '../styleElements/icons';
+import { LogoActive } from '../styleElements/icons';
 
 export function Profile() {
 	const options = [
@@ -28,12 +29,17 @@ export function Profile() {
 			</div>
 
 			<div profile__header-container>
-				<img className='profile__profile-picture' src='https://shmector.com/_ph/4/270476539.png' alt='new' />
+				<img
+					className='profile__profile-picture'
+					src='https://boroondaraosteopathy.com.au/wp-content/uploads/2018/05/20180313_120911-2-1024x1024.jpg'
+					alt='new'
+				/>
 				{/* <uploadeIcon /> */}
 			</div>
 			<div className='profile__name-box'>
 				<h2>Linda Bear</h2>
 				<h3>
+					<LogoActive />
 					26 matches{' '}
 					<span id='profile__star'>
 						{' '}
@@ -66,6 +72,7 @@ export function Profile() {
 					<p>Likes</p>
 					<p className='profile__show-all-text'>Show All ></p>
 				</div>
+
 				<div className='profile__likes-picture'>
 					<img
 						className='profile__likes-picture'
@@ -91,9 +98,21 @@ export function Profile() {
 					<p className='profile__show-all-text'>Show All ></p>
 				</div>
 				<div className='profile__matches-picture'>
-					<img className='profile__likes-picture' src='https://shmector.com/_ph/4/270476539.png' alt='new' />
-					<img className='profile__likes-picture' src='https://shmector.com/_ph/4/270476539.png' alt='new' />
-					<img className='profile__likes-picture' src='https://shmector.com/_ph/4/270476539.png' alt='new' />
+					<img
+						className='profile__likes-picture'
+						src='https://vignette.wikia.nocookie.net/marveldatabase/images/0/00/Deadpool_%28film%29_poster_009.jpg/revision/latest?cb=20160115014652'
+						alt='new'
+					/>
+					<img
+						className='profile__likes-picture'
+						src='https://upload.wikimedia.org/wikipedia/en/0/04/X-Men_-_Apocalypse.jpg'
+						alt='new'
+					/>
+					<img
+						className='profile__likes-picture'
+						src='https://tse1.mm.bing.net/th?id=OIP.y20AfVtBWiqW7JGF6IVeLwHaLP&pid=Api'
+						alt='new'
+					/>
 				</div>
 			</div>
 
