@@ -11,6 +11,10 @@
   font-weight: 600;
 }
 
+.letsStartButton:active {
+  transform: scale(0.95);
+}
+
 .letsStartButton__internal {
   background: var(--prime-500);
   display: flex;
