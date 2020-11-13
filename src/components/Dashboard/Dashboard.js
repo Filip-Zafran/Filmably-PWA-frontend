@@ -3,7 +3,12 @@ import { Route, BrowserRouter as Router, Switch, useHistory, Link } from 'react-
 // import Movies from './Movies';
 import Friends from '../Friends/Friends';
 import MatchPage from '../MatchMovies/MatchPage';
-import { Profile } from '../Profile';
+import { Profile } from '../Profile/Profile';
+import { Start } from '../Start/Start'
+import store from '../../Redux/store';
+import { BottomNav } from '../BottomNav/index';
+import { fetchUser } from '../../Redux/userSlice'
+
 
 const Dashboard = () => {
 	//gets the logged in user and stores it in the REDUX store

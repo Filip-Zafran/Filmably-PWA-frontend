@@ -39,6 +39,7 @@ export default userSlice.reducer;
 //import {useSelector} from 'react-redux';
 //import {selectUser} from '../Redux/userSlice';
 //const user = useSelector(selectUser);
+//maybe it could be  const user = useSelector(selectUser());
 
 export const selectUser = (state) =>
   state.user ? state.user.entities[0] : null;

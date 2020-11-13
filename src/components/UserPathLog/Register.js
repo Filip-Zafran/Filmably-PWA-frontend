@@ -6,8 +6,8 @@ function Registration() {
 	const [values, setInput] = useState('');
 	const [error, setError] = useState();
 
-	const [values, setInput] = useState('')
-	const [error, setError] = useState();
+	// const [values, setInput] = useState('')
+	// const [error, setError] = useState();
 
 	// func expression to post the data gathered in the inputfield
 	const submit = () => {
