@@ -5,3 +5,29 @@
   height: 85vh;
   width: 100vw;
 }
+
+.start__textBox {
+  position: absolute;
+  font-size: 22px;
+  font-weight: 200;
+  line-height: 30px;
+  color: var(--light-100);
+  width: 75vw;
+}
+
+.start__quote {
+  margin-bottom: 20px;
+}
+
+.start__space {
+  height: 80px;
+}
+
+.start__noDisplay {
+  margin-top: 20px;
+  color: rgba(0, 0, 0, 0);
+}
+
+.start > a {
+  position: absolute;
+}
