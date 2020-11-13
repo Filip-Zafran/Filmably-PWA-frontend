@@ -15,7 +15,7 @@ export const fetchUser = createAsyncThunk('user/fetchUser', async () => {
     });
     return response.data;
   } catch (err) {
-    return err;
+    return 'no user';
   }
 });
 
