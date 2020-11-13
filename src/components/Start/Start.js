@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Start.css';
 import { CirclesBackground } from '../../components/styleElements/CirclesBackground';
 import { LetsStartButton } from '../../components/styleElements/buttons/LetsStartButton';
@@ -6,7 +7,9 @@ import { LetsStartButton } from '../../components/styleElements/buttons/LetsStar
 export const Start = () => {
   return (
     <div className="start">
-      <LetsStartButton label="Let's start" />
+      <Link to="/MatchPage">
+        <LetsStartButton label="Let's start" />
+      </Link>
       <CirclesBackground />
     </div>
   );
