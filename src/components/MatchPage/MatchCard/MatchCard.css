@@ -1,0 +1,17 @@
+.matchCard {
+  display: flex;
+  justify-content: center;
+  width: 100vw;
+}
+
+.matchCard__current {
+  background-size: cover;
+  overflow: none;
+  width: 282px;
+  height: 364px;
+  border-radius: 12px;
+}
+
+.matchCard__title {
+  display: none;
+}

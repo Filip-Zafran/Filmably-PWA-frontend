@@ -41,7 +41,14 @@
   background: var(--error-500-25);
 }
 
-.shotsButton__boarder:active {
+.shotsButBoarderLike__Active {
   transform: scale(1.33);
   transition: transform 0.3s linear;
+  background: var(--success-500-25);
+}
+
+.shotsButBoarderDislike__Active {
+  transform: scale(1.33);
+  transition: transform 0.3s linear;
+  background: var(--error-500-25);
 }
