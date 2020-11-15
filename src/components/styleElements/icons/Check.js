@@ -14,10 +14,10 @@ export function Check({ width, height }) {
     >
       <path
         d="M17 1L6 12L1 7"
-        className="inactiveIcon"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        className="activeLogo"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

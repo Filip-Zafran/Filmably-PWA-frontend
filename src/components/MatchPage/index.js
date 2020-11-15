@@ -1,0 +1,1 @@
+export { MatchPage } from './MatchPage';

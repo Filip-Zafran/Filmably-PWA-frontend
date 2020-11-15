@@ -1,5 +1,5 @@
-import React from "react";
-import "./RippleButton.css";
+import React from 'react';
+import './RippleButton.css';
 
 /*const styleRipple = {
   position: "relative",
@@ -45,15 +45,16 @@ export class Ripple extends React.Component {
   showRipple = (e) => {
     const rippleContainer = e.currentTarget;
     const size = rippleContainer.offsetWidth;
-    const pos = rippleContainer.getBoundingClientRect();
+    /*const pos = rippleContainer.getBoundingClientRect();
     const x = e.pageX - pos.x - size / 2;
-    const y = e.pageY - pos.y - size / 2;
+    const y = e.pageY - pos.y - size / 2;*/
 
     const spanStyles = {
-      top: y + "px",
-      left: x + "px",
-      height: size + "px",
-      width: size + "px",
+      /*top: x + 'px',
+      left: y + 'px',*/
+      position: 'fixed',
+      height: size + 'px',
+      width: size + 'px',
     };
     const count = this.state.count + 1;
     this.setState({
@@ -74,7 +75,7 @@ export class Ripple extends React.Component {
       return spanArray.map((key, index) => {
         return (
           <span
-            key={"spanCount_" + index}
+            key={'spanCount_' + index}
             className=""
             style={{ ...spanStyles[key] }}
           ></span>
@@ -86,11 +87,11 @@ export class Ripple extends React.Component {
   };
 
   render() {
-    const { children = null, classes = "", onClickHandler = null } = this.props;
+    const { children = null, classes = '', onClickHandler = null } = this.props;
     return (
       <div
         ref="targetElement"
-        className={"ripple " + classes}
+        className={'ripple ' + classes}
         onClick={onClickHandler}
       >
         {children}
