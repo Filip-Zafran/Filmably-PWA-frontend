@@ -6,16 +6,15 @@ import { dummyData } from './dummyData';
 
 export const MatchCard = ({ decision, reset }) => {
   const [currentFilm, setCurrentFilm] = useState({
-    id: 'tt0047478',
-    rank: '19',
-    title: 'Seven Samurai',
-    fullTitle: 'Seven Samurai (1954)',
-    year: '1954',
-    image:
-      'https://imdb-api.com/images/original/MV5BOWE4ZDdhNmMtNzE5ZC00NzExLTlhNGMtY2ZhYjYzODEzODA1XkEyXkFqcGdeQXVyNTAyODkwOQ@@._V1_Ratio0.7015_AL_.jpg',
-    crew: 'Akira Kurosawa (dir.), Toshirô Mifune, Takashi Shimura',
-    imDbRating: '8.6',
-    imDbRatingCount: '311516',
+    id: '',
+    rank: '',
+    title: '',
+    fullTitle: '',
+    year: '',
+    image: '',
+    crew: '',
+    imDbRating: '',
+    imDbRatingCount: '',
   });
   const [filmArray, setFilmArray] = useState([]);
 

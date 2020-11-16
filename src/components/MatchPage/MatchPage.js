@@ -39,7 +39,8 @@ export function MatchPage() {
   }, []);
 
   //create useEffect that finds the location of the buttons on mount
-  //when mouseUp or touchEnd happens over location of buttons preform setDecision
+  //when the mouse or touch is no longer over the button, the verdict changes to 'neutral'
+  //decision is only set when a mouseUp or touchEnd event happens while over a button
 
   return (
     <div className="matchPage">

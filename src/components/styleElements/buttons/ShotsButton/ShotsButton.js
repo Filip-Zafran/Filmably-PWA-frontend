@@ -12,7 +12,10 @@ export const ShotsButton = ({
   return (
     <div className="shotsButton">
       <div
-        /*onTouchStart={clickHandler}*/
+        onTouchStart={like ? clickHandler('like') : clickHandler('dislike')}
+        onTouchEnd={
+          like ? otherClickHandler('like') : otherClickHandler('dislike')
+        }
         onMouseDown={like ? clickHandler('like') : clickHandler('dislike')}
         onMouseUp={
           like ? otherClickHandler('like') : otherClickHandler('dislike')
