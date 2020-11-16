@@ -35,14 +35,14 @@ const App = () => {
 				<PrivateRoute path='/dashboard'>
 					<Dashboard />
 				</PrivateRoute>
-				<PrivateRoute path='/profile'>
+				{/* <PrivateRoute path='/profile'>
 					<Profile />
-				</PrivateRoute>
+				</PrivateRoute> */}
 
 				<Route exact path='/findpeople'>
 					<FindPeople />
 				</Route>
-			
+
 				<Route exact path='/friends'>
 					<Friends />
 				</Route>
