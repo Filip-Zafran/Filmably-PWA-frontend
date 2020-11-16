@@ -10,7 +10,7 @@
     y="1.75"
     width="21"
     height="21"
-    rx="10.25"
+    rx="3"
     fill="#050505"
     stroke="#050505"
     stroke-width="1.5"
@@ -28,4 +28,4 @@
     stroke-width="2"
     stroke-linejoin="round"
   />
-</svg>;
+</svg>
