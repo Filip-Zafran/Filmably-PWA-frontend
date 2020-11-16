@@ -9,12 +9,12 @@ export function BottomNav() {
 
   return (
     <div className="bottomNav">
-      <Link to="/Profile">
+      <Link to="/profile">
         <Ripple classes="bottomNavButton">
-          <Star active={location.pathname === '/Profile' ? true : false} />
+          <Star active={location.pathname === '/profile' ? true : false} />
           <p
             className={
-              location.pathname === '/Profile'
+              location.pathname === '/profile'
                 ? 'bottomNav__activeLabel'
                 : 'bottomNav__label'
             }
@@ -25,10 +25,10 @@ export function BottomNav() {
       </Link>
       <Link to="/MatchPage">
         <Ripple classes="bottomNavButton">
-          <Thunder active={location.pathname === '/MatchPage' ? true : false} />
+          <Thunder active={location.pathname === '/matchPage' ? true : false} />
           <p
             className={
-              location.pathname === '/MatchPage'
+              location.pathname === '/matchPage'
                 ? 'bottomNav__activeLabel'
                 : 'bottomNav__label'
             }
@@ -37,12 +37,12 @@ export function BottomNav() {
           </p>
         </Ripple>
       </Link>
-      <Link to="/Friends">
+      <Link to="/friends">
         <Ripple classes="bottomNavButton">
-          <Heart active={location.pathname === '/Friends' ? true : false} />
+          <Heart active={location.pathname === '/friends' ? true : false} />
           <p
             className={
-              location.pathname === '/Friends'
+              location.pathname === '/friends'
                 ? 'bottomNav__activeLabel'
                 : 'bottomNav__label'
             }

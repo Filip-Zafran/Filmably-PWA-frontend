@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import axios from 'axios';
+import Axios from 'axios';
 
 
 export default function FindPeople() {
@@ -12,46 +12,46 @@ export default function FindPeople() {
     //this GET route should gather the last three registered people 
     useEffect(() => {
         console.log('getpeople')
-        axios
-            .get('/users.json')
-            .then((data) => {
-                if (data) {
-                    console.log("people", people)
-                    setPeople(data.people)
-                    //should render the data (three last people registered) in the retur statement on mount 
-                    //should be an array
-
+        Axios({
+            // origin: "http://localhost:3000/Friends",
+            method: "GET",
+            url: "http://localhost:5000/authenticate/Friends/users.json"
+        })
+            .then((res) => {
+                if (res.data) {
+                    setPeople(res.data)
+                    console.log(res.data)
                 } else {
                     setError(true)
                 }
-            })
+            });
     }, [])
 
     //when user looks for friend on an input field, should do a post request 
 
-    useEffect(() => {
-        if (searchPeople === undefined) return;
-        let ignore = false;
-        console.log('search')
-        // console.log('values', values.searchFriends)
-        axios
-            .get(`/findProfile/${searchPeople}`,)
-            .then((data) => {
-                // no match found btw the typed Char and the list of people
-                if (data.length === 0) {
-                    setPeople(people)
-                } else if (!ignore && data.data) {
-                    //if match found, should send name, pictures.... to DOM
-                    setPeople(data.data)
-                } else if (!data.data && !ignore) {
-                    //if none of the previous conditions are met, it means there has been an issue somewhere
-                    setError(true)
-                }
-            })
-        return () => {
-            ignore = true;
-        };
-    }, [searchPeople])
+    // useEffect(() => {
+    //     if (searchPeople === undefined) return;
+    //     let ignore = false;
+    //     console.log('search')
+    //     // console.log('values', values.searchFriends)
+    //     Axios
+    //         .get(`/findProfile/${searchPeople}`,)
+    //         .then((data) => {
+    //             // no match found btw the typed Char and the list of people
+    //             if (data.length === 0) {
+    //                 setPeople(people)
+    //             } else if (!ignore && data.data) {
+    //                 //if match found, should send name, pictures.... to DOM
+    //                 setPeople(data.data)
+    //             } else if (!data.data && !ignore) {
+    //                 //if none of the previous conditions are met, it means there has been an issue somewhere
+    //                 setError(true)
+    //             }
+    //         })
+    //     return () => {
+    //         ignore = true;
+    //     };
+    // }, [searchPeople])
 
 
     const handleChange = (e) => {
@@ -67,7 +67,7 @@ export default function FindPeople() {
             {people && people.map(person => {
                 return (
                     <div>
-                        <p name='personCard' key={person.id} > {person.first} {person.last}</p>
+                        <p name='personCard' key={person._id} > {person.username}</p>
                         <img href={person.href} />
                     </div>
                 )
@@ -82,7 +82,6 @@ export default function FindPeople() {
             })} */}
             {errors && <div> Woops, there was an error loading your search, please try again!</div>}
 
-            <div ></div>
         </React.Fragment>
     )
 

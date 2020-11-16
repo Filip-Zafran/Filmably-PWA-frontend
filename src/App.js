@@ -9,6 +9,7 @@ import FindPeople from './components/Friends/FindPeople'
 import OtherProfile from './components/Friends/OtherProfile';
 import Registration from './components/UserPathLog/Register';
 import Resetpw from './components/UserPathLog/Resetpw';
+import Friends from './components/Friends/Friends.js'
 import { HashRouter, Link } from "react-router-dom";
 
 // import Profile from './components/Profile'
@@ -21,7 +22,16 @@ const App = () => {
 	return (
 		<Router>
 			<Switch>
-				{/* <a className="logoref" href="http://localhost:3000/welcome#/"> </a> */}
+				<Route exact path="/" >
+					<Login />
+				</Route>
+
+				<Route exact path="/register">
+					<Registration />
+				</Route>
+				<Route exact path="/resetpw">
+					<Resetpw />
+				</Route>
 				<PrivateRoute path='/dashboard'>
 					<Dashboard />
 				</PrivateRoute>
@@ -32,17 +42,12 @@ const App = () => {
 				<Route exact path='/findpeople'>
 					<FindPeople />
 				</Route>
-				<Route exact path='/user/:id' component={OtherProfile} />
-
-				<Route exact path="/" >
-					<Login />
+			
+				<Route exact path='/friends'>
+					<Friends />
 				</Route>
-
-				<Route exact path="/register">
-					<Registration />
-				</Route>
-				<Route exact path="/resetpw">
-					<Resetpw />
+				<Route exact path='/user/:id'>
+					<OtherProfile />
 				</Route>
 
 			</Switch>

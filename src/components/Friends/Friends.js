@@ -1,9 +1,24 @@
 import React from 'react';
+import FindPeople from './FindPeople';
+import { BottomNav } from "../BottomNav/BottomNav"
+import FriendsList from './FriendsList'
 
 export default function Friends() {
 
 
-	return <p> Friends</p>;
+	return (
+		<React.Fragment>
+			<p> Friends</p>
+			<FindPeople />
+
+
+
+			<p>My friends</p>
+
+			<BottomNav />
+		</React.Fragment>
+
+	)
 }
 
 

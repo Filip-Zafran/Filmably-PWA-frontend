@@ -61,7 +61,6 @@ export default function Login() {
 				/>
 				<button onClick={login}> Login </button>
 			</div >
-			{/* <Route path='/register'></Route> */}
 			<Link to="/register">Register</Link>
 			<Link to="/resetpw"> Reset PW</Link>
 		</React.Fragment>
