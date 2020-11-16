@@ -64,7 +64,6 @@ export function Profile() {
 				<OnClickTextEdit />
 
 				<label> Age Range: DROPDOWN </label>
-				{/* <Dropdown options={options} onChange={this._onSelect} value={defaultOption} placeholder='Select your age range' /> */}
 			</div>
 
 			<div id='profile__likes-container'>
@@ -73,10 +72,10 @@ export function Profile() {
 					<p className='profile__show-all-text'>Show All ></p>
 				</div>
 
-				<div className='profile__likes-picture'>
+				<div className='profile__likes-container'>
 					<img
 						className='profile__likes-picture'
-						src='https://tse1.mm.bing.net/th?id=OIP.u62Q_Fs0d15An9ZB4SEYwgHaK3&pid=Api'
+						src='https://img.apmcdn.org/86805e8c22499c4214dd67d19b4987ec3a73eecd/uncropped/930f1a-20150612-pulp-fiction-soundtrack-album.jpg'
 						alt='new'
 					/>
 					<img
@@ -97,7 +96,7 @@ export function Profile() {
 					<p>Top Matches</p>
 					<p className='profile__show-all-text'>Show All ></p>
 				</div>
-				<div className='profile__matches-picture'>
+				<div className='profile__likes-container'>
 					<img
 						className='profile__likes-picture'
 						src='https://vignette.wikia.nocookie.net/marveldatabase/images/0/00/Deadpool_%28film%29_poster_009.jpg/revision/latest?cb=20160115014652'

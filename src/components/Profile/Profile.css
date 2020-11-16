@@ -14,6 +14,7 @@ top: 0;
 z-index: -1;
 width: 100%;
 height: 200px;
+object-fit: cover;
 }
 
 
@@ -71,7 +72,6 @@ height: 200px;
 
  #profile__matches-container {
 top: 500px;
-margin-bottom: ;
         }
 
 .profile__text-container {
@@ -80,17 +80,6 @@ margin-bottom: ;
     width: 99%;
        padding-bottom: 20px;
             }
-
-
-
-/* .profile__likes-picture,
-.profile__matches-picture {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
- 
-} */
-
 
 
   .profile__footer {  
@@ -109,7 +98,7 @@ margin-bottom: ;
     left: 15px;
     position: relative;
   }
-
+  
 
   .profile__footer >h1 {
     padding: 5px;
@@ -154,46 +143,16 @@ border-radius: 30px;
 }
 
 
-
-/* LONG PRESS
-     figure:hover img {
-       transform: translate3d(0, 0, 0) scale(1);
-       opacity: .4;
-     } */
-
-
-     .profile__likes-picture,
-     .profile__matches-picture {
-       /* display: flex;
-       flex-direction: row; */
-       justify-content: space-evenly;
-       position: relative;
-       /* left: 48px; */
-       height: 110px;
-       width: auto;
-       border-radius: 15px;
-       /* clip: rect(10px, 300px, 300px, 3px); */
-       margin-left: 10px;
+.profile__likes-picture,
+.profile__matches-picture {
+    height: 120px;
+    width: 100px;
+    border-radius: 15px;
+    margin-left: 5px;
+    object-fit: cover;
      }
-
-     */
-
-
-    .profile__likes-picture {
-      display: grid;
-      grid-template-columns: repeat(3, auto);
-
+   
+.profile__likes-container {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
     }
-
-      .profile__likes-picture {
-            overflow: hidden;
-        position: relative;
-            transition: background-color .5s;
-      }
-
-        /* img {
-          width: calc(100% + 60px);
-          opacity: .7;
-          transform: translate3d(0, -20px, 0) scale(1.12);
-          transition: all .5s;
-        } */
