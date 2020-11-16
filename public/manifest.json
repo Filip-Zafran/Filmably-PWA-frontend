@@ -1,10 +1,10 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Filmably",
+  "name": "Filmably",
   "icons": [
     {
-      "src": "video-tape.svg",
-      "sizes": "64x64 32x32 24x24 16x16",
+      "src": "Icon.svg",
+      "sizes": "24x24",
       "type": "image/svg"
     }
   ],
