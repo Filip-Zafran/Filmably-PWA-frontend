@@ -11,8 +11,6 @@ import Registration from './components/UserPathLog/Register';
 import Resetpw from './components/UserPathLog/Resetpw';
 import { HashRouter } from 'react-router-dom';
 
-import { MatchPage } from './components/MatchPage';
-
 // import Profile from './components/Profile'
 // import { TestLogin } from './components/TestLogin/TestLogin';
 // import { CirclesBackground } from "./components/styleElements/CirclesBackground";
@@ -43,7 +41,7 @@ const App = () => {
         </Route>
         {/* <HashRouter> */}
         <Route path="/">
-          <MatchPage />
+          <Login />
         </Route>
         {/* <Route exact path="/register" component={Registration}> Register </Route>
 				<Route exact path="/resetpw" component={Resetpw}> Reset PW</Route> */}
