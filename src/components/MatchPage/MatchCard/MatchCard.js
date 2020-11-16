@@ -4,7 +4,7 @@ import './MatchCard.css';
 //Dummy Data can be removed when backend route has been built
 import { dummyData } from './dummyData';
 
-export const MatchCard = () => {
+export const MatchCard = ({ decision, reset }) => {
   const [currentFilm, setCurrentFilm] = useState({
     id: 'tt0047478',
     rank: '19',
@@ -48,6 +48,20 @@ export const MatchCard = () => {
       isMounted.current = true;
     }
   }, [filmArray]);
+
+  //when a decision is made
+  useEffect(() => {
+    if (decision === 'like') {
+      console.log('enter like: ' + filmArray[0]['title']);
+      setFilmArray(filmArray.slice(1));
+      reset();
+    }
+    if (decision === 'dislike') {
+      console.log('enter dislike: ' + filmArray[0]['title']);
+      setFilmArray(filmArray.slice(1));
+      reset();
+    }
+  }, [decision, reset, filmArray]);
 
   return (
     <div className="matchCard">
