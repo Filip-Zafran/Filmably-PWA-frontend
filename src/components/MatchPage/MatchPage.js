@@ -22,7 +22,6 @@ export function MatchPage() {
 
   return (
     <div className="matchPage">
-      <CirclesBackground />
       <div className="matchPage__content">
         <MatchCard />
         <div className="matchPage__buttons">

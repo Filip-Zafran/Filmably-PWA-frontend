@@ -2,16 +2,37 @@
   display: flex;
   justify-content: center;
   width: 100vw;
+  height: 390px;
 }
 
 .matchCard__current {
+  margin-top: 26px;
   background-size: cover;
   overflow: none;
   width: 282px;
   height: 364px;
+  border: 2px solid var(--dark-66-20);
   border-radius: 12px;
+  z-index: 1;
 }
 
 .matchCard__title {
   display: none;
+}
+
+.matchCard__bg1 {
+  margin-top: 13px;
+  position: absolute;
+  width: 260px;
+  height: 318px;
+  border-radius: 12px;
+  background: var(--dark-66-20);
+}
+
+.matchCard__bg2 {
+  position: absolute;
+  width: 234px;
+  height: 318px;
+  border-radius: 12px;
+  background: var(--dark-36-20);
 }

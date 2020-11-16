@@ -20,6 +20,10 @@ a {
 :root {
   /* New color scheme align with the design file */
 
+  /*colors added for the matchPage*/
+  --dark-66-20: rgba(66, 66, 66, 0.2);
+  --dark-36-20: rgba(36, 36, 36, 0.2);
+
   --dark-900: rgba(5, 5, 5, 1);
   --dark-700: rgba(14, 14, 14, 1);
   --dark-500: rgba(22, 22, 22, 1);
