@@ -1,13 +1,11 @@
 import React from 'react';
-// import Dropdown from 'react-dropdown';
-// import 'react-dropdown/style.css'
-import OnClickTextEdit from './OnClickTextEdit';
 import { BottomNav } from '../BottomNav';
 import './Profile.css';
 import Settings from '../styleElements/icons/Settings';
 // import uploadeIcon from './uploadIcon';
 import { Star } from '../styleElements/icons';
 import { LogoActive } from '../styleElements/icons';
+import { Link, useLocation } from 'react-router-dom';
 
 export function Profile() {
 	const options = [
@@ -18,14 +16,16 @@ export function Profile() {
 		'golden age (40 - 50)',
 		'old yeller (50+)'
 	];
-	const defaultOption = options[0];
 
-	const testMovieArray = [];
+	const location = useLocation();
 
 	return (
 		<div className='profile__container'>
 			<div id='profile__settings'>
-				<Settings />
+				<Link to='/ProfileEdit'>
+					<Settings active={location.pathname === '/ProfileEdit'} />
+					<p className={location.pathname === '/ProfileEdit'} />
+				</Link>
 			</div>
 
 			<div profile__header-container>
@@ -34,36 +34,19 @@ export function Profile() {
 					src='https://boroondaraosteopathy.com.au/wp-content/uploads/2018/05/20180313_120911-2-1024x1024.jpg'
 					alt='new'
 				/>
-				{/* <uploadeIcon /> */}
+				{/* <uploadIcon /> */}
 			</div>
 			<div className='profile__name-box'>
 				<h2>Linda Bear</h2>
 				<h3>
 					<LogoActive />
 					26 matches{' '}
-					<span id='profile__star'>
-						{' '}
-						<Star id='profile__star2' />
-					</span>{' '}
+					<span>
+						<Star width={20} height={20} />
+					</span>
 					103 likes{' '}
 				</h3>
 				<h4>“It’s only after we’ve lost everything that we’re free to do anything.”</h4>
-			</div>
-
-			<div className='profile__info-container'>
-				<label> First Name:</label>
-				<OnClickTextEdit />
-
-				<label> Last Name:</label>
-				<OnClickTextEdit />
-
-				<label> Short Bio</label>
-				<OnClickTextEdit />
-
-				<label> e-mail:</label>
-				<OnClickTextEdit />
-
-				<label> Age Range: DROPDOWN </label>
 			</div>
 
 			<div id='profile__likes-container'>
@@ -123,7 +106,7 @@ export function Profile() {
 				<hr className='profile__horizontal-line' />
 
 				<div className='profile__footer-text'>
-					<h1>Black List </h1> <p>></p>
+					<h1>My Black List </h1> <p>></p>
 				</div>
 			</div>
 
