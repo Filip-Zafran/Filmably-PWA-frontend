@@ -1,3 +1,8 @@
+.shotsButton {
+  width: 92px;
+  height: 92px;
+}
+
 .shotsButtonLike {
   background: var(--success-500);
 }
