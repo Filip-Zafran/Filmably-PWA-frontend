@@ -1,21 +1,13 @@
 import React from 'react';
 import './Profile.css';
 import { Settings } from '../styleElements/icons/Settings';
+import { Link, useLocation } from 'react-router-dom';
 // import uploadeIcon from './uploadIcon';
 import { Star } from '../styleElements/icons';
 import { LogoActive } from '../styleElements/icons';
-import { Link, useLocation } from 'react-router-dom';
+import { ChevronRight } from '../styleElements/icons';
 
-export function Profile() {
-	const options = [
-		'newb ( < 18)',
-		'barely legal (18 - 21)',
-		'generation z (22 - 30)',
-		'midlife crisis (30 - 40)',
-		'golden age (40 - 50)',
-		'old yeller (50+)'
-	];
-
+export function Profile(size) {
 	const location = useLocation();
 
 	return (
@@ -23,7 +15,6 @@ export function Profile() {
 			<div id='profile__settings'>
 				<Link to='/ProfileEdit'>
 					<Settings active={location.pathname === '/ProfileEdit'} />
-					{/* <p className={location.pathname === '/ProfileEdit'} /> */}
 				</Link>
 			</div>
 
@@ -33,17 +24,14 @@ export function Profile() {
 					src='https://boroondaraosteopathy.com.au/wp-content/uploads/2018/05/20180313_120911-2-1024x1024.jpg'
 					alt='new'
 				/>
-				{/* <uploadIcon /> */}
 			</div>
 			<div className='profile__name-box'>
 				<h2>Linda Bear</h2>
 				<h3>
-					<LogoActive />
-					26 matches{' '}
-					<span>
-						<Star width={20} height={20} />
-					</span>
-					103 likes{' '}
+					<LogoActive size={13} />
+					&nbsp;26 matches &nbsp; &nbsp;
+					<Star size={13} />
+					&nbsp;103 likes
 				</h3>
 				<h4>“It’s only after we’ve lost everything that we’re free to do anything.”</h4>
 			</div>
@@ -51,7 +39,11 @@ export function Profile() {
 			<div id='profile__likes-container'>
 				<div className='profile__text-container'>
 					<p>Likes</p>
-					<p>Show All </p>
+					<p className='profile__show-all'>Show All </p>
+
+					<Link to='/LikedMovies'>
+						<ChevronRight size={15} active={location.pathname === '/LikedMovies'} />
+					</Link>
 				</div>
 
 				<div className='profile__likes-container'>
@@ -76,7 +68,10 @@ export function Profile() {
 			<div id='profile__matches-container'>
 				<div className='profile__text-container'>
 					<p>Top Matches</p>
-					<p>Show All </p>
+					<p className='profile__show-all'>Show All </p>
+					<Link to='/TopMatches'>
+						<ChevronRight size={15} active={location.pathname === '/TopMatches'} />
+					</Link>
 				</div>
 				<div className='profile__likes-container'>
 					<img
@@ -99,13 +94,13 @@ export function Profile() {
 
 			<div className='profile__footer'>
 				<div className='profile__footer-text'>
-					<h1>Friends </h1> <p>></p>
+					<h1>Friends </h1> <ChevronRight />
 				</div>
 
 				<hr className='profile__horizontal-line' />
 
 				<div className='profile__footer-text'>
-					<h1>My Black List </h1> <p>></p>
+					<h1>My Black List </h1> <ChevronRight />
 				</div>
 			</div>
 		</div>
