@@ -2,7 +2,7 @@ export const movieQuotes = [
   ['Frankly, my dear, I don’t give a damn.', 'GONE WITH THE WIND', '1939'],
   ["I'm going to make him an offer he can't refuse.", 'GODFATHER, THE', '1972'],
   [
-    "You don't understand! I coulda had class. I coulda been a contender. I could've been somebody, instead of a bum, which is what I am.",
+    "You don't understand! I coulda had class. I coulda been a contender.",
     'ON THE WATERFRONT',
     '1954',
   ],
@@ -61,10 +61,11 @@ export const movieQuotes = [
     'TO HAVE AND HAVE NOT',
     '1944',
   ],
-  ["You're gonna need a bigger boat. JAWS 1975"][
-    ("Badges? We ain't got no badges! We don't need no badges! I don't have to show you any stinking badges!",
+  ["You're gonna need a bigger boat. JAWS 1975"],
+  [
+    "Badges? We ain't got no badges! We don't need no badges! I don't have to show you any stinking badges!",
     'TREASURE OF THE SIERRA MADRE, THE',
-    '1948')
+    '1948',
   ],
   ["I'll be back.", 'TERMINATOR, THE', '1984'],
   [
@@ -186,22 +187,12 @@ export const movieQuotes = [
     '1933',
   ],
   [
-    "Listen to me, mister. You're my knight in shining armor. Don't you forget it. You're going to get back on that horse, and I'm going to be right behind you, holding on tight, and away we're gonna go, go, go!",
-    'ON GOLDEN POND',
-    '1981',
-  ],
-  [
     "Tell 'em to go out there with all they got and win just one for the Gipper.",
     'KNUTE ROCKNE ALL AMERICAN',
     '1940',
   ],
   ['A martini. Shaken, not stirred.', 'GOLDFINGER', '1964'],
   ["Who's on first.", 'NAUGHTY NINETIES, THE', '1945'],
-  [
-    "Cinderella story. Outta nowhere. A former greenskeeper, now, about to become the Masters champion. It looks like a mirac… It's in the hole! It's in the hole! It's in the hole!",
-    'CADDYSHACK',
-    '1980',
-  ],
   [
     'Life is a banquet, and most poor suckers are starving to death!',
     'AUNTIE MAME',
