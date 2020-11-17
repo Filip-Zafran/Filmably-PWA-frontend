@@ -24,7 +24,7 @@ export function Profile() {
 			<div id='profile__settings'>
 				<Link to='/ProfileEdit'>
 					<Settings active={location.pathname === '/ProfileEdit'} />
-					<p className={location.pathname === '/ProfileEdit'} />
+					{/* <p className={location.pathname === '/ProfileEdit'} /> */}
 				</Link>
 			</div>
 

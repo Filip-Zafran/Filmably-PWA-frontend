@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import BottomNav from '../BottomNav'
+import {BottomNav} from '../BottomNav'
 
 export function ProfileEdit() {
 
