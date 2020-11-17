@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
+import { HashRouter, Link } from "react-router-dom";
+import OtherProfile from './OtherProfile';
 
-
-export default function FindPeople() {
+export default function FindPeople(props) {
+    console.log("props below unction", props)
     const [errors, setError] = useState(false);
     const [people, setPeople] = useState([])
     const [searchPeople, setSearchPeople] = useState()
+    const [otherID, setOtherID] = useState('')
 
     // console.log('I am finding friends')
     // useEffect is there in order to make the request when component mount
@@ -64,33 +67,34 @@ export default function FindPeople() {
         setSearchPeople(e.target.value)
     }
 
+    const redirectPage = e => {
+        // console.log(e.target.parentElement.name)
+        // let otherId = e.target.parentElement.name;
+        // setOtherID(e.target.parentElement.name)
+        // console.log(e.target.parentElement.name)
+        props.onChange(e.target.parentElement.name)
 
+    }
+    console.log(otherID)
     return (
         <React.Fragment>
             <h2>Find friends!</h2>
             <input type='text' name='searchFriends' onChange={handleChange} />
             <button >Search</button>
-            {/* <h3>Latest register</h3> */}
+
             {people && people.map(person => {
+
                 return (
-                    <div key={person._id}>
-                        <p name='personCard'  > {person.username}</p>
+                    // href = { "http://localhost:3000/user/:" + person._id }
+                    // to={"user/:" + person._id}
+                    <Link key={person._id} name={person._id} onClick={e => redirectPage(e)} >
+                        <p name={person._id} >{person.username}</p>
                         <img href={person.href} />
-                    </div>
+                    </Link>
                 )
             })}
-            {/* <h3>Your search:</h3>
-            {searchPeople && searchPeople.map(searchPerson => {
-                return (
-                    <div>
-                        <p name='personCard' key={searchPerson.id} > {searchPerson.first} {searchPerson.last}</p>
-                        <img href={searchPerson.href} />
-                    </div>
-                )
-            })} */}
-            {errors && <div> Woops, there was an error loading your search, please try again!</div>}
-
-        </React.Fragment>
+            { errors && <div> Woops, there was an error {errors} loading your search, please try again!</div>}
+        </React.Fragment >
     )
 
 

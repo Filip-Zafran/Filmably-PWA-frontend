@@ -18,7 +18,9 @@ import { HashRouter, Link } from "react-router-dom";
 // import { BottomNav } from "./components/BottomNav";
 
 
-const App = () => {
+const App = (props) => {
+	console.log("props in app", props)
+
 	return (
 		<Router>
 			<Switch>
