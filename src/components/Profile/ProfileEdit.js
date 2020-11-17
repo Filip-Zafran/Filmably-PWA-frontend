@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import {BottomNav} from '../BottomNav'
+
 
 export function ProfileEdit() {
 
@@ -10,46 +10,43 @@ export function ProfileEdit() {
           
         <>
             
-            	<Link to='/Profile'>
-					<button active={location.pathname === '/Profile'}>SAVE</button>
-								</Link>
+            	
                     
 			<br />
-			<br /> <br /> <br />
-            <h1> name profile</h1> 
+			<br /> <br />
+			<h1>EDIT PROFILE </h1>
 			<br />
-			     	<label> Choose avatar UPLOADER  </label>
+        
+			     	<label> Update Prof-Pic  </label>
 			<input type="text" />
 			<br />
 			<br />
-			<label> Change nick name</label>
+			<label> Change nick/user name</label>
 			<input type="text"  />
 			<br />
 			<br />
-			<label> Age  </label>
+			<label> Age Range </label>
+		<h1>DROPDOWN MENI GOZ HIR</h1>
+			<br />
+			<br />
+			         	<label> City: </label>
+			<input type="text" />
+			<br />
+			<br />
+						         	<label> Change email: ?? </label>
 			<input type="text" />
 			<br />
             <br />
-            	<label> Fav movie  </label>
-			<input type="text" />
-			<br />
-            <br />
-            	<label> Fav movie quote  </label>
-			<input type="text" />
-			<br />
-            <br />
+    
                  	<label> Current filters: </label>
 			<input type="text" />
 			<br />
             <br />
        
 
-			<button> SAVE </button>
-			
-			<br />
-			<br />
-    
-			<BottomNav />
+			<Link to='/Profile'>
+					<button active={location.pathname === '/Profile'}>SAVE</button>
+								</Link>
    
             </>
     )

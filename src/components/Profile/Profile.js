@@ -1,7 +1,6 @@
 import React from 'react';
-import { BottomNav } from '../BottomNav';
 import './Profile.css';
-import Settings from '../styleElements/icons/Settings';
+import { Settings } from '../styleElements/icons/Settings';
 // import uploadeIcon from './uploadIcon';
 import { Star } from '../styleElements/icons';
 import { LogoActive } from '../styleElements/icons';
