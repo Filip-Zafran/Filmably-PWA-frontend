@@ -4,6 +4,7 @@
 export { Thunder } from './Thunder';
 export { Heart } from './Heart';
 export { Star } from './Star';
+export { Flip } from './Flip';
 
 //To change default size: accepts "size" prop (NUMBER)
 //square icons so size is used as both width and height
