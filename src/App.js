@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Dashboard from './components/Dashboard/Dashboard';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
@@ -20,7 +20,14 @@ import { HashRouter, Link } from "react-router-dom";
 
 const App = (props) => {
 	console.log("props in app", props)
+	const [otherProfilID, setOtherProfileID] = useState('')
 
+	const handleProfileID = (newAppID) => {
+		console.log("I am the visited profile ID in APP", newAppID)
+		setOtherProfileID(newAppID)
+
+		props.onChange(newAppID)
+	}
 	return (
 		<Router>
 			<Switch>
@@ -46,7 +53,7 @@ const App = (props) => {
 				</Route>
 
 				<Route exact path='/friends'>
-					<Friends />
+					<Friends name={otherProfilID} onChange={handleProfileID} />
 				</Route>
 				<Route exact path='/user/:id'>
 					<OtherProfile />

@@ -6,7 +6,7 @@ import FriendButton from './FriendsButton'
 
 export default function OtherProfile(props) {
     //this is a child component of the profile page
-    console.log(props)
+    console.log("props.location", props)
     console.log("I am a child components")
     const [profiles, setProfile] = useState()
     const [error, setError] = useState(false)

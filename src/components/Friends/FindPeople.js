@@ -4,7 +4,7 @@ import { HashRouter, Link } from "react-router-dom";
 import OtherProfile from './OtherProfile';
 
 export default function FindPeople(props) {
-    console.log("props below unction", props)
+    // console.log("props below unction", props)
     const [errors, setError] = useState(false);
     const [people, setPeople] = useState([])
     const [searchPeople, setSearchPeople] = useState()
@@ -68,14 +68,12 @@ export default function FindPeople(props) {
     }
 
     const redirectPage = e => {
-        // console.log(e.target.parentElement.name)
-        // let otherId = e.target.parentElement.name;
-        // setOtherID(e.target.parentElement.name)
-        // console.log(e.target.parentElement.name)
+        e.preventDefault()
         props.onChange(e.target.parentElement.name)
+        console.log(props)
 
     }
-    console.log(otherID)
+
     return (
         <React.Fragment>
             <h2>Find friends!</h2>
@@ -86,8 +84,12 @@ export default function FindPeople(props) {
 
                 return (
                     // href = { "http://localhost:3000/user/:" + person._id }
-                    // to={"user/:" + person._id}
-                    <Link key={person._id} name={person._id} onClick={e => redirectPage(e)} >
+                    // to={"user/:" + person._id} 
+                    <Link
+                        to={"user/:" + person._id}
+                        key={person._id}
+                        name={person._id}
+                        onClick={e => redirectPage(e)} >
                         <p name={person._id} >{person.username}</p>
                         <img href={person.href} />
                     </Link>
