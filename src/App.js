@@ -17,40 +17,40 @@ import { HashRouter } from 'react-router-dom';
 // import { BottomNav } from "./components/BottomNav";
 
 const App = () => {
-  return (
-    <Router>
-      <Switch>
-        {/*<a className="logoref" href="http://localhost:3000/welcome#/"> </a>*/}
-        <PrivateRoute path="/dashboard">
-          <Dashboard />
-        </PrivateRoute>
-        <PrivateRoute path="/profile">
-          <Profile />
-        </PrivateRoute>
-        {/* 
+	return (
+		<Router>
+			<Switch>
+				{/*<a className="logoref" href="http://localhost:3000/welcome#/"> </a>*/}
+				<PrivateRoute path='/dashboard'>
+					<Dashboard />
+				</PrivateRoute>
+				<PrivateRoute path='/profile'>
+					<Profile />
+				</PrivateRoute>
+				{/* 
 				<Route path='/'>
 					<Login />
 				</Route> */}
-        <Route path="/findpeople">
-          <FindPeople />
-        </Route>
-        <Route path="/user/:id" component={OtherProfile} />
+				<Route path='/findpeople'>
+					<FindPeople />
+				</Route>
+				<Route path='/user/:id' component={OtherProfile} />
 
-        <Route path="/findpeople">
-          <FindPeople />
-        </Route>
-        {/* <HashRouter> */}
-        <Route path="/">
-          <Login />
-        </Route>
-        {/* <Route exact path="/register" component={Registration}> Register </Route>
+				<Route path='/findpeople'>
+					<FindPeople />
+				</Route>
+				{/* <HashRouter> */}
+				<Route path='/'>
+					<Login />
+				</Route>
+				{/* <Route exact path="/register" component={Registration}> Register </Route>
 				<Route exact path="/resetpw" component={Resetpw}> Reset PW</Route> */}
-        {/* </HashRouter> */}
-        {/* add Register and Reset PW */}
-        {/* <Route path="/user/:id" component={OtherProfile}></Route> */}
-      </Switch>
-    </Router>
-  );
+				{/* </HashRouter> */}
+				{/* add Register and Reset PW */}
+				{/* <Route path="/user/:id" component={OtherProfile}></Route> */}
+			</Switch>
+		</Router>
+	);
 };
 
 export default App;

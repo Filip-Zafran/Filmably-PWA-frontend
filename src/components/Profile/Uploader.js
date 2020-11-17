@@ -15,7 +15,7 @@ function Uploader() {
 	return (
 		<ImageUploader
 			withIcon={true}
-			buttonText="Choose images"
+			buttonText='Choose images'
 			onChange={this.onDrop}
 			imgExtension={[ '.jpg', '.gif', '.png', '.gif' ]}
 			maxFileSize={5242880}
