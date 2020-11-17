@@ -2,16 +2,78 @@
   display: flex;
   justify-content: center;
   width: 100vw;
+  height: 390px;
 }
 
 .matchCard__current {
+  position: relative;
+  margin-top: 26px;
+  background-color: var(--dark-18);
   background-size: cover;
   overflow: none;
   width: 282px;
   height: 364px;
+  border: 2px solid var(--dark-18);
   border-radius: 12px;
+  z-index: 1;
+}
+
+.matchCard__info {
+  margin: 21px;
 }
 
 .matchCard__title {
-  display: none;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 27px;
+  margin: 0px 35px;
+}
+
+.matchCard__details {
+  margin-top: 20px;
+}
+
+.matchCard__details > div {
+  background: var(--dark-100);
+  padding: 3px 0px;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.matchCard__details > p {
+  margin: 2px 0px;
+  text-align: left;
+  font-size: 14px;
+  font-weight: 100;
+}
+
+.matchCard__button {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--dark-300-50);
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+}
+
+.matchCard__bg1 {
+  margin-top: 13px;
+  position: absolute;
+  width: 260px;
+  height: 318px;
+  border-radius: 12px;
+  background: var(--dark-66-20);
+}
+
+.matchCard__bg2 {
+  position: absolute;
+  width: 234px;
+  height: 318px;
+  border-radius: 12px;
+  background: var(--dark-36-20);
 }
