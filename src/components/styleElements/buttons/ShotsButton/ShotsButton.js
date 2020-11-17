@@ -7,15 +7,17 @@ export const ShotsButton = ({
   active,
   inactive,
   clickHandler,
-  otherHandler,
+  otherClickHandler,
 }) => {
   return (
     <div className="shotsButton">
       <div
-        onTouchStart={clickHandler}
-        onTouchEnd={otherHandler}
-        onMouseDown={clickHandler}
-        onMouseUp={otherHandler}
+        onTouchStart={like ? clickHandler('like') : clickHandler('dislike')}
+        onMouseDown={like ? clickHandler('like') : clickHandler('dislike')}
+        onTouchEnd={clickHandler('neutral')}
+        onMouseUp={
+          like ? otherClickHandler('like') : otherClickHandler('dislike')
+        }
         className={`shotsButton__boarder ${
           like && active
             ? 'shotsButBoarderLike__Active'
@@ -24,8 +26,7 @@ export const ShotsButton = ({
             : active
             ? 'shotsButBoarderDislike__Active'
             : 'shotsButBoarderDislike'
-        }
-    }`}
+        }`}
       ></div>
       <div
         className={`shotsButton__center ${

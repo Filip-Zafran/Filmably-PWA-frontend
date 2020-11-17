@@ -11,9 +11,9 @@ export const Start = () => {
   return (
     <div className="start">
       <div className="start__textBox">
-        <div className="start__quote">{quote}</div>
+        <div className="start__quote">"{quote}"</div>
         <div className="start__space"></div>
-        <div className="start__noDisplay">{quote}</div>
+        <div className="start__noDisplay">"{quote}"</div>
       </div>
       <Link to="/MatchPage">
         <LetsStartButton label="Let's start" />
