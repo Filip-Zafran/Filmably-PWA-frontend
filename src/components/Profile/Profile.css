@@ -110,7 +110,7 @@ top: 500px;
    border: 1px solid #202020;
 }
 
-.profile__show-all-text {
+.profile__show-all {
 font-size: small;
 color: 9D9D9D;
 }
@@ -144,3 +144,82 @@ border-radius: 30px;
     display: grid;
     grid-template-columns: repeat(3, auto);
     }
+
+.profile__movies-list {
+     display: grid;
+      padding: 5px;
+     margin-bottom: 100px;
+     grid-template-columns: repeat(3, auto);
+}
+
+.profile__listed-movie {
+ padding: 5px;
+}
+
+.profile__header-text {
+font-size: 25px;
+font-weight: bold;
+padding: 30px;
+text-align: left;
+}
+
+.profile__back-bttn {
+ position: fixed;
+ right: 20px;
+ top: 20px;
+}
+
+
+.profile__edit-containter{
+  display: absolute;
+  align-items: left;
+  padding-left: 20px;
+  }
+
+.profile__edit-footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  justify-content: space-around;
+
+}
+
+#profile__edit-picture {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  border-radius: 10px;
+}
+
+.profile__edit-label-input {
+  display: flex;
+  padding: 10px;
+  padding-right: 20px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  background: rgba(5, 5, 5, 0.25);
+  border-radius: 10px;
+}
+
+.profile__bttn{
+  margin: 20px;
+  height: 40px;
+  width: 200px;
+  font-size: 25px;
+}
+
+.profile__edit-likes-friends {
+  margin-bottom: 150px;
+  text-align: start;
+}
+
+.profile__p-text {
+  padding: 10px;
+}
+
