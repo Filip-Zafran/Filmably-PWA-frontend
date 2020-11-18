@@ -70,7 +70,7 @@ export default function FindPeople(props) {
     const redirectPage = e => {
         // e.preventDefault()
         props.onChange(e.target.parentElement.name)
-        console.log(props)
+        // console.log(props)
 
     }
 

@@ -23,28 +23,11 @@ const App = (props) => {
 	const [IDOther, setIDOther] = useState()
 
 	const handleProfileID = (newAppID) => {
-		// console.log("otherprofileID", typeof (otherProfilID))
-		// props.newAppID = newAppID
-		// console.log("props in app", props.onChange(newAppID))
-
-		console.log("I am the visited profile ID in APP", newAppID)
 
 		setOtherProfileID(newAppID)
 		setIDOther(newAppID)
-		console.log("setIDOther(newAppID)", setIDOther(newAppID))
-		console.log("setOtherProfileID(newAppID)", setOtherProfileID(newAppID))
-		// console.log("props in handlechange", setIDOther(newAppID))
-		// props.onChange(newAppID)
-		// props.onChange(newAppID)
+
 	}
-
-	// const sendToOtherProfile = (newAppID) => {
-	// 	console.log("I am the visited profile ID in APP", newAppID)
-
-	// 	props.onChange(newAppID)
-
-
-	// }
 
 	return (
 		<Router>
