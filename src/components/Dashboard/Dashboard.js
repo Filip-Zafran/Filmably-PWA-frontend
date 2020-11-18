@@ -1,14 +1,14 @@
 import React, { useEffect } from 'react';
-import { Route, BrowserRouter as Router, Switch, useHistory, Link } from 'react-router-dom';
+import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 // import Movies from './Movies';
 import Friends from '../Friends/Friends';
-import MatchPage from '../MatchMovies/MatchPage';
+import { MatchPage } from '../MatchPage';
 import { Profile } from '../Profile/Profile';
-import { Start } from '../Start/Start'
+import { ProfileEdit } from '../Profile/ProfileEdit';
+import { Start } from '../Start/Start';
 import store from '../../Redux/store';
-import { BottomNav } from '../BottomNav/index';
-import { fetchUser } from '../../Redux/userSlice'
-
+import { BottomNav } from '../BottomNav';
+import { fetchUser } from '../../Redux/userSlice';
 
 const Dashboard = () => {
 	//gets the logged in user and stores it in the REDUX store
@@ -17,7 +17,7 @@ const Dashboard = () => {
 	}, []);
 
 	return (
-		<div className="dashboard">
+		<div className='dashboard'>
 			<Router>
 				<BottomNav />
 				<Switch>

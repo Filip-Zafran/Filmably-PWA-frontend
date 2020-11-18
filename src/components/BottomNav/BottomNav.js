@@ -23,7 +23,7 @@ export function BottomNav() {
           </p>
         </Ripple>
       </Link>
-      <Link to="/MatchPage">
+      <Link to="/dashboard">
         <Ripple classes="bottomNavButton">
           <Thunder active={location.pathname === '/matchPage' ? true : false} />
           <p

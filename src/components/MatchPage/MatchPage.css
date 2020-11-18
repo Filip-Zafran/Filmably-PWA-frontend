@@ -1,0 +1,22 @@
+.matchPage {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.matchPage__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.matchPage__buttons {
+  width: 100vw;
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
