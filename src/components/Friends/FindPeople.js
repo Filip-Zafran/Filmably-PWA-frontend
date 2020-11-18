@@ -35,7 +35,7 @@ export default function FindPeople(props) {
     useEffect(() => {
 
         if (searchPeople === undefined) return;
-        console.log("searcjpeople", searchPeople)
+        // console.log("searcjpeople", searchPeople)
         let ignore = false;
         Axios({
             method: "GET",
@@ -68,7 +68,7 @@ export default function FindPeople(props) {
     }
 
     const redirectPage = e => {
-        e.preventDefault()
+        // e.preventDefault()
         props.onChange(e.target.parentElement.name)
         console.log(props)
 

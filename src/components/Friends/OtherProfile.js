@@ -6,7 +6,7 @@ import FriendButton from './FriendsButton'
 
 export default function OtherProfile(props) {
     //this is a child component of the profile page
-    console.log("props.location", props)
+    console.log("props.location", props.location)
     console.log("I am a child components")
     const [profiles, setProfile] = useState()
     const [error, setError] = useState(false)
@@ -15,7 +15,9 @@ export default function OtherProfile(props) {
     const [otherUserId, setOtherUserId] = useState()
     //
 
-    useEffect(() => {
+    useEffect((newProfile) => {
+        setProfile(newProfile)
+        console.log("nwprofile", newProfile)
         // do an ajax request to 
         // const { id } = props.match.params;
         // console.log("id", window)
@@ -44,11 +46,17 @@ export default function OtherProfile(props) {
         //             setError(true)
         //         }
         //     })
+
+
+        // const handleChange = () => {
+        //     console.log("handlechange in OtherProfile")
+        // }
     })
 
     return (
         <React.Fragment>
             {error && <div>Woops, there was an error with laoding the content! Please try again</div>}
+            <div>I AM AP ROFILE</div>
             {/* {profiles && profiles.map((profile) => {
                 return (
                     <p key={profile.id}>{profile.name}</p>

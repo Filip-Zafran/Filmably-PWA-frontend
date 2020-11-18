@@ -20,14 +20,26 @@ import { HashRouter, Link } from "react-router-dom";
 
 const App = (props) => {
 	console.log("props in app", props)
-	const [otherProfilID, setOtherProfileID] = useState('')
+	const [otherProfileID, setOtherProfileID] = useState({})
+	const [IDOther, setIDOther] = useState({})
 
 	const handleProfileID = (newAppID) => {
-		console.log("I am the visited profile ID in APP", newAppID)
+		// console.log("otherprofileID", typeof (otherProfilID))
 		setOtherProfileID(newAppID)
-
-		props.onChange(newAppID)
+		// console.log("props in handlechange", setIDOther(newAppID))
+		// props.onChange(newAppID)
+		// props.onChange(newAppID)
 	}
+
+	const sendToOtherProfile = (newAppID) => {
+		console.log("I am the visited profile ID in APP", newAppID)
+
+		setIDOther(newAppID)
+		props.onChange(newAppID)
+
+
+	}
+
 	return (
 		<Router>
 			<Switch>
@@ -53,10 +65,10 @@ const App = (props) => {
 				</Route>
 
 				<Route exact path='/friends'>
-					<Friends name={otherProfilID} onChange={handleProfileID} />
+					<Friends name={otherProfileID} onChange={handleProfileID} />
 				</Route>
 				<Route exact path='/user/:id'>
-					<OtherProfile />
+					<OtherProfile name={IDOther} onChange={sendToOtherProfile} />
 				</Route>
 
 			</Switch>
