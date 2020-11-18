@@ -1,7 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { Select, MenuItem, FormControl, InputLabel, makeStyles } from '@material-ui/core';
 import { Link, useLocation } from 'react-router-dom';
 import { ChevronLeft } from '../styleElements/icons';
+import { Download } from '../styleElements/icons';
 import { CirclesBackground } from '../styleElements/CirclesBackground';
+import { Toggle } from '../styleElements/controls/Toggle';
+
+const useStyles = makeStyles((theme) => ({
+	formControl: {
+		minWidth: 100
+	}
+}));
 
 export function ProfileEdit() {
 	const location = useLocation();
@@ -15,27 +24,47 @@ export function ProfileEdit() {
 		'old yeller (50+)'
 	];
 
+	const classes = useStyles();
+	const [ value, setValue ] = useState('');
+
+	const handleChange = (e) => setValue(e.target.value);
+
 	return (
 		<div>
 			<CirclesBackground />
 
 			<div className='profile__edit-containter'>
 				<div className='profile__edit-footer'>
-					<ChevronLeft size={24} /> <h1>Profile Settings </h1>
+					<Link to='/Profile'>
+						<ChevronLeft size={24} active={location.pathname === '/Profile'} />
+					</Link>
+					<h1>Profile Settings </h1>
 				</div>
 
-				<div id='profile__edit-picture'>
-					<label> Update Prof-Pic </label>
+				<div id='profile__edit-picture-container'>
+					<div id='profile__edit-picture'>
+						<Download />
+					</div>
 				</div>
 
 				<div className='profile__edit-label-input'>
-					<label> Change username</label>
+					<label> Edit username:</label>
 					<input type='text' />
 				</div>
 
 				<div className='profile__edit-label-input'>
 					<label> Age Range </label>
-					<h1> - DROPDOWN - </h1>
+					<FormControl className={classes.formControl}>
+						<InputLabel>Numbers</InputLabel>
+						<Select onChange={handleChange}>
+							<MenuItem value={10}>Ten</MenuItem>
+							<MenuItem value={20}>Twenty</MenuItem>
+							<MenuItem value={30}>Thirty</MenuItem>
+							<MenuItem value={40}>Forty</MenuItem>
+						</Select>
+					</FormControl>
+
+					<p>You Selected: {value}</p>
 				</div>
 
 				<div className='profile__edit-label-input'>
@@ -44,12 +73,12 @@ export function ProfileEdit() {
 				</div>
 
 				<div className='profile__edit-label-input'>
-					<label> Change email: </label>
+					<label> Edit email: </label>
 					<input type='text' />
 				</div>
 
 				<div className='profile__edit-label-input'>
-					<label> Change password: </label>
+					<label> Edit password: </label>
 					<input type='text' />
 				</div>
 
@@ -65,8 +94,14 @@ export function ProfileEdit() {
 				</Link>
 
 				<div className='profile__edit-likes-friends'>
-					<p className='profile__p-text'>Show likes on profile page</p>
-					<p className='profile__p-text'>Show friends on profile page</p>
+					<div className='profile__edit-grid'>
+						<p className='profile__p-text'>Show likes on profile page</p>
+						<Toggle />
+					</div>
+					<div className='profile__edit-grid'>
+						<p className='profile__p-text'>Show friends on profile page</p>
+						<Toggle />
+					</div>
 				</div>
 			</div>
 		</div>
