@@ -15,7 +15,7 @@ export const Start = () => {
         <div className="start__space"></div>
         <div className="start__noDisplay">"{quote}"</div>
       </div>
-      <Link to="/MatchPage">
+      <Link to="/matchPage">
         <LetsStartButton label="Let's start" />
       </Link>
       <CirclesBackground />
