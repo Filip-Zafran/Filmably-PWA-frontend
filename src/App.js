@@ -19,26 +19,32 @@ import { HashRouter, Link } from "react-router-dom";
 
 
 const App = (props) => {
-	console.log("props in app", props)
-	const [otherProfileID, setOtherProfileID] = useState({})
-	const [IDOther, setIDOther] = useState({})
+	const [otherProfileID, setOtherProfileID] = useState()
+	const [IDOther, setIDOther] = useState()
 
 	const handleProfileID = (newAppID) => {
 		// console.log("otherprofileID", typeof (otherProfilID))
+		// props.newAppID = newAppID
+		// console.log("props in app", props.onChange(newAppID))
+
+		console.log("I am the visited profile ID in APP", newAppID)
+
 		setOtherProfileID(newAppID)
+		setIDOther(newAppID)
+		console.log("setIDOther(newAppID)", setIDOther(newAppID))
+		console.log("setOtherProfileID(newAppID)", setOtherProfileID(newAppID))
 		// console.log("props in handlechange", setIDOther(newAppID))
 		// props.onChange(newAppID)
 		// props.onChange(newAppID)
 	}
 
-	const sendToOtherProfile = (newAppID) => {
-		console.log("I am the visited profile ID in APP", newAppID)
+	// const sendToOtherProfile = (newAppID) => {
+	// 	console.log("I am the visited profile ID in APP", newAppID)
 
-		setIDOther(newAppID)
-		props.onChange(newAppID)
+	// 	props.onChange(newAppID)
 
 
-	}
+	// }
 
 	return (
 		<Router>
@@ -60,16 +66,16 @@ const App = (props) => {
 					<Profile />
 				</PrivateRoute> */}
 
-				<Route exact path='/findpeople'>
+				<PrivateRoute exact path='/findpeople'>
 					<FindPeople />
-				</Route>
+				</PrivateRoute>
 
-				<Route exact path='/friends'>
+				<PrivateRoute exact path='/friends'>
 					<Friends name={otherProfileID} onChange={handleProfileID} />
-				</Route>
-				<Route exact path='/user/:id'>
-					<OtherProfile name={IDOther} onChange={sendToOtherProfile} />
-				</Route>
+				</PrivateRoute>
+				<PrivateRoute exact path='/user/:id'>
+					<OtherProfile name={IDOther} onChange={setIDOther} />
+				</PrivateRoute>
 
 			</Switch>
 		</Router >

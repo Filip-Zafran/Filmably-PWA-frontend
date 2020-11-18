@@ -6,7 +6,7 @@ import FriendButton from './FriendsButton'
 
 export default function OtherProfile(props) {
     //this is a child component of the profile page
-    console.log("props.location", props.location)
+    console.log("props.location", props)
     console.log("I am a child components")
     const [profiles, setProfile] = useState()
     const [error, setError] = useState(false)
@@ -15,11 +15,11 @@ export default function OtherProfile(props) {
     const [otherUserId, setOtherUserId] = useState()
     //
 
-    useEffect((newProfile) => {
-        setProfile(newProfile)
-        console.log("nwprofile", newProfile)
+    useEffect(() => {
+        // setProfile(newProfile)
+        console.log("nwprofile", props.name)
         // do an ajax request to 
-        // const { id } = props.match.params;
+        const { id } = props.name;
         // console.log("id", window)
         // console.log(id)
 

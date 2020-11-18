@@ -31,7 +31,7 @@ export default function Friends(props) {
 
 			<p> My friends</p>
 
-			<BottomNav />
+			{/* <BottomNav /> */}
 		</React.Fragment>
 
 	)
