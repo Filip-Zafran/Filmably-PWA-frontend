@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
 import Registration from '../UserPathLog/Register';
 import Resetpw from '../UserPathLog/Resetpw';
-import { HashRouter, Route } from "react-router-dom";
+import { HashRouter, Route, Link } from "react-router-dom";
 
 
 export default function Login() {
@@ -35,6 +35,13 @@ export default function Login() {
 		});
 	}
 
+	// const hide = () => {
+	// 	if (!'http://localhost:3000/') {
+	// 		console.log("url changed")
+
+	// 	}
+	// }
+
 	return (
 		<React.Fragment>
 			<div className="login">
@@ -54,9 +61,8 @@ export default function Login() {
 				/>
 				<button onClick={login}> Login </button>
 			</div >
-
-
-
+			<Link to="/register">Register</Link>
+			<Link to="/resetpw"> Reset PW</Link>
 		</React.Fragment>
 	);
 }

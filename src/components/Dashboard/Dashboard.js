@@ -21,11 +21,10 @@ const Dashboard = () => {
 			<Router>
 				<BottomNav />
 				<Switch>
-					<Route path='/Profile' component={Profile} />
-					<Route path='/ProfileEdit' component={ProfileEdit} />
-					<Route path='/Friends' component={Friends} />
-					<Route path='/MatchPage' component={MatchPage} />
-					<Route path='/' component={Start} />
+					<Route path="/profile" component={Profile} />
+					<Route path="/friends" component={Friends} />
+					<Route path="/matchPage" component={MatchPage} />
+					<Route path="/" component={Start} />
 				</Switch>
 			</Router>
 		</div>
