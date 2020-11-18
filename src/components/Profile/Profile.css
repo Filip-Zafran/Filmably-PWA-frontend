@@ -1,3 +1,4 @@
+
 .profile__container {
    height: 150%;
 }
@@ -145,23 +146,43 @@ border-radius: 30px;
     grid-template-columns: repeat(3, auto);
     }
 
+#profile__liked-movies-container {
+      display: table;
+      justify-content: start;
+    }
+
+#profile__liked-movies-container .profile__likes-picture {
+   width: 60px;
+   height: 60px;
+}
+
 .profile__movies-list {
-     display: grid;
-      padding: 5px;
-     margin-bottom: 100px;
-     grid-template-columns: repeat(3, auto);
+  display: flex;
+    padding: 5px;
+    margin-bottom: 100px;
+   }
+
+   #biggest {
+     display: flex
+   }
+
+
+
+.profile__listed-movie-container {
+  display: flex;
 }
 
 .profile__listed-movie {
- padding: 5px;
-}
+   position: relative;
+   padding: 5px;
+   display: block;
+   }
 
-.profile__header-text {
-font-size: 25px;
-font-weight: bold;
-padding: 30px;
-text-align: left;
-}
+   .profile__listed-movie-info {
+     
+   }
+
+
 
 .profile__back-bttn {
  position: fixed;
@@ -243,3 +264,30 @@ text-align: left;
   padding-right: 5px;
   margin-right: 5px;
 } 
+
+#profile__edit-formcontrol {
+  border: solid 2px green;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 300px;
+}
+
+#profile__edit-inputlabel {
+   border: solid 2px blue
+}
+
+#profile__edit-select {
+  border: solid 2px red
+}
+
+#profile__chevron-left {
+background: #202020;
+height: 40px;
+width: 40px;
+opacity: 0.5;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
