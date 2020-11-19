@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Flip } from '../../styleElements/icons';
 import './MatchCard.css';
+import axios from 'axios';
 
 //Dummy Data can be removed when backend route has been built
 import { dummyData } from './dummyData';
@@ -44,7 +45,9 @@ export const MatchCard = ({ decision, reset }) => {
 
   //maps over crew and makes a div for every crew member
   const crewMembers = crew.map((member) => (
-    <div className="matchCard__bubble">{member}</div>
+    <div className="matchCard__bubble" key={member}>
+      {member}
+    </div>
   ));
 
   //concates the newArray to end of the filmArray when the filmArray is < 5
@@ -64,16 +67,47 @@ export const MatchCard = ({ decision, reset }) => {
     }
   }, [filmArray]);
 
-  //when a decision is made
+  //when a decision is made it triggers an axios call
+
+  const serverURL = 'http://localhost:5000';
+
   useEffect(() => {
     if (decision === 'like') {
-      console.log('enter like: ' + filmArray[0]['title']);
+      const updateLikes = async () => {
+        try {
+          const response = await axios({
+            method: 'PUT',
+            withCredentials: true,
+            url: `${serverURL}/likeTracker/like`,
+            data: { film: filmArray[0] },
+          });
+          console.log(response.data);
+          return response.data;
+        } catch (err) {
+          return err;
+        }
+      };
+      updateLikes();
       setFilmArray(filmArray.slice(1));
       setShowInfo(false);
       reset();
     }
     if (decision === 'dislike') {
-      console.log('enter dislike: ' + filmArray[0]['title']);
+      const updateDislikes = async () => {
+        try {
+          const response = await axios({
+            method: 'PUT',
+            withCredentials: true,
+            url: `${serverURL}/likeTracker/dislike`,
+            data: { film: filmArray[0] },
+          });
+          console.log(response.data);
+          return response.data;
+        } catch (err) {
+          return err;
+        }
+      };
+      updateDislikes();
       setFilmArray(filmArray.slice(1));
       setShowInfo(false);
       reset();
