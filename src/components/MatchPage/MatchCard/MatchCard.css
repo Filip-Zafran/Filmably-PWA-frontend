@@ -11,7 +11,7 @@
   background-color: var(--dark-18);
   background-size: cover;
   overflow: none;
-  width: 282px;
+  width: 295px;
   height: 364px;
   border: 2px solid var(--dark-18);
   border-radius: 12px;
@@ -19,32 +19,45 @@
 }
 
 .matchCard__info {
-  margin: 21px;
+  height: 336px;
+  margin: 14px;
+  display: flex;
+  flex-direction: column;
 }
 
 .matchCard__title {
-  font-size: 20px;
+  color: var(--light-500);
+  font-size: 18px;
   font-weight: 500;
-  line-height: 27px;
-  margin: 0px 35px;
+  line-height: 26px;
+  margin: 6px 48px 16px 48px;
 }
 
 .matchCard__details {
-  margin-top: 20px;
+  margin-top: 10%;
+  flex-grow: 1;
 }
 
 .matchCard__details > div {
-  background: var(--dark-100);
-  padding: 3px 0px;
-  border-radius: 4px;
-  margin-bottom: 10px;
+  display: inline-block;
+}
+
+.matchCard__bubble {
+  white-space: nowrap;
+  font-size: 13px;
+  font-weight: 400px;
+  background: var(--dark-300);
+  padding: 8px 16px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+  display: inline-block;
+  margin: 4px;
 }
 
 .matchCard__details > p {
-  margin: 2px 0px;
-  text-align: left;
-  font-size: 14px;
-  font-weight: 100;
+  margin: 20px 50px 8px 50px;
+  font-size: 13px;
+  font-weight: 400;
 }
 
 .matchCard__button {
@@ -54,7 +67,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--dark-300-50);
+  background: var(--dark-900-50);
   border-radius: 50%;
   width: 44px;
   height: 44px;
@@ -67,13 +80,14 @@
   width: 260px;
   height: 318px;
   border-radius: 12px;
-  background: var(--dark-66-20);
+  background: var(--dark-66);
 }
 
 .matchCard__bg2 {
+  z-index: -1;
   position: absolute;
   width: 234px;
   height: 318px;
   border-radius: 12px;
-  background: var(--dark-36-20);
+  background: var(--dark-36);
 }

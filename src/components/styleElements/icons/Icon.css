@@ -26,3 +26,7 @@
   stroke: var(--prime-500);
   fill: var(--prime-500);
 }
+
+.light300 {
+  stroke: var(--light-300);
+}

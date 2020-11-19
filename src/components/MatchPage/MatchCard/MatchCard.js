@@ -36,6 +36,17 @@ export const MatchCard = ({ decision, reset }) => {
     return films;
   };
 
+  //splits crew string into an array of individual crew members
+  //replaces (dir.) with (director)
+  const crew = filmArray[0]
+    ? filmArray[0]['crew'].replace('dir.', 'director').split(', ')
+    : [];
+
+  //maps over crew and makes a div for every crew member
+  const crewMembers = crew.map((member) => (
+    <div className="matchCard__bubble">{member}</div>
+  ));
+
   //concates the newArray to end of the filmArray when the filmArray is < 5
   useEffect(() => {
     if (filmArray.length < 5) {
@@ -78,7 +89,7 @@ export const MatchCard = ({ decision, reset }) => {
         }
       >
         <div className="matchCard__button" onClick={toggleInfo}>
-          <Flip />
+          <Flip className="light300" />
         </div>
         <div
           className="matchCard__info"
@@ -86,14 +97,16 @@ export const MatchCard = ({ decision, reset }) => {
         >
           <div className="matchCard__title">{currentFilm['title']}</div>
           <div className="matchCard__details">
-            <p>Release year</p>
-            <div>{currentFilm['year']}</div>
-
+            <div>
+              <div className="matchCard__bubble">
+                Release: {currentFilm['year']}
+              </div>
+              <div className="matchCard__bubble">
+                ImDb rating: {currentFilm['imDbRating']}
+              </div>
+            </div>
             <p>Crew</p>
-            <div>{currentFilm['crew']}</div>
-
-            <p>imDb Rating</p>
-            <div>{currentFilm['imDbRating']}</div>
+            <div>{crewMembers}</div>
           </div>
         </div>
       </div>
