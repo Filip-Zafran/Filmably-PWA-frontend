@@ -19,7 +19,7 @@ export function BottomNav() {
                 : 'bottomNav__label'
             }
           >
-            My Lists
+            Profile
           </p>
         </Ripple>
       </Link>
@@ -41,7 +41,7 @@ export function BottomNav() {
                 : 'bottomNav__label'
             }
           >
-            Shots
+            Match
           </p>
         </Ripple>
       </Link>
@@ -55,7 +55,7 @@ export function BottomNav() {
                 : 'bottomNav__label'
             }
           >
-            Friends
+            Chat
           </p>
         </Ripple>
       </Link>

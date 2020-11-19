@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Flip } from '../../styleElements/icons';
 import './MatchCard.css';
+import axios from 'axios';
 
 //Dummy Data can be removed when backend route has been built
 import { dummyData } from './dummyData';
@@ -36,6 +37,19 @@ export const MatchCard = ({ decision, reset }) => {
     return films;
   };
 
+  //splits crew string into an array of individual crew members
+  //replaces (dir.) with (director)
+  const crew = filmArray[0]
+    ? filmArray[0]['crew'].replace('dir.', 'director').split(', ')
+    : [];
+
+  //maps over crew and makes a div for every crew member
+  const crewMembers = crew.map((member) => (
+    <div className="matchCard__bubble" key={member}>
+      {member}
+    </div>
+  ));
+
   //concates the newArray to end of the filmArray when the filmArray is < 5
   useEffect(() => {
     if (filmArray.length < 5) {
@@ -53,16 +67,47 @@ export const MatchCard = ({ decision, reset }) => {
     }
   }, [filmArray]);
 
-  //when a decision is made
+  //when a decision is made it triggers an axios call
+
+  const serverURL = 'http://localhost:5000';
+
   useEffect(() => {
     if (decision === 'like') {
-      console.log('enter like: ' + filmArray[0]['title']);
+      const updateLikes = async () => {
+        try {
+          const response = await axios({
+            method: 'PUT',
+            withCredentials: true,
+            url: `${serverURL}/likeTracker/like`,
+            data: { film: filmArray[0] },
+          });
+          console.log(response.data);
+          return response.data;
+        } catch (err) {
+          return err;
+        }
+      };
+      updateLikes();
       setFilmArray(filmArray.slice(1));
       setShowInfo(false);
       reset();
     }
     if (decision === 'dislike') {
-      console.log('enter dislike: ' + filmArray[0]['title']);
+      const updateDislikes = async () => {
+        try {
+          const response = await axios({
+            method: 'PUT',
+            withCredentials: true,
+            url: `${serverURL}/likeTracker/dislike`,
+            data: { film: filmArray[0] },
+          });
+          console.log(response.data);
+          return response.data;
+        } catch (err) {
+          return err;
+        }
+      };
+      updateDislikes();
       setFilmArray(filmArray.slice(1));
       setShowInfo(false);
       reset();
@@ -78,7 +123,7 @@ export const MatchCard = ({ decision, reset }) => {
         }
       >
         <div className="matchCard__button" onClick={toggleInfo}>
-          <Flip />
+          <Flip className="light300" />
         </div>
         <div
           className="matchCard__info"
@@ -86,14 +131,16 @@ export const MatchCard = ({ decision, reset }) => {
         >
           <div className="matchCard__title">{currentFilm['title']}</div>
           <div className="matchCard__details">
-            <p>Release year</p>
-            <div>{currentFilm['year']}</div>
-
+            <div>
+              <div className="matchCard__bubble">
+                Release: {currentFilm['year']}
+              </div>
+              <div className="matchCard__bubble">
+                ImDb rating: {currentFilm['imDbRating']}
+              </div>
+            </div>
             <p>Crew</p>
-            <div>{currentFilm['crew']}</div>
-
-            <p>imDb Rating</p>
-            <div>{currentFilm['imDbRating']}</div>
+            <div>{crewMembers}</div>
           </div>
         </div>
       </div>
