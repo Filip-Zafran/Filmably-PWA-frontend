@@ -57,9 +57,11 @@ export function ProfileEdit() {
 					<label> Edit username:</label>
 					<input type='text' />
 				</div>
-
-				<div className='profile__edit-label-input'>
-					<FormControl className={classes.formControl} id='profile__edit-formcontrol'>
+				<div className='profile__edit-label-input profile__edit__age-select-wrapper'>
+					<FormControl
+						className={`${classes.formControl} profile__edit__age-select`}
+						id='profile__edit-formcontrol'
+					>
 						<InputLabel id='profile__edit-inputlabel'>Age range</InputLabel>
 						<Select id='profile__edit-select' onChange={handleChange}>
 							<MenuItem value={'Newb'}> Younger than 18yo</MenuItem>
@@ -103,7 +105,7 @@ export function ProfileEdit() {
 						<Toggle />
 					</div>
 					<div className='profile__edit-grid'>
-						<p className='profile__p-text'>Show friends on profile page</p>
+						<p className='profile__p-text'>Show matches on profile page</p>
 						<Toggle />
 					</div>
 				</div>

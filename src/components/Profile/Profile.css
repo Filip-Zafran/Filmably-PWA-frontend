@@ -163,25 +163,38 @@ border-radius: 30px;
    }
 
    #biggest {
-     display: flex
-   }
+     display: flex;
+    }
 
 
 
 .profile__listed-movie-container {
   display: flex;
+  /* font-family: Inter; */
 }
 
 .profile__listed-movie {
    position: relative;
    padding: 5px;
+   height: 60px;
    display: block;
+   
    }
 
-   .profile__listed-movie-info {
-     
+   .profile__listed-movie-name {
+     position: relative;
+     padding: 5px;
+     height: 60px;
+     display: block;
+     text-align: start;
+     top: 7px;
    }
 
+   .profile__listed-movie-name span {
+     font-size: small;
+     padding-right: 5px;
+     color: grey;
+   }
 
 
 .profile__back-bttn {
@@ -265,20 +278,25 @@ border-radius: 30px;
   margin-right: 5px;
 } 
 
-#profile__edit-formcontrol {
+.profile__edit__age-select-wrapper .profile__edit__age-select {
   border: solid 2px green;
   position: relative;
   display: flex;
   flex-direction: row;
   width: 300px;
+  color: white;
 }
 
 #profile__edit-inputlabel {
-   border: solid 2px blue
+  border: solid 2px blue;
+  color: white;
+  position: static;
+  transform: none;
 }
 
-#profile__edit-select {
-  border: solid 2px red
+.profile__edit__age-select-wrapper .MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-formControl.MuiInput-formControl {
+  border: solid 2px red;
+  color: white;
 }
 
 #profile__chevron-left {
@@ -291,3 +309,16 @@ opacity: 0.5;
   align-items: center;
   justify-content: center;
 }
+
+/* #profile__likes-chevron-right {
+  position: relative;
+  right: 3px;
+}
+
+.profile__listed-movie-name .iconSVG {
+  display: flex;
+  align-items: flex-end;
+  position: absolute;
+  right: 3px;
+  align-items: end;
+} */

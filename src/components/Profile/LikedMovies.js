@@ -152,25 +152,14 @@ export function LikedMovies() {
 						{/* NAME YEAR MATCH CONTAINER */}
 						<div>
 							{/* NAME  CONTAINER */}
-							{movieNames.map((movieName) => <div className='profile__listed-movie'>{movieName}</div>)}
-						</div>
-
-						<div>
-							{/* YEAR MATCH CONTAINER */}
-
-							<div>
-								{/* YEAR  CONTAINER */}
-								{movieYear.map((year) => <div className='profile__listed-movie'>{year}</div>)}
-							</div>
-
-							<div>
-								{/* MATCH  CONTAINER */}
-								{numberOfMatches.map((nmbMatch) => (
-									<div className='profile__listed-movie'>{nmbMatch}</div>
-								))}
-							</div>
-
-							<ChevronRight />
+							{movieNames.map((movieName) => (
+								<div className='profile__listed-movie-name'>
+									{movieName}
+									<br />
+									<span> 1998 </span> <span> 5 matches</span>
+									<ChevronRight id='profile__likes-chevron-right' />
+								</div>
+							))}
 						</div>
 					</div>
 				</div>
