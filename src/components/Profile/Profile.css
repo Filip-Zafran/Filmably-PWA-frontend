@@ -31,7 +31,8 @@ object-fit: cover;
     border-radius: 15px;
 }
 
-.profile__name-box  span {
+.profile__name-box  
+span {
     color: #9D9D9D;
     font-size: 14px;
     line-height: 1.4;
@@ -111,7 +112,7 @@ top: 600px;
 
   .profile__footer {  
     position: absolute;
-    top: 700px;
+    top: 810px;
     width: 90%;
     padding-bottom: 150px;
     text-align: start;
@@ -218,7 +219,8 @@ border-radius: 30px;
      top: 7px;
    }
 
-.profile__listed-movie-name span {
+.profile__listed-movie-name 
+span {
      font-size: small;
      padding-right: 5px;
      color: grey;
@@ -281,6 +283,17 @@ input {
   justify-content: space-around;
   width: 300px;
   flex-wrap: wrap;
+}
+
+.profile__span-container2 
+span {
+color: #FFCB1F;
+
+}
+
+.profile__edit-span-container 
+span {
+  color: #FFCB1F;
 }
 
 .profile__edit-label-input {
