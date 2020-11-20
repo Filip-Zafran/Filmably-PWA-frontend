@@ -1,6 +1,7 @@
 .shotsButton {
   width: 92px;
   height: 92px;
+  cursor: pointer;
 }
 
 .shotsButtonLike {

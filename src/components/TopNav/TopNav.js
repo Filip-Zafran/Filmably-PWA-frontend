@@ -1,16 +1,41 @@
 import React from 'react';
 import { ChevronLeft, Filter } from '../styleElements/icons';
-import { TopNavText } from './TopNavText';
+import { Link, useHistory } from 'react-router-dom';
+import './TopNav.css';
 
-export const TopNav = ({ backIcon, filterIcon, text }) => {
+export const TopNav = ({ backIcon, filterIcon, text, textLink, dark }) => {
+  const history = useHistory();
+
+  const clickHandler = () => {
+    history.goBack();
+  };
+
   return (
     <div className="topNav">
-      {backIcon ? <ChevronLeft className="light300" /> : null}
+      {backIcon ? (
+        <div
+          onClick={clickHandler}
+          className="topNav__button"
+          id={dark ? 'topNav__buttonDark' : null}
+        >
+          <ChevronLeft className="light300" />
+        </div>
+      ) : (
+        <div classname="topNav__none"></div>
+      )}
       {filterIcon ? (
-        <Filter className="light300" />
+        <Link to="/filter">
+          <div className="topNav__button">
+            <Filter className="light300" />
+          </div>
+        </Link>
       ) : text ? (
-        <TopNavText text={text} />
-      ) : null}
+        <Link to={textLink}>
+          <div className="topNav__text">{text}</div>
+        </Link>
+      ) : (
+        <div classname="topNav__none"></div>
+      )}
     </div>
   );
 };
