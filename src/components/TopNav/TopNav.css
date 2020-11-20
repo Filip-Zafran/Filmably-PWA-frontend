@@ -1,0 +1,36 @@
+.topNav {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topNav__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--dark-300-50);
+  margin: 20px;
+  cursor: pointer;
+}
+
+#topNav__buttonDark {
+  background: var(--dark-900-50);
+}
+
+.topNav__text {
+  color: var(--prime-500);
+  background: var(--dark-900-50);
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 16.25px;
+  font-weight: 400;
+  padding: 8px 16px;
+  margin: 20px;
+}

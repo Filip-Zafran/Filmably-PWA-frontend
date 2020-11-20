@@ -1,7 +1,7 @@
 import React from 'react';
 import './Icon.css';
 
-export function ChevronLeft({ size }) {
+export function ChevronLeft({ size, className }) {
   return (
     <svg
       width={size ? size : null}
@@ -13,7 +13,7 @@ export function ChevronLeft({ size }) {
     >
       <path
         d="M15 18L9 12L15 6"
-        className="inactiveIcon"
+        className={className ? className : 'inactiveIcon'}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

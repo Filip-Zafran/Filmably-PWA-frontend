@@ -1,5 +1,5 @@
 import React from 'react';
-import { Thunder, Heart, Star } from '../styleElements/icons';
+import { Logo, LogoActive, Heart, Star } from '../styleElements/icons';
 import { Link, useLocation } from 'react-router-dom';
 import './BottomNav.css';
 import { Ripple } from './RippleButton';
@@ -25,14 +25,13 @@ export function BottomNav() {
       </Link>
       <Link to="/dashboard">
         <Ripple classes="bottomNavButton">
-          <Thunder
-            active={
-              location.pathname === '/dashboard' ||
-              location.pathname === '/matchPage'
-                ? true
-                : false
-            }
-          />
+          {location.pathname === '/dashboard' ||
+          location.pathname === '/matchPage' ? (
+            <LogoActive />
+          ) : (
+            <Logo />
+          )}
+
           <p
             className={
               location.pathname === '/dashboard' ||

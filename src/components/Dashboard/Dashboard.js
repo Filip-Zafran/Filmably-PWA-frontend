@@ -5,7 +5,8 @@ import Friends from '../Friends/Friends';
 import { MatchPage } from '../MatchPage';
 import { Profile } from '../Profile/Profile';
 //import { ProfileEdit } from '../Profile/ProfileEdit';
-import { Start } from '../Start/Start';
+import { Start } from '../Start';
+import { FilterPage } from '../FilterPage';
 import { BottomNav } from '../BottomNav';
 
 const Dashboard = () => {
@@ -17,7 +18,8 @@ const Dashboard = () => {
           <Route path="/profile" component={Profile} />
           <Route path="/friends" component={Friends} />
           <Route path="/matchPage" component={MatchPage} />
-          <Route path="/" component={Start} />
+          <Route path="/filter" component={FilterPage} />
+          <Route path="/dashboard" component={Start} />
         </Switch>
       </Router>
     </div>

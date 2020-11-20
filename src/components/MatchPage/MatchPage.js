@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react';
 import './MatchPage.css';
 import { MatchCard } from './MatchCard';
 import { ShotsButton } from '../styleElements/buttons';
+import { TopNav } from '../TopNav';
+import { CirclesBackground } from '../styleElements/CirclesBackground';
 
 export function MatchPage() {
   //verdict indicates which button is active
@@ -44,6 +46,8 @@ export function MatchPage() {
 
   return (
     <div className="matchPage">
+      <CirclesBackground />
+      <TopNav backIcon dark filterIcon />
       <div className="matchPage__content">
         <MatchCard reset={reset} decision={decision} />
         <div className="matchPage__buttons">
