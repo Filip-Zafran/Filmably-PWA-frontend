@@ -69,7 +69,7 @@ export const MatchCard = ({ decision, reset }) => {
 
   //when a decision is made it triggers an axios call
 
-  const serverURL = 'http://localhost:5000';
+  const serverURL = process.env.REACT_APP_SERVER;
 
   useEffect(() => {
     if (decision === 'like') {
