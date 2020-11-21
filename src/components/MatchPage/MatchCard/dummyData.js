@@ -1,29 +1,5 @@
 export const dummyData = [
 	{
-		id: 'tt0068646',
-		rank: '2',
-		title: 'The Godfather',
-		fullTitle: 'The Godfather (1972)',
-		year: '1972',
-		image:
-			'https://imdb-api.com/images/original/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_Ratio0.7015_AL_.jpg',
-		crew: 'Francis Ford Coppola (dir.), Marlon Brando, Al Pacino',
-		imDbRating: '9.1',
-		imDbRatingCount: '1591434'
-	},
-	{
-		id: 'tt0071562',
-		rank: '3',
-		title: 'The Godfather: Part II',
-		fullTitle: 'The Godfather: Part II (1974)',
-		year: '1974',
-		image:
-			'https://imdb-api.com/images/original/MV5BMWMwMGQzZTItY2JlNC00OWZiLWIyMDctNDk2ZDQ2YjRjMWQ0XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_Ratio0.7015_AL_.jpg',
-		crew: 'Francis Ford Coppola (dir.), Al Pacino, Robert De Niro',
-		imDbRating: '9.0',
-		imDbRatingCount: '1111857'
-	},
-	{
 		id: 'tt0468569',
 		rank: '4',
 		title: 'The Dark Knight',

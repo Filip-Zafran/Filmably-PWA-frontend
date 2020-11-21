@@ -36,7 +36,7 @@ export function ProfileEdit() {
 			<TopNav />
 			<div className='profile__edit-containter'>
 				<div className='profile__edit-footer'>
-					<div id='profile__chevron-left'>
+					<div className='profile__chevron-left'>
 						<Link to='/Profile'>
 							<ChevronLeft size={30} active={location.pathname === '/Profile'} />
 						</Link>
@@ -44,8 +44,8 @@ export function ProfileEdit() {
 					<h1>Profile Settings </h1>
 				</div>
 
-				<div id='profile__edit-picture-container'>
-					<div id='profile__edit-picture'>
+				<div className='profile__edit-picture-container'>
+					<div className='profile__edit-picture'>
 						<Download />
 					</div>
 				</div>
@@ -59,7 +59,7 @@ export function ProfileEdit() {
 						className={`${classes.formControl} profile__edit__age-select`}
 						id='profile__edit-formcontrol'
 					>
-						<InputLabel id='profile__edit-inputlabel'>Age range</InputLabel>
+						<InputLabel className='profile__edit-inputlabel'>Age range</InputLabel>
 						<Select id='profile__edit-select' onChange={handleChange}>
 							<MenuItem value={'Newb'}> Younger than 18yo</MenuItem>
 							<MenuItem value={'Generation Z'}>Between 22 - 30yo</MenuItem>

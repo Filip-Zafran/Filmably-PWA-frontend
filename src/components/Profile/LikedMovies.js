@@ -4,6 +4,7 @@ import { ChevronLeft } from '../styleElements/icons';
 import { ChevronRight } from '../styleElements/icons';
 import { CirclesBackground } from '../styleElements/CirclesBackground';
 import { dummyData } from '../MatchPage/MatchCard/dummyData';
+import { LogoActive } from '../styleElements/icons';
 
 export function LikedMovies() {
 	const location = useLocation();
@@ -18,7 +19,7 @@ export function LikedMovies() {
 			<CirclesBackground />
 
 			<div className='profile__edit-footer'>
-				<div id='profile__chevron-left'>
+				<div className='profile__chevron-left'>
 					<Link to='/Profile'>
 						<ChevronLeft size={30} active={location.pathname === '/Profile'} />
 					</Link>
@@ -33,7 +34,11 @@ export function LikedMovies() {
 						<div className='liked_movies__text-container'>
 							<p>{film.title} </p>
 							<div className='liked_movies__year-match'>
-								{film.year} <span>14 matches</span>
+								{film.year}
+								<span>
+									<LogoActive size={13} />
+									&nbsp;14 matches
+								</span>
 							</div>
 						</div>
 						<div className='liked_movies__circle'>

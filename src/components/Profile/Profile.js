@@ -38,7 +38,22 @@ export function Profile(size) {
 					<Star size={13} />
 					&nbsp;103 likes
 				</h3>
-				<h4>“It’s only after we’ve lost everything that we’re free to do anything.”</h4>
+
+				<div className='profile__span-container'>
+					<span> “Midlife Crisis”</span>
+					<span> Berlin </span>
+				</div>
+				<div className='profile__span-container-big'>
+					<h4> Current filter:</h4>
+					<div className='profile__span-container'>
+						<span style={{ background: 'rgba(200, 0, 255, 0.2)' }}>1970s</span>
+						<span style={{ background: 'rgba(0, 0, 255, 0.2)' }}>1980s</span>
+						<span style={{ background: 'rgba(5, 111, 255, 0.2)' }}>Art</span>
+						<span style={{ background: 'rgba(30, 20, 355, 0.2)' }}>Indy</span>
+						<span style={{ background: 'rgba(20, 330, 0, 0.2)' }}>Si-Fi</span>
+						<span style={{ background: 'rgba(50, 500, 0, 0.2)' }}>Western</span>
+					</div>
+				</div>
 			</div>
 
 			<div id='profile__likes-container'>
