@@ -42,7 +42,7 @@ export function ProfileEdit() {
 				</div>
 
 				<div className='profile__edit-label-input'>
-					<label> Edit username:</label>
+					<label> Username:</label>
 					<input type='text' />
 				</div>
 				<div className='profile__edit-label-input profile__edit__age-select-wrapper'>
@@ -50,7 +50,7 @@ export function ProfileEdit() {
 						className={`${classes.formControl} profile__edit__age-select`}
 						id='profile__edit-formcontrol'
 					>
-						<InputLabel id='profile__edit-inputlabel'>Age range</InputLabel>
+						<InputLabel id='profile__edit-inputlabel'>Age range:</InputLabel>
 						<Select id='profile__edit-select' onChange={handleChange}>
 							<MenuItem value={'Newb'}> Younger than 18yo</MenuItem>
 							<MenuItem value={'Generation Z'}>Between 22 - 30yo</MenuItem>
@@ -67,18 +67,29 @@ export function ProfileEdit() {
 				</div>
 
 				<div className='profile__edit-label-input'>
-					<label> Edit email: </label>
+					<label> Email: </label>
 					<input type='text' />
 				</div>
 
 				<div className='profile__edit-label-input'>
-					<label> Edit password: </label>
+					<label> Password: </label>
 					<input type='text' />
 				</div>
 
-				<div className='profile__edit-label-input'>
-					<label> Current filters: </label>
-					<input type='text' />
+				<div className='profile__edit-current-filters'>
+					<div className='profile__span-container-big'>
+						<h4> Current filters: - - - EDIT SYMBOL</h4>
+						<div className='profile__edit-span-container'>
+							<span style={{ background: 'rgba(200, 0, 255, 0.2)' }}>1970s</span>
+							<span style={{ background: 'rgba(0, 0, 255, 0.2)' }}>1980s</span>
+							<span style={{ background: 'rgba(5, 111, 255, 0.2)' }}>Art</span>
+							<span style={{ background: 'rgba(30, 20, 355, 0.2)' }}>Indy</span>
+							<span style={{ background: 'rgba(20, 330, 0, 0.2)' }}>Si-Fi</span>
+							<span style={{ background: 'rgba(50, 500, 0, 0.2)' }}>Western</span>
+							<span style={{ background: 'rgba(20, 330, 0, 0.2)' }}>Si-Fi</span>
+							<span style={{ background: 'rgba(50, 500, 0, 0.2)' }}>Western</span>
+						</div>
+					</div>
 				</div>
 
 				<Link to='/Profile'>
