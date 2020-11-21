@@ -310,15 +310,51 @@ opacity: 0.5;
   justify-content: center;
 }
 
-/* #profile__likes-chevron-right {
-  position: relative;
-  right: 3px;
+.liked_movies__container {
+  padding-bottom: 150px;
 }
 
-.profile__listed-movie-name .iconSVG {
+.liked_movies__all {
+  display: grid;
+  grid-template-columns: 100px auto 30px;
+  grid-template-rows: 90px 90px;
+ 
+}
+
+.liked_movies__thumbnail {
+width: 70px;
+height: 80px;
+ border-radius: 15px;
+ margin-left: 15px;
+ margin-bottom: 10px;
+ object-fit: cover;
+}
+
+.liked_movies__text-container {
+  display: grid;
+  justify-self: start;
+  text-align-last: left;
+}
+
+.liked_movies__text-container p {
   display: flex;
-  align-items: flex-end;
-  position: absolute;
-  right: 3px;
-  align-items: end;
-} */
+  align-items: center;
+  font-size: 18px;
+  color: gray;
+ 
+   }
+
+.liked_movies__text-container div {
+  font-size: 14px;
+   text-align: start;
+}
+
+.liked_movies__circle {
+  display: flex;
+  align-items: center;
+}
+
+.liked_movies__year-match {
+display: grid;
+grid-template-columns: 80px 80px ;
+}

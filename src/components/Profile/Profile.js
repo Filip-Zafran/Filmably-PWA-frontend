@@ -2,13 +2,18 @@ import React from 'react';
 import './Profile.css';
 import { Settings } from '../styleElements/icons/Settings';
 import { Link, useLocation } from 'react-router-dom';
-// import uploadeIcon from './uploadIcon';
 import { Star } from '../styleElements/icons';
 import { LogoActive } from '../styleElements/icons';
 import { ChevronRight } from '../styleElements/icons';
+import { dummyData } from '../MatchPage/MatchCard/dummyData';
 
 export function Profile(size) {
 	const location = useLocation();
+
+	const likedFilms = [];
+	for (let i = 0; i < 3; i++) {
+		likedFilms.push(dummyData[i]);
+	}
 
 	return (
 		<div className='profile__container'>
@@ -47,21 +52,9 @@ export function Profile(size) {
 				</div>
 
 				<div className='profile__likes-container'>
-					<img
-						className='profile__likes-picture'
-						src='https://img.apmcdn.org/86805e8c22499c4214dd67d19b4987ec3a73eecd/uncropped/930f1a-20150612-pulp-fiction-soundtrack-album.jpg'
-						alt='new'
-					/>
-					<img
-						className='profile__likes-picture'
-						src='https://fanart.tv/fanart/movies/19/movieposter/metropolis-5223509d084e8.jpg'
-						alt='new'
-					/>
-					<img
-						className='profile__likes-picture'
-						src='https://fanart.tv/fanart/movies/13/movieposter/forrest-gump-52196a490f738.jpg'
-						alt='new'
-					/>
+					{likedFilms.map((film) => (
+						<img className='profile__likes-picture' src={film.image} alt='movie thumbnail' />
+					))}
 				</div>
 			</div>
 
