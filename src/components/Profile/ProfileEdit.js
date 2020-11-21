@@ -4,9 +4,7 @@ import { Link, useLocation } from 'react-router-dom';
 import { ChevronLeft } from '../styleElements/icons';
 import { Download } from '../styleElements/icons';
 import { CirclesBackground } from '../styleElements/CirclesBackground';
-<<<<<<< HEAD
 import { TopNav } from '../TopNav';
-=======
 import { Toggle } from '../styleElements/controls/Toggle';
 
 const useStyles = makeStyles((theme) => ({
@@ -14,13 +12,12 @@ const useStyles = makeStyles((theme) => ({
 		minWidth: 100
 	}
 }));
->>>>>>> styled ProfileEdit Page, added Dropdown / npm install @material-ui/core
 
 export function ProfileEdit() {
 	const location = useLocation();
 
 	const options = [
-		'',
+		'newb ( < 18)',
 		'barely legal (18 - 21)',
 		'generation z (22 - 30)',
 		'midlife crisis (30 - 40)',
