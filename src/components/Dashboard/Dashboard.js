@@ -11,11 +11,6 @@ import store from '../../Redux/store';
 import { BottomNav } from '../BottomNav';
 
 const Dashboard = () => {
-	//gets the logged in user and stores it in the REDUX store
-	useEffect(() => {
-		store.dispatch(fetchUser());
-	}, []);
-
 	return (
 		<div className='dashboard'>
 			<Router>
