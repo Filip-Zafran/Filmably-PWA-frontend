@@ -51,6 +51,7 @@ justify-content: space-around;
 width: 235px
 }
 
+
 .profile__span-container {
   display: flex;
   align-items: center;
@@ -58,7 +59,30 @@ width: 235px
   justify-content: space-around;
   width: 235px;
   flex-wrap: wrap;
-}
+ }
+
+ .profile__span-container 
+ span {
+   color: white!important;
+  }
+
+
+.profile__span-container-big  {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+   }
+
+
+ .profile__span-container-big
+ span {
+  color: #FFCB1F;
+
+ }
+
 
 .profile__name-box
 >h2 {
@@ -285,16 +309,14 @@ input {
   flex-wrap: wrap;
 }
 
-.profile__span-container2 
-span {
-color: #FFCB1F;
-
-}
-
 .profile__edit-span-container 
 span {
-  color: #FFCB1F;
+  color: #FFCB1F!important;
 }
+
+
+
+
 
 .profile__edit-label-input {
   display: flex;
@@ -372,6 +394,14 @@ label {
   padding: 8px;
    font-size: 16px;
    font-family: inherit;
+}
+
+/* age range */
+.MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-formControl.MuiInput-formControl 
+ {
+width: 196px;
+font-family: inherit;
+color: #D4D4D4;
 }
 
 /* Dropdown list */

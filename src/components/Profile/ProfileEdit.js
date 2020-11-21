@@ -94,18 +94,16 @@ export function ProfileEdit() {
 				</div>
 
 				<div className='profile__edit-current-filters'>
-					<div className='profile__span-container-big'>
-						<h4> Current filters: - - - EDIT SYMBOL</h4>
-						<div className='profile__edit-span-container'>
-							<span>1970s</span>
-							<span>1980s</span>
-							<span>Art</span>
-							<span>Indy</span>
-							<span>Si-Fi</span>
-							<span>Western</span>
-							<span>Si-Fi</span>
-							<span>Western</span>
-						</div>
+					<h4> Current filters: - - - EDIT SYMBOL</h4>
+					<div className='profile__edit-span-container'>
+						<span>1970s</span>
+						<span>1980s</span>
+						<span>Art</span>
+						<span>Indy</span>
+						<span>Si-Fi</span>
+						<span>Western</span>
+						<span>Si-Fi</span>
+						<span>Western</span>
 					</div>
 				</div>
 

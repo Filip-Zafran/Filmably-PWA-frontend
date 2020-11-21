@@ -48,16 +48,15 @@ export function Profile(size) {
 					<span> “Midlife Crisis”</span>
 					<span> Berlin </span>
 				</div>
+
+				<h4> Current filter:</h4>
 				<div className='profile__span-container-big'>
-					<h4> Current filter:</h4>
-					<div className='profile__span-container2'>
-						<span>1970s</span>
-						<span>1980s</span>
-						<span>Art</span>
-						<span>Indy</span>
-						<span>Si-Fi</span>
-						<span>Western</span>
-					</div>
+					<span>1970s</span>
+					<span>1980s</span>
+					<span>Art</span>
+					<span>Indy</span>
+					<span>Si-Fi</span>
+					<span>Western</span>
 				</div>
 			</div>
 
