@@ -1,14 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
-import { HashRouter, Link } from "react-router-dom";
-import OtherProfile from './OtherProfile';
+import { Link } from "react-router-dom";
+// import OtherProfile from './OtherProfile';
 
 export default function FindPeople(props) {
     // console.log("props below unction", props)
     const [errors, setError] = useState(false);
-    const [people, setPeople] = useState([])
+    const [people, setPeople] = useState()
     const [searchPeople, setSearchPeople] = useState()
-    const [otherID, setOtherID] = useState('')
+    // const [otherID, setOtherID] = useState('')
 
     // console.log('I am finding friends')
     // useEffect is there in order to make the request when component mount
@@ -18,9 +18,11 @@ export default function FindPeople(props) {
         Axios({
             // origin: "http://localhost:3000/Friends",
             method: "GET",
-            url: "http://localhost:5000/authenticate/Friends/users.json"
+            url: "http://localhost:5000/authenticate/users.json",
+            withCredentials: true,
         })
             .then((res) => {
+                console.log("res in findpeople", res)
                 if (res.data) {
                     setPeople(res.data)
                     // console.log(res.data)
@@ -35,14 +37,14 @@ export default function FindPeople(props) {
     useEffect(() => {
 
         if (searchPeople === undefined) return;
-        // console.log("searcjpeople", searchPeople)
+        console.log("searcjpeople", searchPeople)
         let ignore = false;
         Axios({
             method: "GET",
-            url: `http://localhost:5000/authenticate/Friends/FindPeople/${searchPeople}`
+            url: `http://localhost:5000/authenticate/FindPeople/${searchPeople || "d9r3"}`,
+            withCredentials: true,
         })
 
-            // .get(`/findProfile/${searchPeople}`,)
             .then((res) => {
                 console.log(res)
                 // no match found btw the typed Char and the list of people
@@ -62,9 +64,10 @@ export default function FindPeople(props) {
     }, [searchPeople])
 
 
-    const handleChange = (e) => {
-        e.preventDefault()
+    const handleChange = e => {
+        // e.preventDefault()
         setSearchPeople(e.target.value)
+
     }
 
     const redirectPage = e => {
@@ -83,8 +86,6 @@ export default function FindPeople(props) {
             {people && people.map(person => {
 
                 return (
-                    // href = { "http://localhost:3000/user/:" + person._id }
-                    // to={"user/:" + person._id} 
                     <Link
                         to={"user/:" + person._id}
                         key={person._id}
@@ -95,7 +96,7 @@ export default function FindPeople(props) {
                     </Link>
                 )
             })}
-            { errors && <div> Woops, there was an error {errors} loading your search, please try again!</div>}
+            { errors && <div> Woops, there was an error loading your search, please try again!</div>}
         </React.Fragment >
     )
 

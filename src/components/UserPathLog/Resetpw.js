@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import axios from 'axios';
-import Login from './Login';
+// import Login from './Login';
 import { Link } from 'react-router-dom'
 
 
@@ -8,7 +8,7 @@ export default function Resetpw(e) {
 
     const [values, setValue] = useState('');
     const [step, setSteps] = useState(0)
-    const [code, setCode] = useState('');
+    // const [code, setCode] = useState('');
     const [error, setError] = useState();
 
 
@@ -60,7 +60,7 @@ export default function Resetpw(e) {
     }
 
     const getCurrentDisplay = () => {
-        if (step == 0) {
+        if (step === 0) {
             return (
                 <React.Fragment >
                     {error && <div>Woops, there was an issue with the email!</div>}
@@ -75,7 +75,7 @@ export default function Resetpw(e) {
                     <button onClick={submitEmail}> Next </button >
                 </React.Fragment>
             )
-        } else if (Object.values(step)[0] == 1) {
+        } else if (Object.values(step)[0] === 1) {
             return (
                 <React.Fragment>
                     {error && <div>Woops, there was an issue with code/ password!</div>}
@@ -97,7 +97,7 @@ export default function Resetpw(e) {
                     <button onClick={submitCode}> Next </button >
                 </React.Fragment>
             )
-        } else if (Object.values(step)[0] == 2) {
+        } else if (Object.values(step)[0] === 2) {
             return (
                 <React.Fragment>
                     <p>Successfully updated</p>

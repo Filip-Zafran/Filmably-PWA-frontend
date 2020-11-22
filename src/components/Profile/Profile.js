@@ -7,14 +7,14 @@ import { LogoActive } from '../styleElements/icons';
 import { Link, useLocation } from 'react-router-dom';
 
 export function Profile() {
-	const options = [
-		'newb ( < 18)',
-		'barely legal (18 - 21)',
-		'generation z (22 - 30)',
-		'midlife crisis (30 - 40)',
-		'golden age (40 - 50)',
-		'old yeller (50+)'
-	];
+	// const options = [
+	// 	'newb ( < 18)',
+	// 	'barely legal (18 - 21)',
+	// 	'generation z (22 - 30)',
+	// 	'midlife crisis (30 - 40)',
+	// 	'golden age (40 - 50)',
+	// 	'old yeller (50+)'
+	// ];
 
 	const location = useLocation();
 
@@ -99,13 +99,13 @@ export function Profile() {
 
 			<div className='profile__footer'>
 				<div className='profile__footer-text'>
-					<h1>Friends </h1> <p>></p>
+					<h1>Friends </h1> <p></p>
 				</div>
 
 				<hr className='profile__horizontal-line' />
 
 				<div className='profile__footer-text'>
-					<h1>My Black List </h1> <p>></p>
+					<h1>My Black List </h1> <p></p>
 				</div>
 			</div>
 		</div>

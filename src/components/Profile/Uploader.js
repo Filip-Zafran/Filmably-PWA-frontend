@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import ImageUploader from 'react-images-upload';
 
 function Uploader() {
-	const [ pictures, setPictures ] = useState('');
+	// const [ pictures, setPictures ] = useState('');
 
 	//   onDrop(picture) {
 	//     this.setState({
@@ -10,14 +10,14 @@ function Uploader() {
 	//     });
 	// }
 
-	function onDrop() {}
+	// function onDrop() {}
 
 	return (
 		<ImageUploader
 			withIcon={true}
 			buttonText='Choose images'
 			onChange={this.onDrop}
-			imgExtension={[ '.jpg', '.gif', '.png', '.gif' ]}
+			imgExtension={['.jpg', '.gif', '.png', '.gif']}
 			maxFileSize={5242880}
 		/>
 	);
