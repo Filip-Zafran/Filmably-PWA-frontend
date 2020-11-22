@@ -1,11 +1,13 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
 import './Start.css';
 import { CirclesBackground } from '../../components/styleElements/CirclesBackground';
-import { LetsStartButton } from '../../components/styleElements/buttons/LetsStartButton';
+import { LetsStart } from '../../components/LetsStart';
 import { movieQuotes } from './movieQuotes';
+import { FilterPage } from '../FilterPage';
 
 export const Start = () => {
+  const [seeFilters, setSeeFilters] = useState(false);
+
   const quote = movieQuotes[Math.floor(Math.random() * movieQuotes.length)][0];
 
   return (
@@ -15,9 +17,8 @@ export const Start = () => {
         <div className="start__space"></div>
         <div className="start__noDisplay">"{quote}"</div>
       </div>
-      <Link to="/matchPage">
-        <LetsStartButton label="Let's start" />
-      </Link>
+      <FilterPage />
+      {/*<LetsStart setExpand={setSeeFilters} expand={seeFilters} />*/}
       <CirclesBackground />
     </div>
   );

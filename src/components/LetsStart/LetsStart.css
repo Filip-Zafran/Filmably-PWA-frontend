@@ -1,21 +1,30 @@
-.letsStartButton {
+.letsStart {
+  z-index: 2;
+  cursor: pointer;
+}
+
+.letsStart__border {
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--dark-900);
   background: var(--prime-500-25);
-  border-radius: 8px;
+  border-radius: 20px;
   width: 261px;
   height: 80px;
   font-size: 22px;
   font-weight: 600;
 }
 
-.letsStartButton:active {
+.letsStart:hover {
+  cursor: pointer;
+}
+
+.letsStart :active {
   transform: scale(0.95);
 }
 
-.letsStartButton__internal {
+.letsStart__internal {
   background: var(--prime-500);
   display: flex;
   align-items: center;
