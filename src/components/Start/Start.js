@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import './Start.css';
 import { CirclesBackground } from '../../components/styleElements/CirclesBackground';
-import { LetsStart } from '../../components/LetsStart';
 import { movieQuotes } from './movieQuotes';
 import { FilterPage } from '../FilterPage';
 
@@ -20,7 +19,6 @@ export const Start = () => {
         <div className="start__noDisplay">"{quote}"</div>
       </div>
       <FilterPage toggle={toggleSeeFilters} seeFilters={seeFilters} />
-      {/*<LetsStart setExpand={setSeeFilters} expand={seeFilters} />*/}
       <CirclesBackground />
     </div>
   );

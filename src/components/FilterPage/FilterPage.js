@@ -23,8 +23,8 @@ export const FilterPage = ({ toggle, seeFilters }) => {
       className={seeFilters ? 'filterPage' : 'letsStart'}
       onClick={seeFilters ? null : toggle}
     >
-      <motion.div layout data-isOpen={seeFilters} className="letsStart__border">
-        <motion.div layout data-isOpen={seeFilters} className="letsStart__card">
+      <motion.div layout data-isopen={seeFilters} className="letsStart__border">
+        <motion.div layout data-isopen={seeFilters} className="letsStart__card">
           <motion.div layout className="letsStart__title">
             Let's Start
           </motion.div>

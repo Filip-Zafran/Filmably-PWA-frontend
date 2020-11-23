@@ -25,9 +25,9 @@
   height: 80px;
 }
 
-.letsStart__border[data-isOpen='true'] {
-  height: 548px;
-  width: 408px;
+.letsStart__border[data-isopen='true'] {
+  height: 508px;
+  width: 348px;
 }
 
 .letsStart__card {
@@ -42,9 +42,9 @@
   border-radius: 8px;
 }
 
-.letsStart__card[data-isOpen='true'] {
-  height: 500px;
-  width: 360px;
+.letsStart__card[data-isopen='true'] {
+  height: 460px;
+  width: 300px;
   padding: 12px;
 }
 
@@ -73,6 +73,7 @@
 .filterPage__cancel {
   padding: 8px 16px;
   border: 1px solid var(--dark-900);
+  color: var(--dark-900);
   border-radius: 8px;
   cursor: pointer;
 }
