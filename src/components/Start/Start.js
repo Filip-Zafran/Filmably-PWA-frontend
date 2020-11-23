@@ -10,14 +10,16 @@ export const Start = () => {
 
   const quote = movieQuotes[Math.floor(Math.random() * movieQuotes.length)][0];
 
+  const toggleSeeFilters = () => setSeeFilters(!seeFilters);
+
   return (
     <div className="start">
-      <div className="start__textBox">
+      <div className={seeFilters ? 'start__hide' : 'start__textBox'}>
         <div className="start__quote">"{quote}"</div>
         <div className="start__space"></div>
         <div className="start__noDisplay">"{quote}"</div>
       </div>
-      <FilterPage />
+      <FilterPage toggle={toggleSeeFilters} seeFilters={seeFilters} />
       {/*<LetsStart setExpand={setSeeFilters} expand={seeFilters} />*/}
       <CirclesBackground />
     </div>
