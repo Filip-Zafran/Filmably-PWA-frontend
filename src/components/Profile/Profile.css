@@ -1,3 +1,4 @@
+
 .profile__container {
    height: 150%;
 }
@@ -24,29 +25,61 @@ object-fit: cover;
     left: 32px;
     top: 170px;
     width: 235px;
-    height: 100px;
+    height: 200px;
     align-items: center;
     padding: 30px;
     border-radius: 15px;
 }
 
-.profile__name-box>h2 {
+.profile__name-box  span {
+    color: #9D9D9D;
+    font-size: 14px;
+    line-height: 1.4;
+    padding: 5px;
+    background: #202020;
+    border-radius: 5px;
+    height: 18px;
+    margin-bottom: 10px;
+}
+
+.profile__span-age-city {
+display: flex;
+align-items: center;
+justify-content: center;
+justify-content: space-around;
+width: 235px
+}
+
+.profile__span-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  width: 235px;
+  flex-wrap: wrap;
+}
+
+.profile__name-box
+>h2 {
     color: white;
     font-size: 26px;
     font-weight: bold;
 }
 
-.profile__name-box>h3 {
+.profile__name-box
+>h3 {
     color: white;
     padding: 16px;
     font-size: 12px;
 }
 
-.profile__name-box > h4 {
-    color: #9D9D9D;
-    font-size: 14px;
-    line-height: 1.4;
+.profile__name-box
+ h4 {
+  color: #9D9D9D;
+  padding: 8px;
+  font-size: 16px;
 }
+
 
 .profile__info-container {
     display: none;
@@ -57,7 +90,7 @@ object-fit: cover;
 #profile__likes-container, 
 #profile__matches-container {
     position: absolute;
-    top: 350px;
+    top: 450px;
     left: 15px;
     width: 90%;
             }
@@ -66,7 +99,7 @@ object-fit: cover;
    margin-top: 25px;}
 
  #profile__matches-container {
-top: 500px;
+top: 600px;
         }
 
 .profile__text-container {
@@ -93,7 +126,8 @@ top: 500px;
     position: relative;
   }  
 
-  .profile__footer >h1 {
+  .profile__footer 
+  >h1 {
     padding: 5px;
     padding-left: 15px;
     font-family: Inter;
@@ -110,7 +144,7 @@ top: 500px;
    border: 1px solid #202020;
 }
 
-.profile__show-all-text {
+.profile__show-all {
 font-size: small;
 color: 9D9D9D;
 }
@@ -144,3 +178,280 @@ border-radius: 30px;
     display: grid;
     grid-template-columns: repeat(3, auto);
     }
+
+#profile__liked-movies-container {
+      display: table;
+      justify-content: start;
+    }
+
+#profile__liked-movies-container 
+.profile__likes-picture {
+   width: 60px;
+   height: 60px;
+}
+
+.profile__movies-list {
+  display: flex;
+    padding: 5px;
+    margin-bottom: 100px;
+   }
+
+
+.profile__listed-movie-container {
+  display: flex;
+  /* font-family: Inter; */
+}
+
+.profile__listed-movie {
+   position: relative;
+   padding: 5px;
+   height: 60px;
+   display: block;
+     }
+
+.profile__listed-movie-name {
+     position: relative;
+     padding: 5px;
+     height: 60px;
+     display: block;
+     text-align: start;
+     top: 7px;
+   }
+
+.profile__listed-movie-name span {
+     font-size: small;
+     padding-right: 5px;
+     color: grey;
+   }
+
+
+.profile__back-bttn {
+ position: fixed;
+ right: 20px;
+ top: 20px;
+}
+
+.profile__edit-containter{
+  display: absolute;
+  align-items: left;
+  padding-left: 20px;
+  width: 320px
+  }
+
+.profile__edit-containter 
+input {
+    background: #202020;
+    color: white;
+    font-size: 18px;
+    width: 100%;
+  }
+
+.profile__edit-footer {
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  font-weight: bold;
+  justify-content: space-around;
+
+}
+
+#profile__edit-picture-container{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#profile__edit-picture {
+  position: relative;
+  display:flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  height: 100px;
+  width: 100px;
+  background-color: blue;
+  border-radius: 10px;
+}
+
+.profile__edit-span-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  width: 300px;
+  flex-wrap: wrap;
+}
+
+.profile__edit-label-input {
+  display: flex;
+  padding: 10px;
+  padding-right: 20px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  background: rgba(5, 5, 5, 0.25);
+  border-radius: 10px;
+}
+
+.profile__bttn{
+  margin: 20px;
+  height: 40px;
+  width: 200px;
+  font-size: 25px;
+}
+
+.profile__edit-likes-friends {
+  margin-bottom: 150px;
+  text-align: start;
+}
+
+.profile__edit-grid {
+  display: flex;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-bottom: 5px;
+  align-items: center;
+}
+
+.profile__p-text {
+  padding: 10px;
+}
+
+.profile__edit-containter 
+label {
+  padding-right: 5px;
+  margin-right: 5px;
+} 
+
+.profile__edit__age-select-wrapper 
+.profile__edit__age-select {
+  /* border: solid 2px green; */
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 300px;
+  height: 21px;
+  color: white;
+   font-size: 16px;
+   font-family: inherit;
+}
+
+#profile__edit-inputlabel {
+  /* border: solid 2px blue; */
+  color: white;
+  position: static;
+  transform: none;
+  font-size: 16px;
+  font-family: inherit;
+
+}
+
+/* BEETWEEN INPUT */
+.profile__edit__age-select-wrapper 
+.MuiInputBase-root.MuiInput-root.MuiInput-underline.MuiInputBase-formControl.MuiInput-formControl {
+  /* border: solid 2px red; */
+  color: white;
+  height: 26px;
+  font-size: 18px;
+  top: -7px;
+  background: rgb(80, 49, 49);
+  padding: 8px;
+   font-size: 16px;
+   font-family: inherit;
+}
+
+/* Dropdown list */
+.MuiList-root.MuiMenu-list.MuiList-padding {
+  background: rgb(144, 192, 180);
+   font-size: 16px;
+   font-family: inherit;
+}
+
+.profile__edit-current-filters {
+  background: rgba(5, 5, 5, 0.25);
+  align-items: center;
+  padding: 10px;
+  border-radius: 15px;
+ }
+
+.profile__edit-current-filters 
+h4 {
+  padding-bottom: 15px;
+   }
+
+
+.profile__edit-current-filters 
+span {
+  color: #9D9D9D;
+  background: #202020;
+  font-size: 14px;
+  padding: 5px;
+  border-radius: 5px;
+  height: 18px;
+  margin-bottom: 10px;
+}
+
+
+#profile__chevron-left {
+background: #202020;
+height: 40px;
+width: 40px;
+opacity: 0.5;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.liked_movies__container {
+  padding-bottom: 150px;
+}
+
+.liked_movies__all {
+  display: grid;
+  grid-template-columns: 100px auto 30px;
+  grid-template-rows: 90px 90px;
+ 
+}
+
+.liked_movies__thumbnail {
+width: 70px;
+height: 80px;
+ border-radius: 15px;
+ margin-left: 15px;
+ margin-bottom: 10px;
+ object-fit: cover;
+}
+
+.liked_movies__text-container {
+  display: grid;
+  justify-self: start;
+  text-align-last: left;
+}
+
+.liked_movies__text-container 
+p {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: gray;
+ 
+   }
+
+.liked_movies__text-container 
+div {
+  font-size: 14px;
+   text-align: start;
+}
+
+.liked_movies__circle {
+  display: flex;
+  align-items: center;
+}
+
+.liked_movies__year-match {
+display: grid;
+grid-template-columns: 70px 100px;
+}
+
