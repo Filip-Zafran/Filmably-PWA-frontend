@@ -4,6 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
+  position: relative;
 }
 
 .matchPage__content {
@@ -11,7 +13,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 800px;
+  position: absolute;
 }
 
 .matchPage__buttons {
