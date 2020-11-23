@@ -1,9 +1,17 @@
+.filterPage__hidden {
+  z-index: 5;
+  position: absolute;
+  bottom: -100vh;
+  opacity: 100%;
+}
+
 .filterPage {
-  z-index: 2;
+  z-index: 5;
+  position: absolute;
 }
 
 .letsStart {
-  z-index: 2;
+  z-index: 5;
   cursor: pointer;
 }
 
@@ -86,4 +94,12 @@
   border: 1px solid var(--dark-900);
   border-radius: 8px;
   cursor: pointer;
+}
+
+.filterPage__cancel:active {
+  transform: scale(0.9);
+}
+
+.filterPage__ok:active {
+  transform: scale(0.9);
 }

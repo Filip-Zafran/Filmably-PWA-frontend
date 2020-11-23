@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import './FilterPage.css';
 
-export const FilterPage = ({ toggle, seeFilters }) => {
+export const FilterPage = ({ toggle, seeFilters, hidden }) => {
   const timeFilters = ['1990s', '1980s', 'New Releases'];
   const genreFilters = [
     'Art',
@@ -20,7 +20,9 @@ export const FilterPage = ({ toggle, seeFilters }) => {
 
   return (
     <div
-      className={seeFilters ? 'filterPage' : 'letsStart'}
+      className={
+        hidden ? 'filterPage__hidden' : seeFilters ? 'filterPage' : 'letsStart'
+      }
       onClick={seeFilters ? null : toggle}
     >
       <motion.div layout data-isopen={seeFilters} className="letsStart__border">
@@ -37,7 +39,9 @@ export const FilterPage = ({ toggle, seeFilters }) => {
               Cancel
             </div>
             <Link to="/matchPage">
-              <div className="filterPage__ok">OK</div>
+              <div onClick={toggle} className="filterPage__ok">
+                OK
+              </div>
             </Link>
           </motion.div>
         </motion.div>
