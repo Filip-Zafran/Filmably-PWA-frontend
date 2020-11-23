@@ -1,6 +1,7 @@
 import React from 'react';
 import { FilterGroup } from './FilterGroup';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 import './FilterPage.css';
 
 export const FilterPage = ({ toggle, seeFilters }) => {
@@ -18,19 +19,26 @@ export const FilterPage = ({ toggle, seeFilters }) => {
   ];
 
   return (
-    <div className={seeFilters ? 'filterPage' : 'letsStart'} onClick={toggle}>
+    <div
+      className={seeFilters ? 'filterPage' : 'letsStart'}
+      onClick={seeFilters ? null : toggle}
+    >
       <motion.div layout data-isOpen={seeFilters} className="letsStart__border">
         <motion.div layout data-isOpen={seeFilters} className="letsStart__card">
           <motion.div layout className="letsStart__title">
             Let's Start
           </motion.div>
-          <motion.div
-            layout
-            className={seeFilters ? null : 'letsStart__content'}
-          >
+          <motion.div layout className="letsStart__content">
             <FilterGroup name="Time" filters={timeFilters} />
             <FilterGroup name="Genre" filters={genreFilters} />
-            <div className="filterPage__buttons"></div>
+          </motion.div>
+          <motion.div layout className="filterPage__buttons">
+            <div onClick={toggle} className="filterPage__cancel">
+              Cancel
+            </div>
+            <Link to="/matchPage">
+              <div className="filterPage__ok">OK</div>
+            </Link>
           </motion.div>
         </motion.div>
       </motion.div>
