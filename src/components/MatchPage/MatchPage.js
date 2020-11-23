@@ -4,6 +4,7 @@ import { MatchCard } from './MatchCard';
 import { ShotsButton } from '../styleElements/buttons';
 import { TopNav } from '../TopNav';
 import { CirclesBackground } from '../styleElements/CirclesBackground';
+import { FilterPage } from '../FilterPage';
 
 export function MatchPage() {
   //verdict indicates which button is active
@@ -11,6 +12,11 @@ export function MatchPage() {
 
   //decision indicates the final decision of the user
   const [decision, setDecision] = useState('neutral');
+
+  //whether filterMenu is displayed or not
+  const [displayFilters, setDisplayFilters] = useState(false);
+
+  const toggleDisplayFilters = () => setDisplayFilters(!displayFilters);
 
   //sets buttons from neutral to inactive based on if the opposite button is selected
   const likeActive = verdict === 'like' ? true : false;
@@ -47,7 +53,12 @@ export function MatchPage() {
   return (
     <div className="matchPage">
       <CirclesBackground />
-      <TopNav backIcon dark filterIcon />
+      <FilterPage
+        hidden={!displayFilters}
+        seeFilters={displayFilters}
+        toggle={toggleDisplayFilters}
+      />
+      <TopNav backIcon dark filterIcon displayFilters={toggleDisplayFilters} />
       <div className="matchPage__content">
         <MatchCard reset={reset} decision={decision} />
         <div className="matchPage__buttons">

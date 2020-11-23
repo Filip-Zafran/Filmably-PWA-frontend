@@ -1,1 +1,0 @@
-export { LetsStartButton } from './LetsStartButton';

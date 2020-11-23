@@ -26,7 +26,8 @@ export function BottomNav() {
       <Link to="/dashboard">
         <Ripple classes="bottomNavButton">
           {location.pathname === '/dashboard' ||
-          location.pathname === '/matchPage' ? (
+          location.pathname === '/matchPage' ||
+          location.pathname === '/filter' ? (
             <LogoActive />
           ) : (
             <Logo />
@@ -35,7 +36,8 @@ export function BottomNav() {
           <p
             className={
               location.pathname === '/dashboard' ||
-              location.pathname === '/matchPage'
+              location.pathname === '/matchPage' ||
+              location.pathname === '/filter'
                 ? 'bottomNav__activeLabel'
                 : 'bottomNav__label'
             }
