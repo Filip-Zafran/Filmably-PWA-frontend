@@ -2,16 +2,20 @@ import React, { useEffect, useState } from 'react';
 import Axios from 'axios'
 
 
-export default function FriendsButton({ otherUserId }) {
-    console.log("otheruserId", otherUserId)
+export default function FriendsButton() {
+    // console.log("otheruserIdtop", otherUserId)
     // console.log("e in FriendsButton", e)
-    const [buttonText, setButtonText] = useState("Send friend request")
+    const [buttonText, setButtonText] = useState("something")
     const [errors, setError] = useState(false)
+    var otherUserId = (window.location.pathname).slice(6)
+
     // const [id, setId] = useState('');
     // const [otherId, setOtherId] = useState('');
     // let otherUserId;
     //props should be replaced by otherUserId
     useEffect(() => {
+        // if (otherUserId) {
+        console.log("otheruserIdtuseEffect", otherUserId)
 
         Axios({
             method: "GET",
@@ -27,6 +31,7 @@ export default function FriendsButton({ otherUserId }) {
                 } else if (data && data.data.unfriend === true) {
                     setButtonText("Unfriend")
                 } else if (data && data.data.acceptFriendReq === true) {
+                    console.log("Iam in accept friends request")
                     setButtonText("Accept Friend Request")
                 } else if (data && data.data.cancelFriendReq === true) {
                     setButtonText("Cancel Friend Request")
@@ -35,9 +40,10 @@ export default function FriendsButton({ otherUserId }) {
                     setError(true)
                 }
             })
+        // }
     }, [])
 
-    const handleClicke = () => {
+    const handleClick = () => {
         //for this function, one route to backend will be created per button title
         if (buttonText === 'Send friend request') {
             // console.log("send friend request", otherUserId)
@@ -108,7 +114,7 @@ export default function FriendsButton({ otherUserId }) {
     return (
         <React.Fragment>
             {errors && <div>There was an issue {errors} with your request, please try again!</div>}
-            <button style={{ color: "red", fontSize: "16px", width: "200px", height: "200px" }} onClick={handleClicke}>{buttonText}</button>
+            <button style={{ color: "red", fontSize: "16px", width: "200px", height: "200px" }} onClick={handleClick}>{buttonText}</button>
         </React.Fragment>
     )
 

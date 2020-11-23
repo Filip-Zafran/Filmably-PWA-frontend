@@ -8,8 +8,8 @@ export default function FindPeople(props) {
     const [errors, setError] = useState(false);
     const [people, setPeople] = useState()
     const [searchPeople, setSearchPeople] = useState()
-    // const [otherID, setOtherID] = useState('')
-
+    const [otherid, setOtherProfileID] = useState('')
+    console.log("props in findpeople", props)
     // console.log('I am finding friends')
     // useEffect is there in order to make the request when component mount
     //this GET route should gather the last three registered people 
@@ -67,15 +67,17 @@ export default function FindPeople(props) {
     const handleChange = e => {
         // e.preventDefault()
         setSearchPeople(e.target.value)
-
+        // props.onChange()
     }
 
-    const redirectPage = e => {
-        // e.preventDefault()
-        props.onChange(e.target.parentElement.name)
+    const sendPropsParents = e => {
+        setOtherProfileID(e.target.id)
+        console.log("sendpropsparent", e.target.id)
+        // props.onChange(e.target.id)
         // console.log(props)
-
     }
+
+
 
     return (
         <React.Fragment>
@@ -84,16 +86,16 @@ export default function FindPeople(props) {
             <button >Search</button>
 
             {people && people.map(person => {
-
+                // console.log("person._id", props.person)
                 return (
-                    <Link
-                        to={"user/:" + person._id}
-                        key={person._id}
-                        name={person._id}
-                        onClick={e => redirectPage(e)} >
-                        <p name={person._id} >{person.username}</p>
-                        <img href={person.href} />
-                    </Link>
+                    <div key={person._id}  >
+                        <a
+                            href={`http://localhost:3000/user/${person._id}`} name={person._id} target="_blank" otheridtoparents={setOtherProfileID} onClick={sendPropsParents}
+                        >
+                            <p id={person._id} >{person.username}</p>
+                            {/* <img href={person.href} alt="Image" /> */}
+                        </a>
+                    </div>
                 )
             })}
             { errors && <div> Woops, there was an error loading your search, please try again!</div>}

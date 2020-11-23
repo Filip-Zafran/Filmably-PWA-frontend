@@ -21,7 +21,7 @@ export default function Friends(props) {
 	return (
 		<React.Fragment>
 			<p> Friends</p>
-			<FindPeople name={otherID} onChange={handleID} />
+			{/* <FindPeople name={otherID} onChange={handleID} value={props} /> */}
 
 
 

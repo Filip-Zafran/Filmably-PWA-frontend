@@ -5,18 +5,21 @@ import Axios from 'axios';
 import FriendsButton from './FriendsButton.js'
 
 export default function OtherProfile(props) {
-    console.log("props.location", props)
-
+    // console.log("otheridtoparents", otheridtoparents)
+    console.log("props", props)
     const [profiles, setProfile] = useState({})
     const [error, setError] = useState(false)
     // const [url, setUrl] = useState()
     // const [id, setId] = useState();
     // const [otherUserId, setOtherUserId] = useState()
+    // console.log("newAppID", newAppID)
 
 
     useEffect(() => {
-        const id = props.name;
-
+        const id = (window.location.pathname).slice(6);
+        // console.log("id", (window.location.pathname).slice(6))
+        // const id = otheridtoparents
+        // console.log("otheridtoparents", otheridtoparents)
         Axios({
             method: "GET",
             url: `http://localhost:5000/authenticate/OtherProfile/${id}.json`,
@@ -49,7 +52,7 @@ export default function OtherProfile(props) {
             {error && <div>Woops, there was an error with laoding the content! Please try again</div>}
             <div>I AM A PROFILE</div>
             <p key={profiles.id} > {profiles.username}</p>
-            <FriendsButton otherUserId={props.name} />
+            <FriendsButton otherUserId={profiles.id} />
         </React.Fragment >
     )
 }

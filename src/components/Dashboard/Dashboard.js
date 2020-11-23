@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
 // import Movies from './Movies';
-import Friends from '../Friends/Friends';
+import FindPeople from '../Friends/FindPeople';
 import { MatchPage } from '../MatchPage';
 import { Profile } from '../Profile/Profile';
 // import { ProfileEdit } from '../Profile/ProfileEdit';
@@ -22,7 +22,7 @@ const Dashboard = () => {
 				<BottomNav />
 				<Switch>
 					<Route path="/profile" component={Profile} />
-					<Route path="/friends" component={Friends} />
+					<Route path="/users" component={FindPeople} />
 					<Route path="/matchPage" component={MatchPage} />
 					<Route path="/" component={Start} />
 				</Switch>

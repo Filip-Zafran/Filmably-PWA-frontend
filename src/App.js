@@ -19,15 +19,20 @@ import Friends from './components/Friends/Friends.js'
 
 
 const App = (props) => {
-	const [otherProfileID, setOtherProfileID] = useState()
-	const [IDOther, setIDOther] = useState()
+	const [otheridtoparents, setOtherProfileID] = useState('')
+	// console.log(props)
+	// console.log(props.otherid)
 
+	// console.log("otherprofileid", otherprofileid)
 	const handleProfileID = (newAppID) => {
-
+		console.log("newAppId", newAppID)
 		setOtherProfileID(newAppID)
-		setIDOther(newAppID)
+
 
 	}
+
+	console.log("setotherprofileId", setOtherProfileID)
+
 
 	return (
 		<Router>
@@ -48,17 +53,23 @@ const App = (props) => {
 				{/* <PrivateRoute path='/profile'>
 					<Profile />
 				</PrivateRoute> */}
+				<Route path='/users'>
+					<FindPeople onChange={handleProfileID} setOtherProfileID={setOtherProfileID} />
+				</Route>
+				<Route path='/user/:id'>
+					<OtherProfile onChange={handleProfileID} setOtherProfileID={setOtherProfileID} />
+				</Route>
 
-				<PrivateRoute exact path='/findpeople'>
-					<FindPeople />
-				</PrivateRoute>
 
-				<PrivateRoute exact path='/friends'>
+
+				{/* <PrivateRoute exact path='/friends'>
 					<Friends name={otherProfileID} onChange={handleProfileID} />
-				</PrivateRoute>
-				<PrivateRoute exact path='/user/:id'>
+					<FindPeople /> */}
+
+				{/* </PrivateRoute> */}
+				{/* <Route path='/user/:id'>
 					<OtherProfile name={IDOther} onChange={setIDOther} />
-				</PrivateRoute>
+				</Route> */}
 				{/* <PrivateRoute>
 					<FriendsButton />
 				</PrivateRoute> */}
