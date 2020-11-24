@@ -22,7 +22,7 @@ export default function OtherProfile(props) {
         // console.log("otheridtoparents", otheridtoparents)
         Axios({
             method: "GET",
-            url: `http://localhost:5000/authenticate/OtherProfile/${id}.json`,
+            url: `http://localhost:5000/profiles/OtherProfile/${id}.json`,
             withCredentials: true
         })
             .then((res) => {

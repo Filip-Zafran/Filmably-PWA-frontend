@@ -18,7 +18,7 @@ export default function FindPeople(props) {
         Axios({
             // origin: "http://localhost:3000/Friends",
             method: "GET",
-            url: "http://localhost:5000/authenticate/users.json",
+            url: "http://localhost:5000/profiles/users.json",
             withCredentials: true,
         })
             .then((res) => {
@@ -41,7 +41,7 @@ export default function FindPeople(props) {
         let ignore = false;
         Axios({
             method: "GET",
-            url: `http://localhost:5000/authenticate/FindPeople/${searchPeople || "d9r3"}`,
+            url: `http://localhost:5000/profiles/FindPeople/${searchPeople || "d9r3"}`,
             withCredentials: true,
         })
 
