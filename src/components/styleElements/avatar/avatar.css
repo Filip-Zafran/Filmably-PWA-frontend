@@ -26,7 +26,6 @@
 }
 
 .circleBig {
-  overflow: hidden;
   fill: var(--warm-900);
 }
 
