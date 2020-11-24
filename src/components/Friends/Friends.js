@@ -14,7 +14,6 @@ export default function Friends(props) {
 		// console.log("newID after", newID)
 		if (newID) {
 			console.log("props inside", props)
-
 			props.onChange(newID)
 		}
 	}
