@@ -1,30 +1,28 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { Route, BrowserRouter as Router, Switch } from 'react-router-dom';
-// import Movies from './Movies';
+// import Friends from '../Friends/Friends';
 import FindPeople from '../Friends/FindPeople';
 import { MatchPage } from '../MatchPage';
 import { Profile } from '../Profile/Profile';
-// import { ProfileEdit } from '../Profile/ProfileEdit';
+import { ProfileEdit } from '../Profile/ProfileEdit';
+import { LikedMovies } from '../Profile/LikedMovies';
+import { TopMatches } from '../Profile/TopMatches';
 import { Start } from '../Start/Start';
-import store from '../../Redux/store';
 import { BottomNav } from '../BottomNav';
-import { fetchUser } from '../../Redux/userSlice';
 
 const Dashboard = () => {
-	//gets the logged in user and stores it in the REDUX store
-	useEffect(() => {
-		store.dispatch(fetchUser());
-	}, []);
-
 	return (
-		<div className='dashboard'>
+		<div className="dashboard">
 			<Router>
 				<BottomNav />
 				<Switch>
-					<Route path="/profile" component={Profile} />
+					<Route path="/Profile" component={Profile} />
+					<Route path="/ProfileEdit" component={ProfileEdit} />
+					<Route path="/LikedMovies" component={LikedMovies} />
+					<Route path="/TopMatches" component={TopMatches} />
 					<Route path="/users" component={FindPeople} />
-					<Route path="/matchPage" component={MatchPage} />
-					<Route path="/" component={Start} />
+					<Route path="/MatchPage" component={MatchPage} />
+					<Route path="/Dashboard" component={Start} />
 				</Switch>
 			</Router>
 		</div>

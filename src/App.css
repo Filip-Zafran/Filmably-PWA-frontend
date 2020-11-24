@@ -21,8 +21,8 @@ a {
   /* New color scheme align with the design file */
 
   /*colors added for the matchPage*/
-  --dark-66-20: rgba(66, 66, 66, 0.2);
-  --dark-36-20: rgba(36, 36, 36, 0.2);
+  --dark-66: rgba(66, 66, 66, 1);
+  --dark-36: rgba(36, 36, 36, 1);
   --dark-300-50: rgba(32, 32, 32, 0.5);
   --dark-18: rgba(18, 18, 18, 1);
 

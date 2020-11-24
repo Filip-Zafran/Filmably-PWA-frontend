@@ -1,25 +1,32 @@
 import React from 'react';
 
-export const Flip = ({ size, className }) => {
+export const Filter = ({ className, size }) => {
   return (
     <svg
+      className={size ? null : 'iconSvg'}
       width={size ? size : null}
       height={size ? size : null}
-      className={size ? null : 'iconSvg'}
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M10.8446 8.58459L16.9683 5.04906L20.5039 11.1728"
-        className={className}
+        d="M5 12H19"
+        className={className ? className : 'inactiveIcon'}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
       <path
-        d="M2.20203 17.6569L8.96351 19.4686C9.98822 19.7432 11.08 19.5994 11.9988 19.069C12.9175 18.5386 13.5879 17.6649 13.8625 16.6402L16.9683 5.04906"
-        className={className}
+        d="M3 6H21"
+        className={className ? className : 'inactiveIcon'}
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      />
+      <path
+        d="M8 18H16"
+        className={className ? className : 'inactiveIcon'}
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

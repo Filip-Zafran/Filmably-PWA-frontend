@@ -1,5 +1,5 @@
 import React from 'react';
-import { Thunder, Heart, Star } from '../styleElements/icons';
+import { Logo, LogoActive, Heart, Star } from '../styleElements/icons';
 import { Link, useLocation } from 'react-router-dom';
 import './BottomNav.css';
 import { Ripple } from './RippleButton';
@@ -19,21 +19,30 @@ export function BottomNav() {
                 : 'bottomNav__label'
             }
           >
-            My Lists
+            Profile
           </p>
         </Ripple>
       </Link>
       <Link to="/dashboard">
         <Ripple classes="bottomNavButton">
-          <Thunder active={location.pathname === '/matchPage' ? true : false} />
+          {location.pathname === '/dashboard' ||
+          location.pathname === '/matchPage' ||
+          location.pathname === '/filter' ? (
+            <LogoActive />
+          ) : (
+            <Logo />
+          )}
+
           <p
             className={
-              location.pathname === '/matchPage'
+              location.pathname === '/dashboard' ||
+              location.pathname === '/matchPage' ||
+              location.pathname === '/filter'
                 ? 'bottomNav__activeLabel'
                 : 'bottomNav__label'
             }
           >
-            Shots
+            Match
           </p>
         </Ripple>
       </Link>
@@ -47,7 +56,7 @@ export function BottomNav() {
                 : 'bottomNav__label'
             }
           >
-            Friends
+            Chat
           </p>
         </Ripple>
       </Link>
