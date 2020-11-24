@@ -1,37 +1,32 @@
 import React, { useState } from 'react';
 import FindPeople from './FindPeople';
-import { BottomNav } from "../BottomNav/BottomNav"
-import FriendsList from './FriendsList'
-import { Route } from 'react-router-dom';
+// import { BottomNav } from "../BottomNav/BottomNav"
+// import FriendsList from './FriendsList'
+// import { Route } from 'react-router-dom';
 
 export default function Friends(props) {
 	console.log("props", props)
 	const [otherID, setOtherID] = useState('')
 
 	const handleID = (newID) => {
-		console.log("something", newID)
+		console.log("props in newID", props)
 		setOtherID(newID)
-
-		// console.log("e in friends.js", e)
-		props.onChange(newID)
-		// setOtherID()
+		// console.log("newID after", newID)
+		if (newID) {
+			console.log("props inside", props)
+			props.onChange(newID)
+		}
 	}
-
-	// const passToParents = (e) => {
-	// 	console.log("e in passtoparents", e)
-	// 	// props.onChange(e)
-	// }
-	// onChange = { e => passToParents(e) }
 	return (
 		<React.Fragment>
 			<p> Friends</p>
-			<FindPeople name={otherID} onChange={handleID} />
+			{/* <FindPeople name={otherID} onChange={handleID} value={props} /> */}
 
 
 
 			<p> My friends</p>
 
-			<BottomNav />
+			{/* <BottomNav /> */}
 		</React.Fragment>
 
 	)

@@ -1,9 +1,9 @@
 import Axios from "axios";
 import React, { useState } from "react";
 import { useHistory } from "react-router-dom";
-import Registration from '../UserPathLog/Register';
-import Resetpw from '../UserPathLog/Resetpw';
-import { HashRouter, Route, Link } from "react-router-dom";
+// import Registration from '../UserPathLog/Register';
+// import Resetpw from '../UserPathLog/Resetpw';
+import { Link } from "react-router-dom";
 
 
 export default function Login() {

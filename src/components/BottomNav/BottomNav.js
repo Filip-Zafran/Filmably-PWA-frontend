@@ -46,12 +46,12 @@ export function BottomNav() {
           </p>
         </Ripple>
       </Link>
-      <Link to="/friends">
+      <Link to="/users">
         <Ripple classes="bottomNavButton">
-          <Heart active={location.pathname === '/friends' ? true : false} />
+          <Heart active={location.pathname === '/users' ? true : false} />
           <p
             className={
-              location.pathname === '/friends'
+              location.pathname === '/users'
                 ? 'bottomNav__activeLabel'
                 : 'bottomNav__label'
             }

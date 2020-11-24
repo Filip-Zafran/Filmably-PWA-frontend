@@ -1,29 +1,21 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
-import { HashRouter, Link } from "react-router-dom";
-import OtherProfile from './OtherProfile';
 
 export default function FindPeople(props) {
-    // console.log("props below unction", props)
     const [errors, setError] = useState(false);
-    const [people, setPeople] = useState([])
+    const [people, setPeople] = useState()
     const [searchPeople, setSearchPeople] = useState()
-    const [otherID, setOtherID] = useState('')
-
-    // console.log('I am finding friends')
-    // useEffect is there in order to make the request when component mount
+    const [otherid, setOtherProfileID] = useState('')
     //this GET route should gather the last three registered people 
     useEffect(() => {
-        // console.log('getpeople')
         Axios({
-            // origin: "http://localhost:3000/Friends",
             method: "GET",
-            url: "http://localhost:5000/authenticate/Friends/users.json"
+            url: "http://localhost:5000/profiles/users.json",
+            withCredentials: true,
         })
             .then((res) => {
                 if (res.data) {
                     setPeople(res.data)
-                    // console.log(res.data)
                 } else {
                     setError(true)
                 }
@@ -31,18 +23,15 @@ export default function FindPeople(props) {
     }, [])
 
     //when user looks for friend on an input field, should do a post request 
-
     useEffect(() => {
-
         if (searchPeople === undefined) return;
-        // console.log("searcjpeople", searchPeople)
         let ignore = false;
         Axios({
             method: "GET",
-            url: `http://localhost:5000/authenticate/Friends/FindPeople/${searchPeople}`
+            url: `http://localhost:5000/profiles/FindPeople/${searchPeople || "d9r3"}`,
+            withCredentials: true,
         })
 
-            // .get(`/findProfile/${searchPeople}`,)
             .then((res) => {
                 console.log(res)
                 // no match found btw the typed Char and the list of people
@@ -62,17 +51,15 @@ export default function FindPeople(props) {
     }, [searchPeople])
 
 
-    const handleChange = (e) => {
-        e.preventDefault()
+    const handleChange = e => {
         setSearchPeople(e.target.value)
     }
 
-    const redirectPage = e => {
-        // e.preventDefault()
-        props.onChange(e.target.parentElement.name)
-        console.log(props)
-
+    const sendPropsParents = e => {
+        setOtherProfileID(e.target.id)
     }
+
+
 
     return (
         <React.Fragment>
@@ -81,21 +68,17 @@ export default function FindPeople(props) {
             <button >Search</button>
 
             {people && people.map(person => {
-
                 return (
-                    // href = { "http://localhost:3000/user/:" + person._id }
-                    // to={"user/:" + person._id} 
-                    <Link
-                        to={"user/:" + person._id}
-                        key={person._id}
-                        name={person._id}
-                        onClick={e => redirectPage(e)} >
-                        <p name={person._id} >{person.username}</p>
-                        <img href={person.href} />
-                    </Link>
+                    <div key={person._id}  >
+                        <a
+                            href={`http://localhost:3000/user/${person._id}`} name={person._id} target="_blank" otheridtoparents={setOtherProfileID} onClick={sendPropsParents}
+                        >
+                            <p id={person._id} >{person.username}</p>
+                        </a>
+                    </div>
                 )
             })}
-            { errors && <div> Woops, there was an error {errors} loading your search, please try again!</div>}
+            { errors && <div> Woops, there was an error loading your search, please try again!</div>}
         </React.Fragment >
     )
 

@@ -101,8 +101,8 @@ export function Profile(size) {
 			</div>
 
 			<div className='profile__footer'>
-				<Link to='/Friends'>
-					<div active={location.pathname === '/Friends'} className='profile__footer-text'>
+				<Link to='/users'>
+					<div active={location.pathname === '/users'} className='profile__footer-text'>
 						<h1>Friends </h1> <ChevronRight />
 					</div>
 				</Link>
@@ -110,7 +110,7 @@ export function Profile(size) {
 				<hr className='profile__horizontal-line' />
 
 				<div className='profile__footer-text'>
-					<h1>My Black List </h1> <ChevronRight />
+					<h1>My Black List </h1> <p></p>
 				</div>
 			</div>
 		</div>

@@ -1,39 +1,29 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios'
+import Axios from 'axios'
 
 
-export default function FriendsButton({ otherUserId }) {
-
-    const [buttonText, setButtonText] = useState("Send friend request")
+export default function FriendsButton() {
+    const [buttonText, setButtonText] = useState("something")
     const [errors, setError] = useState(false)
-    // const [id, setId] = useState('');
-    // const [otherId, setOtherId] = useState('');
+    var otherUserId = (window.location.pathname).slice(6)
 
-    //props should be replaced by otherUserId
     useEffect(() => {
-        console.log("mounted ")
-        axios
-            .get(`/getFriendsStatus/${otherUserId}`)
-
-
-            //check in the backend the current status of the friend request.
-            // Is there an existing friend request between a given pair of users ?
-
-            //     If there is a request, has it been accepted ?
-
-            //         If there is a request and it has not been accepted, who is the sender and who is the receiver ?
-            //     A simple way to accomplish this would be to create a table for friend requests that has columns for the id of the sender, the id of the recipient, and a boolean indicating whether or not the request has been accepted.When one user sends another a friend request, a row would be inserted with the ids of the sender and receiver in the appropriate columns and the boolean set to false.When a user accepts a friend request, the appropriate row would be updated to set the boolean to true.When a user unfriends or cancels a pending request, the row for the request can be deleted(deleting these rows means that we will lose potentially valuable historical information, but that is probably acceptable for our purposes).
-
-
+        //when component mount, it checks the status of friendship (not friend, friend request, friends)
+        Axios({
+            method: "GET",
+            url: `http://localhost:5000/Friends/getFriendsStatus/${otherUserId}`,
+            withCredentials: true,
+        })
             .then(data => {
-                //define the orignal "state" of the message 
-                if (data && data.addFriend === true) {
+                if (data && data.data.addFriend === true) {
+                    console.log("made it to addFriend")
                     setButtonText("Send friend request")
-                } else if (data && data.unfriend === true) {
+                } else if (data && data.data.unfriend === true) {
                     setButtonText("Unfriend")
-                } else if (data && data.acceptFriend === true) {
+                } else if (data && data.data.acceptFriendReq === true) {
+                    console.log("Iam in accept friends request")
                     setButtonText("Accept Friend Request")
-                } else if (data && data.cancelFrequest === true) {
+                } else if (data && data.data.cancelFriendReq === true) {
                     setButtonText("Cancel Friend Request")
                 } else {
                     setError(true)
@@ -41,34 +31,44 @@ export default function FriendsButton({ otherUserId }) {
             })
     }, [])
 
-    const handleClicke = () => {
-        //for this function, one route to backend will be created per button title
-        if (buttonText == 'Send friend request') {
-            axios
-                .post(`/makeFriendRequest/${otherUserId}`)
+    const handleClick = () => {
+        //on click, will identify current status and update depending on the action
+        if (buttonText === 'Send friend request') {
+            Axios({
+                method: "POST",
+                url: `http://localhost:5000/Friends/makeFriendRequest/${otherUserId}`,
+                withCredentials: true,
+            })
                 .then(data => {
-                    if (data == true) {
+                    if (data.data.data === true) {
+                        console.log("made it to accept friend")
                         setButtonText('Cancel Friend Request')
                     } else {
                         setError(true)
                     }
                 })
 
-        } else if (buttonText == 'Cancel Friend Request' || buttonText == "Unfriend") {
-            axios
-                .post(`/unfriend/${otherUserId}`)
+        } else if (buttonText === 'Cancel Friend Request' || buttonText === "Unfriend") {
+            Axios({
+                method: "POST",
+                url: `http://localhost:5000/Friends/unfriend/${otherUserId}`,
+                withCredentials: true,
+            })
                 .then(data => {
-                    if (data == true) {
+                    if (data.data.data === true) {
                         setButtonText('Send friend request')
                     } else {
                         setError(true)
                     }
                 })
-        } else if (buttonText == "Accept Friend Request") {
-            axios
-                .post(`/acceptFriendRequest/${otherUserId}`)
+        } else if (buttonText === "Accept Friend Request") {
+            Axios({
+                method: "POST",
+                url: `http://localhost:5000/Friends/acceptFriendRequest/${otherUserId}`,
+                withCredentials: true,
+            })
                 .then(data => {
-                    if (data == true) {
+                    if (data.data.accepted === true) {
                         setButtonText('Unfriend')
                     } else {
                         setError(true)
@@ -81,35 +81,10 @@ export default function FriendsButton({ otherUserId }) {
 
 
 
-
-
-
-
-    //props hsould have the ID of the profile that being visited
-
-
-    //if no pending request or sent request, not friend => add friends
-
-    // if there is a friendship => remove friend
-    //if request is pending, should offer to accept or declined friends request for the user that receive it and should allow to cancel friend request for the user sending it 
-
-
-
-    //DB
-    // Is there an existing friend request between a given pair of users ?
-
-    //     If there is a request, has it been accepted ?
-
-    //         If there is a request and it has not been accepted, who is the sender and who is the receiver ?
-    //     A simple way to accomplish this would be to create a table for friend requests that has columns for the id of the sender, the id of the recipient, and a boolean indicating whether or not the request has been accepted.When one user sends another a friend request, a row would be inserted with the ids of the sender and receiver in the appropriate columns and the boolean set to false.When a user accepts a friend request, the appropriate row would be updated to set the boolean to true.When a user unfriends or cancels a pending request, the row for the request can be deleted(deleting these rows means that we will lose potentially valuable historical information, but that is probably acceptable for our purposes).
-
-
-
-
     return (
         <React.Fragment>
-            {errors && <div>There was an issue with your request, please try again!</div>}
-            <button style={{ color: "red", fontSize: "16px", width: "200px", height: "200px" }} onClick={handleClicke}>{buttonText}</button>
+            {errors && <div>There was an issue {errors} with your request, please try again!</div>}
+            <button style={{ color: "red", fontSize: "16px", width: "200px", height: "200px" }} onClick={handleClick}>{buttonText}</button>
         </React.Fragment>
     )
 
