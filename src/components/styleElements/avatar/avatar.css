@@ -1,0 +1,35 @@
+.avatarBackground {
+  margin-left: 200px;
+  height: 5rem;
+  width: 5rem;
+  border-radius: 12px;
+  background-color: var(--warm-900);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.SvgCircle {
+  position: absolute;
+  z-index: 1;
+  height: 6rem;
+  width: 6rem;
+}
+
+.circleSmall {
+  fill: var(--warm-100);
+}
+
+.circleMedium {
+  fill: var(--warm-500);
+}
+
+.circleBig {
+  fill: var(--warm-900);
+}
+
+.initials {
+  z-index: 3;
+}
