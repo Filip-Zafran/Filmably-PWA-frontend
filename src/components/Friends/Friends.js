@@ -1,38 +1,33 @@
-import React, { useState } from 'react';
-import FindPeople from './FindPeople';
-// import { BottomNav } from "../BottomNav/BottomNav"
-// import FriendsList from './FriendsList'
-// import { Route } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { fetchFriendsWannabes, fetchFriendsAccepted, fetchFriendsDeclined, fetchFriendsDeleted } from '../../Redux/friendsSlice'
+import { useDispatch, useSelector } from "react-redux";
 
-export default function Friends(props) {
-	console.log("props", props)
-	const [otherID, setOtherID] = useState('')
+export default function Friends(status) {
 
-	const handleID = (newID) => {
-		console.log("props in newID", props)
-		setOtherID(newID)
-		// console.log("newID after", newID)
-		if (newID) {
-			console.log("props inside", props)
-			props.onChange(newID)
+	const [friendsWannabes, setFriendsWannabes] = useState();
+	const [friendsAccepted, setFriendsAccepted] = useState();
+	const [friendsDeclined, setFriendsDeclined] = useState();
+	const [friendsDelete, setFriendsDelete] = useState();
+
+	useEffect(() => {
+		console.log("looking for the id",)
+		// fetchFriendsWannabes
+		setFriendsWannabes(fetchFriendsWannabes)
+		console.log("fetchFriendsWannabes", fetchFriendsWannabes)
+		return () => {
+			console.log("FRIENDS LOADING")
 		}
-	}
+	}, [])
+
+
 	return (
 		<React.Fragment>
-			<p> Friends</p>
-			{/* <FindPeople name={otherID} onChange={handleID} value={props} /> */}
+			<h3> Friends</h3>
 
-
-
-			<p> My friends</p>
-
-			{/* <BottomNav /> */}
 		</React.Fragment>
 
 	)
 }
 
 
-//to do friends: Manage status friends 
-// manage who is online and which ID is called
-// Look for friends
+

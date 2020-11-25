@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react';
+import Friends from './Friends'
 import Axios from 'axios';
 
-export default function FindPeople(props) {
+export default function FindPeople() {
     const [errors, setError] = useState(false);
     const [people, setPeople] = useState()
     const [searchPeople, setSearchPeople] = useState()
     const [otherid, setOtherProfileID] = useState('')
+    const serverUrl = process.env.REACT_APP_SERVER;
+    const feUrl = process.env.REACT_APP_FE;
     //this GET route should gather the last three registered people 
     useEffect(() => {
         Axios({
             method: "GET",
-            url: "http://localhost:5000/profiles/users.json",
+            url: `${serverUrl}/profiles/users.json`,
             withCredentials: true,
         })
             .then((res) => {
@@ -28,7 +31,7 @@ export default function FindPeople(props) {
         let ignore = false;
         Axios({
             method: "GET",
-            url: `http://localhost:5000/profiles/FindPeople/${searchPeople || "d9r3"}`,
+            url: `${serverUrl}/profiles/FindPeople/${searchPeople || "d9r3"}`,
             withCredentials: true,
         })
 
@@ -71,7 +74,7 @@ export default function FindPeople(props) {
                 return (
                     <div key={person._id}  >
                         <a
-                            href={`http://localhost:3000/user/${person._id}`} name={person._id} target="_blank" otheridtoparents={setOtherProfileID} onClick={sendPropsParents}
+                            href={`${feUrl}/user/${person._id}`} name={person._id} target="_blank" otheridtoparents={setOtherProfileID} onClick={sendPropsParents}
                         >
                             <p id={person._id} >{person.username}</p>
                         </a>
@@ -79,6 +82,7 @@ export default function FindPeople(props) {
                 )
             })}
             { errors && <div> Woops, there was an error loading your search, please try again!</div>}
+            <Friends />
         </React.Fragment >
     )
 

@@ -9,6 +9,8 @@ export default function OtherProfile(props) {
     console.log("props", props)
     const [profiles, setProfile] = useState({})
     const [error, setError] = useState(false)
+    const serverUrl = process.env.REACT_APP_SERVER;
+
     // const [url, setUrl] = useState()
     // const [id, setId] = useState();
     // const [otherUserId, setOtherUserId] = useState()
@@ -22,7 +24,7 @@ export default function OtherProfile(props) {
         // console.log("otheridtoparents", otheridtoparents)
         Axios({
             method: "GET",
-            url: `http://localhost:5000/profiles/OtherProfile/${id}.json`,
+            url: `${serverUrl}/profiles/OtherProfile/${id}.json`,
             withCredentials: true
         })
             .then((res) => {
@@ -53,6 +55,7 @@ export default function OtherProfile(props) {
             <div>I AM A PROFILE</div>
             <p key={profiles.id} > {profiles.username}</p>
             <FriendsButton otherUserId={profiles.id} />
+
         </React.Fragment >
     )
 }

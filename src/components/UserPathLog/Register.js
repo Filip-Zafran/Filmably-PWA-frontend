@@ -5,6 +5,7 @@ import axios from 'axios';
 function Registration() {
 	const [values, setInput] = useState('');
 	const [error, setError] = useState();
+	const serverUrl = process.env.REACT_APP_SERVER;
 
 	// const [values, setInput] = useState('')
 	// const [error, setError] = useState();
@@ -13,7 +14,7 @@ function Registration() {
 	const submit = () => {
 		//post route to backend
 		axios
-			.post('http://localhost:5000/authenticate/register', {
+			.post(`${serverUrl}/authenticate/register`, {
 				// first: values.first,
 				// last: values.last,
 				username: values.email,

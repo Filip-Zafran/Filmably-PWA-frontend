@@ -9,6 +9,7 @@ import { Link } from "react-router-dom";
 export default function Login() {
 	const [username, setUsername] = useState("");
 	const [password, setPassword] = useState("");
+	const serverUrl = process.env.REACT_APP_SERVER;
 
 	const history = useHistory();
 
@@ -24,7 +25,7 @@ export default function Login() {
 				password: password,
 			},
 			withCredentials: true,
-			url: "http://localhost:5000/authenticate/login",
+			url: `${serverUrl}/authenticate/login`,
 		}).then((res) => {
 			if (res.data.message === "Successfully Authenticated") {
 				setUsername("");

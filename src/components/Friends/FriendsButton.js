@@ -6,12 +6,13 @@ export default function FriendsButton() {
     const [buttonText, setButtonText] = useState("something")
     const [errors, setError] = useState(false)
     var otherUserId = (window.location.pathname).slice(6)
+    const serverUrl = process.env.REACT_APP_SERVER;
 
     useEffect(() => {
         //when component mount, it checks the status of friendship (not friend, friend request, friends)
         Axios({
             method: "GET",
-            url: `http://localhost:5000/Friends/getFriendsStatus/${otherUserId}`,
+            url: `${serverUrl}/Friends/getFriendsStatus/${otherUserId}`,
             withCredentials: true,
         })
             .then(data => {
@@ -36,7 +37,7 @@ export default function FriendsButton() {
         if (buttonText === 'Send friend request') {
             Axios({
                 method: "POST",
-                url: `http://localhost:5000/Friends/makeFriendRequest/${otherUserId}`,
+                url: `${serverUrl}/Friends/makeFriendRequest/${otherUserId}`,
                 withCredentials: true,
             })
                 .then(data => {
@@ -51,7 +52,7 @@ export default function FriendsButton() {
         } else if (buttonText === 'Cancel Friend Request' || buttonText === "Unfriend") {
             Axios({
                 method: "POST",
-                url: `http://localhost:5000/Friends/unfriend/${otherUserId}`,
+                url: `${serverUrl}/Friends/unfriend/${otherUserId}`,
                 withCredentials: true,
             })
                 .then(data => {
@@ -64,7 +65,7 @@ export default function FriendsButton() {
         } else if (buttonText === "Accept Friend Request") {
             Axios({
                 method: "POST",
-                url: `http://localhost:5000/Friends/acceptFriendRequest/${otherUserId}`,
+                url: `${serverUrl}/Friends/acceptFriendRequest/${otherUserId}`,
                 withCredentials: true,
             })
                 .then(data => {
