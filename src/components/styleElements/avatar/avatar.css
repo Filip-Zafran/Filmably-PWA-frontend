@@ -1,7 +1,7 @@
 .avatarBackground {
   margin-left: 200px;
-  height: 5rem;
-  width: 5rem;
+  height: 80px;
+  width: 80px;
   border-radius: 12px;
   background-color: var(--warm-900);
   overflow: hidden;

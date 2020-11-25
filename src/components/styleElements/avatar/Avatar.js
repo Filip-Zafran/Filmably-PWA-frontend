@@ -2,7 +2,13 @@ import React from "react";
 import "./avatar.css";
 import { AvatarCircles } from "./AvatarCircles";
 
-const Avatar = () => {
+const Avatar = (props) => {
+  const { size, imgSrc, firstName, lastName } = props;
+
+  function initialFirst(firstName) {
+    return console.log(firstName.CharAt(0));
+  }
+
   return (
     <div className="avatarBackground">
       <AvatarCircles />
