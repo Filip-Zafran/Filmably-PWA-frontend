@@ -21,6 +21,23 @@ export function ProfileEdit() {
 
 	const handleChange = (e) => setValue(e.target.value);
 
+	/*
+  How to make post http requests with axios?
+  How to send data in post http requests with axios?
+  How to work with Redux Thunk (redux-toolkit)?
+  Finish form validation with Formik
+  Show validation errors in the form
+  Learn Formik API
+  learn basics about http requests/responds. 101/crashcorse http
+  How your server receives http requests
+  Find out if there is already an API endpoint for profile/user updating?
+  If no - create one
+  Found out how to get/RECEIVE the data from the http POST request 
+  how to put data into mongo db - ex
+  post vs get vs get requests
+  how to respond to the client - http status codes: 201 / 400 / 500
+*/
+
 	return (
 		<div>
 			<CirclesBackground />
@@ -77,18 +94,16 @@ export function ProfileEdit() {
 				</div>
 
 				<div className='profile__edit-current-filters'>
-					<div className='profile__span-container-big'>
-						<h4> Current filters: - - - EDIT SYMBOL</h4>
-						<div className='profile__edit-span-container'>
-							<span style={{ background: 'rgba(200, 0, 255, 0.2)' }}>1970s</span>
-							<span style={{ background: 'rgba(0, 0, 255, 0.2)' }}>1980s</span>
-							<span style={{ background: 'rgba(5, 111, 255, 0.2)' }}>Art</span>
-							<span style={{ background: 'rgba(30, 20, 355, 0.2)' }}>Indy</span>
-							<span style={{ background: 'rgba(20, 330, 0, 0.2)' }}>Si-Fi</span>
-							<span style={{ background: 'rgba(50, 500, 0, 0.2)' }}>Western</span>
-							<span style={{ background: 'rgba(20, 330, 0, 0.2)' }}>Si-Fi</span>
-							<span style={{ background: 'rgba(50, 500, 0, 0.2)' }}>Western</span>
-						</div>
+					<h4> Current filters: - - - EDIT SYMBOL</h4>
+					<div className='profile__edit-span-container'>
+						<span>1970s</span>
+						<span>1980s</span>
+						<span>Art</span>
+						<span>Indy</span>
+						<span>Si-Fi</span>
+						<span>Western</span>
+						<span>Si-Fi</span>
+						<span>Western</span>
 					</div>
 				</div>
 

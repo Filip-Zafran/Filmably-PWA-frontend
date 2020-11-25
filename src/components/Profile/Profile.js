@@ -15,6 +15,11 @@ export function Profile(size) {
 		likedFilms.push(dummyData[i]);
 	}
 
+	const topMatches = [];
+	for (let i = 4; i < 7; i++) {
+		topMatches.push(dummyData[i]);
+	}
+
 	return (
 		<div className='profile__container'>
 			<div id='profile__settings'>
@@ -43,16 +48,15 @@ export function Profile(size) {
 					<span> “Midlife Crisis”</span>
 					<span> Berlin </span>
 				</div>
+
+				<h4> Current filter:</h4>
 				<div className='profile__span-container-big'>
-					<h4> Current filter:</h4>
-					<div className='profile__span-container'>
-						<span style={{ background: 'rgba(200, 0, 255, 0.2)' }}>1970s</span>
-						<span style={{ background: 'rgba(0, 0, 255, 0.2)' }}>1980s</span>
-						<span style={{ background: 'rgba(5, 111, 255, 0.2)' }}>Art</span>
-						<span style={{ background: 'rgba(30, 20, 355, 0.2)' }}>Indy</span>
-						<span style={{ background: 'rgba(20, 330, 0, 0.2)' }}>Si-Fi</span>
-						<span style={{ background: 'rgba(50, 500, 0, 0.2)' }}>Western</span>
-					</div>
+					<span>1970s</span>
+					<span>1980s</span>
+					<span>Art</span>
+					<span>Indy</span>
+					<span>Si-Fi</span>
+					<span>Western</span>
 				</div>
 			</div>
 
@@ -82,21 +86,9 @@ export function Profile(size) {
 					</Link>
 				</div>
 				<div className='profile__likes-container'>
-					<img
-						className='profile__likes-picture'
-						src='https://vignette.wikia.nocookie.net/marveldatabase/images/0/00/Deadpool_%28film%29_poster_009.jpg/revision/latest?cb=20160115014652'
-						alt='new'
-					/>
-					<img
-						className='profile__likes-picture'
-						src='https://upload.wikimedia.org/wikipedia/en/0/04/X-Men_-_Apocalypse.jpg'
-						alt='new'
-					/>
-					<img
-						className='profile__likes-picture'
-						src='https://tse1.mm.bing.net/th?id=OIP.y20AfVtBWiqW7JGF6IVeLwHaLP&pid=Api'
-						alt='new'
-					/>
+					{topMatches.map((match) => (
+						<img className='profile__likes-picture' src={match.image} alt='movie thumbnail' />
+					))}
 				</div>
 			</div>
 
@@ -110,7 +102,7 @@ export function Profile(size) {
 				<hr className='profile__horizontal-line' />
 
 				<div className='profile__footer-text'>
-					<h1>My Black List </h1> <p></p>
+					<h1>My Black List </h1> <ChevronRight />
 				</div>
 			</div>
 		</div>
