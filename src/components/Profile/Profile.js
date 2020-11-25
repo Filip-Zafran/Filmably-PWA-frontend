@@ -6,6 +6,7 @@ import { Star } from '../styleElements/icons';
 import { LogoActive } from '../styleElements/icons';
 import { ChevronRight } from '../styleElements/icons';
 import { dummyData } from '../MatchPage/MatchCard/dummyData';
+import Avatar from '../styleElements/avatar/Avatar.js';
 
 export function Profile(size) {
 	const location = useLocation();
@@ -24,16 +25,18 @@ export function Profile(size) {
 		<div className='profile__container'>
 			<div id='profile__settings'>
 				<Link to='/ProfileEdit'>
-					<Settings active={location.pathname === '/ProfileEdit'} />
+					<Settings className={location.pathname === '/ProfileEdit' ? 'activeLogo' : null} />
+				</Link>
+				<Link to='/'>
+					<p id='profile__logout' active={location.pathname === '/'}>
+						{' '}
+						Logout
+					</p>
 				</Link>
 			</div>
 
 			<div profile__header-container>
-				<img
-					className='profile__profile-picture'
-					src='https://boroondaraosteopathy.com.au/wp-content/uploads/2018/05/20180313_120911-2-1024x1024.jpg'
-					alt='new'
-				/>
+				<Avatar />
 			</div>
 			<div className='profile__name-box'>
 				<h2>Linda Bear</h2>

@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import { Select, MenuItem, FormControl, InputLabel, makeStyles } from '@material-ui/core';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronLeft } from '../styleElements/icons';
-import { Download } from '../styleElements/icons';
 import { CirclesBackground } from '../styleElements/CirclesBackground';
 import { TopNav } from '../TopNav';
 import { Toggle } from '../styleElements/controls/Toggle';
+import Avatar from '../styleElements/avatar/Avatar.js';
 
 const useStyles = makeStyles((theme) => ({
 	formControl: {
@@ -51,9 +50,7 @@ export function ProfileEdit() {
 				</div>
 
 				<div id='profile__edit-picture-container'>
-					<div id='profile__edit-picture'>
-						<Download />
-					</div>
+					<Avatar className='profile__avatar' />
 				</div>
 
 				<div className='profile__edit-label-input'>
@@ -107,7 +104,7 @@ export function ProfileEdit() {
 
 				<Link to='/Profile'>
 					<button className='profile__bttn' active={location.pathname === '/Profile'}>
-						SAVE
+						--- SAVE ICON -- Save
 					</button>
 				</Link>
 
