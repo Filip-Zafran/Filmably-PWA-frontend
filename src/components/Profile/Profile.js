@@ -62,7 +62,7 @@ export function Profile(size) {
 
 			<div id='profile__likes-container'>
 				<div className='profile__text-container'>
-					<p>Likes</p>
+					<span>Likes</span>
 					<p className='profile__show-all'>Show All </p>
 
 					<Link to='/LikedMovies'>
@@ -79,7 +79,7 @@ export function Profile(size) {
 
 			<div id='profile__matches-container'>
 				<div className='profile__text-container'>
-					<p>Top Matches</p>
+					<span>Top Matches</span>
 					<p className='profile__show-all'>Show All </p>
 					<Link to='/TopMatches'>
 						<ChevronRight size={15} active={location.pathname === '/TopMatches'} />

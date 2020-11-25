@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { ChevronLeft } from '../styleElements/icons';
+import { TopNav } from '../TopNav';
 import { ChevronRight } from '../styleElements/icons';
 import { CirclesBackground } from '../styleElements/CirclesBackground';
 import { dummyData } from '../MatchPage/MatchCard/dummyData';
@@ -17,13 +17,11 @@ export function LikedMovies() {
 	return (
 		<div className='liked_movies__container'>
 			<CirclesBackground />
+			<Link to='/Profile'>
+				<TopNav backIcon active={location.pathname === '/Profile'} />
+			</Link>
 
 			<div className='profile__edit-footer'>
-				<div className='profile__chevron-left'>
-					<Link to='/Profile'>
-						<ChevronLeft size={30} active={location.pathname === '/Profile'} />
-					</Link>
-				</div>
 				<h1> Liked Movies </h1>
 			</div>
 

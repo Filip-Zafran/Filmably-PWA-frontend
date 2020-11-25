@@ -41,14 +41,12 @@ export function ProfileEdit() {
 	return (
 		<div>
 			<CirclesBackground />
-			<TopNav />
+			<Link to='/Profile'>
+				<TopNav backIcon active={location.pathname === '/Profile'} />
+			</Link>
+
 			<div className='profile__edit-containter'>
 				<div className='profile__edit-footer'>
-					<div id='profile__chevron-left'>
-						<Link to='/Profile'>
-							<ChevronLeft size={30} active={location.pathname === '/Profile'} />
-						</Link>
-					</div>
 					<h1>Profile Settings </h1>
 				</div>
 
