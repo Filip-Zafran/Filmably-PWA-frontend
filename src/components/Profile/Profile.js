@@ -72,7 +72,7 @@ export function Profile(size) {
 
 				<div className='profile__likes-container'>
 					{likedFilms.map((film) => (
-						<img className='profile__likes-picture' src={film.image} alt='movie thumbnail' />
+						<img className='profile__likes-picture' src={film.image} key={film.id} alt='movie thumbnail' />
 					))}
 				</div>
 			</div>
@@ -87,7 +87,12 @@ export function Profile(size) {
 				</div>
 				<div className='profile__likes-container'>
 					{topMatches.map((match) => (
-						<img className='profile__likes-picture' src={match.image} alt='movie thumbnail' />
+						<img
+							className='profile__likes-picture'
+							src={match.image}
+							key={match.id}
+							alt='movie thumbnail'
+						/>
 					))}
 				</div>
 			</div>
