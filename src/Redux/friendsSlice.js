@@ -4,7 +4,7 @@ import {
     createAsyncThunk,
 } from "@reduxjs/toolkit";
 import axios from "axios";
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { selectUser } from '../Redux/userSlice';
 
 const serverUrl = process.env.REACT_APP_SERVER;
@@ -20,7 +20,7 @@ const initialState = friendsAdapter.getInitialState({
     error: null,
 });
 
-const user = useSelector(selectUser)
+// const user = useSelector(selectUser)
 
 //async thunk that will fetch the top 250 movies list from IMDB and store them
 //in the "movies" section of the redux state
@@ -31,26 +31,31 @@ const user = useSelector(selectUser)
 //     return response;
 // });
 
-const fetchFriendsWannabes = createAsyncThunk('/friends/wannabe',
+//Actions
+const fetchFriendsWannabes = createAsyncThunk("RECEIVE_FRIENDS_WANNABES",
     async () => {
-        const rs = await axios.get(`${serverUrl}/friends/wannabe)`)
-        console.log("rs in friendsslice", rs)
+        const rs = await axios({
+            method: 'GET',
+            url: `${serverUrl}/Friends/wannabe`,
+            withCredentials: true,
+        })
+        // console.log("rs in friendsslice", rs.data)
+        // console.log("rs.payload", rs.payload)
         // if (rs) {
         return {
-            type: "RECEIVE_FRIENDS_WANNABES"
+            friendsWannabes: rs.data
         }
         // }
     }
 )
 
-const fetchFriendsAccepted = createAsyncThunk('/friends/accepted',
+const fetchFriendsAccepted = createAsyncThunk('ACCEPT_FRIEND_REQUEST',
 
     async () => {
         const rs = await axios.post(`${serverUrl}/friends/accepted`)
         // if (rs) {
         return {
-            type: "ACCEPT_FRIEND_REQUEST",
-            friendsWannabes: rs
+            friendsAccepted: rs.data
         }
         // }
     }
@@ -93,21 +98,41 @@ const friendsSlice = createSlice({
     },
     //if async need to crate a thunk 
     extraReducers: {
-        // [fetchFriendsWannabes.fulfilled]: friendsAdapter.setAll,
+        [fetchFriendsWannabes.fulfilled]: (state, action) => {
+            // console.log("state before", action.type)
+            if (action.type === "RECEIVE_FRIENDS_WANNABES/fulfilled") {
+                // console.log("made it to action")
+                state = {
+                    ...state,
+                    friendsWannabes: action.payload.friendsWannabes
+                }
+                console.log("state", state)
+            }
+            return state
+        },
+
         // [fetchFriendsAccepted.fulfilled]: friendsAdapter.setAll,
 
         // [fetchFriendsWannabes],
         // [fetchFriendsAccepted]
+
+        // if (payload.type === "RECEIVE_FRIENDS_WANNABES")
     },
+
 });
 
 console.log("friendsSlice", friendsSlice)
+console.log("fetchFriendsWannabes", fetchFriendsWannabes)
 
 export default friendsSlice.reducer;
 
 export { fetchFriendsWannabes, fetchFriendsAccepted, fetchFriendsDeclined, fetchFriendsDeleted };
 
-
+// export const stateWannabes = (state) =>
+//     state.friendsWannabes ? state.friendsWannabes : [];
+// console.log("state Wannabes", stateWannabes())
+// export selectUser = (state) =>
+//     state.user ? state.user.entities[0] : null;
 //selects all moves from the redux store
 //Note: the shape of the redux state is a bit awkward but I'm not sure how to clean this up
 // export const selectAllMovies = (state) =>

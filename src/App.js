@@ -8,10 +8,11 @@ import FindPeople from './components/Friends/FindPeople';
 import OtherProfile from './components/Friends/OtherProfile';
 import Registration from './components/UserPathLog/Register';
 import Resetpw from './components/UserPathLog/Resetpw';
+import Friends from './components/Friends/Friends'
 
 
 
-const App = (props) => {
+const App = () => {
 	const [otheridtoparents, setOtherProfileID] = useState('')
 	const handleProfileID = (newAppID) => {
 		setOtherProfileID(newAppID)
@@ -35,10 +36,15 @@ const App = (props) => {
 				</PrivateRoute>
 				<Route path='/users'>
 					<FindPeople onChange={handleProfileID} setOtherProfileID={setOtherProfileID} />
+					{/* <Friends /> */}
+
 				</Route>
 				<Route path='/user/:id'>
 					<OtherProfile onChange={handleProfileID} setOtherProfileID={setOtherProfileID} />
 				</Route>
+				{/* <Route path='/friends' >
+					<Friends />
+				</Route> */}
 			</Switch>
 		</Router >
 	);
