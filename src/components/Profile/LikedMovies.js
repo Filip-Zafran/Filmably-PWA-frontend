@@ -18,8 +18,8 @@ export function LikedMovies() {
 	return (
 		<div className='liked_movies__container'>
 			<CirclesBackground />
-			<Link to='/Profile'>
-				<TopNav backIcon active={location.pathname === '/Profile'} />
+			<Link to='/dashboard//Profile'>
+				<TopNav backIcon active={location.pathname === '/dashboard//Profile'} />
 			</Link>
 
 			<div className='profile__edit-footer'>

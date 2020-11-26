@@ -40,8 +40,8 @@ export function ProfileEdit() {
 	return (
 		<div>
 			<CirclesBackground />
-			<Link to='/Profile'>
-				<TopNav backIcon active={location.pathname === '/Profile'} />
+			<Link to='/dashboard//Profile'>
+				<TopNav backIcon active={location.pathname === '/dashboard//Profile'} />
 			</Link>
 
 			<div className='profile__edit-containter'>
@@ -103,7 +103,7 @@ export function ProfileEdit() {
 				</div>
 
 				<Link to='/Profile'>
-					<button className='profile__bttn' active={location.pathname === '/Profile'}>
+					<button className='profile__bttn' active={location.pathname === '/dashboard//Profile'}>
 						--- SAVE ICON -- Save
 					</button>
 				</Link>

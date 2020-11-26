@@ -20,8 +20,8 @@ export function TopMatches() {
 
 			<div className='profile__edit-footer'>
 				<div className='profile__chevron-left'>
-					<Link to='/Profile'>
-						<ChevronLeft size={30} active={location.pathname === '/Profile'} />
+					<Link to='/dashboard/Profile'>
+						<ChevronLeft size={30} active={location.pathname === '/dashboard/Profile'} />
 					</Link>
 				</div>
 				<h1> Top Matches </h1>

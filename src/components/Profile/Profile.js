@@ -24,8 +24,8 @@ export function Profile(size) {
 	return (
 		<div className='profile__container'>
 			<div id='profile__settings'>
-				<Link to='/ProfileEdit'>
-					<Settings className={location.pathname === '/ProfileEdit' ? 'activeLogo' : null} />
+				<Link to='/dashboard/ProfileEdit'>
+					<Settings className={location.pathname === '/dashboard/ProfileEdit' ? 'activeLogo' : null} />
 				</Link>
 				<Link to='/'>
 					<p id='profile__logout' active={location.pathname === '/'}>
@@ -68,8 +68,8 @@ export function Profile(size) {
 					<span>Likes</span>
 					<p className='profile__show-all'>Show All </p>
 
-					<Link to='/LikedMovies'>
-						<ChevronRight size={15} active={location.pathname === '/LikedMovies'} />
+					<Link to='/dashboard/LikedMovies'>
+						<ChevronRight size={15} active={location.pathname === '/dashboard/LikedMovies'} />
 					</Link>
 				</div>
 
@@ -84,8 +84,8 @@ export function Profile(size) {
 				<div className='profile__text-container'>
 					<span>Top Matches</span>
 					<p className='profile__show-all'>Show All </p>
-					<Link to='/TopMatches'>
-						<ChevronRight size={15} active={location.pathname === '/TopMatches'} />
+					<Link to='/dashboard/TopMatches'>
+						<ChevronRight size={15} active={location.pathname === '/dashboard/TopMatches'} />
 					</Link>
 				</div>
 				<div className='profile__likes-container'>
