@@ -9,39 +9,45 @@ import OtherProfile from './components/Friends/OtherProfile';
 import Registration from './components/UserPathLog/Register';
 import Resetpw from './components/UserPathLog/Resetpw';
 
-
-
 const App = (props) => {
-	const [otheridtoparents, setOtherProfileID] = useState('')
-	const handleProfileID = (newAppID) => {
-		setOtherProfileID(newAppID)
-	}
+  const [otheridtoparents, setOtherProfileID] = useState('');
+  const handleProfileID = (newAppID) => {
+    setOtherProfileID(newAppID);
+  };
 
-	return (
-		<Router>
-			<Switch>
-				<Route exact path="/" >
-					<Login />
-				</Route>
+  return (
+    <Router>
+      <Switch>
+        <PrivateRoute path="/dashboard">
+          <Dashboard />
+        </PrivateRoute>
 
-				<Route exact path="/register">
-					<Registration />
-				</Route>
-				<Route exact path="/resetpw">
-					<Resetpw />
-				</Route>
-				<PrivateRoute path='/dashboard'>
-					<Dashboard />
-				</PrivateRoute>
-				<Route path='/users'>
-					<FindPeople onChange={handleProfileID} setOtherProfileID={setOtherProfileID} />
-				</Route>
-				<Route path='/user/:id'>
-					<OtherProfile onChange={handleProfileID} setOtherProfileID={setOtherProfileID} />
-				</Route>
-			</Switch>
-		</Router >
-	);
+        <Route path="/users">
+          <FindPeople
+            onChange={handleProfileID}
+            setOtherProfileID={setOtherProfileID}
+          />
+        </Route>
+        <Route path="/user/:id">
+          <OtherProfile
+            onChange={handleProfileID}
+            setOtherProfileID={setOtherProfileID}
+          />
+        </Route>
+
+        <Route exact path="/register">
+          <Registration />
+        </Route>
+        <Route exact path="/resetpw">
+          <Resetpw />
+        </Route>
+
+        <Route path="/">
+          <Login />
+        </Route>
+      </Switch>
+    </Router>
+  );
 };
 
 export default App;
