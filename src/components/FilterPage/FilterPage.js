@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FilterGroup } from './FilterGroup';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { useHistory, useLocation } from 'react-router-dom';
+import axios from 'axios';
 import './FilterPage.css';
 
 export const FilterPage = ({ toggle, seeFilters, hidden }) => {
@@ -22,18 +23,62 @@ export const FilterPage = ({ toggle, seeFilters, hidden }) => {
     'Top Rated': false,
   });
 
+  const history = useHistory();
+  const location = useLocation();
+
+  const serverURL = process.env.REACT_APP_SERVER;
+
   const toggleActive = (getter, setter) => (filter) =>
     setter({ ...getter, [filter]: !getter[filter] });
 
-  const clickOkay = () => {
-    //save changes
-    toggle();
+  const getFilters = async () => {
+    try {
+      const response = await axios({
+        method: 'GET',
+        withCredentials: true,
+        url: `${serverURL}/likeTracker/filters`,
+      });
+      console.log(response.data);
+      if (Object.keys(response.data.filters).length > 0) {
+        setGenreFilters(response.data.filters.genreFilters);
+        setTimeFilters(response.data.filters.timeFilters);
+      }
+      return response.data.filters;
+    } catch (err) {
+      return err;
+    }
+  };
+
+  const clickOkay = async () => {
+    try {
+      const response = await axios({
+        method: 'POST',
+        withCredentials: true,
+        url: `${serverURL}/likeTracker/filters`,
+        data: {
+          filters: { genreFilters: genreFilters, timeFilters: timeFilters },
+        },
+      });
+      console.log(response.data);
+      if (location.pathname === '/dashboard/matchPage') {
+        toggle();
+      } else {
+        history.push('/dashboard/matchPage');
+      }
+      return response.data;
+    } catch (err) {
+      return err;
+    }
   };
 
   const clickCancel = () => {
-    //reinitialize default values
+    getFilters();
     toggle();
   };
+
+  useEffect(() => {
+    getFilters();
+  }, []);
 
   return (
     <div
@@ -63,11 +108,9 @@ export const FilterPage = ({ toggle, seeFilters, hidden }) => {
             <div onClick={clickCancel} className="filterPage__cancel">
               Cancel
             </div>
-            <Link to="/matchPage">
-              <div onClick={clickOkay} className="filterPage__ok">
-                OK
-              </div>
-            </Link>
+            <div onClick={clickOkay} className="filterPage__ok">
+              OK
+            </div>
           </motion.div>
         </motion.div>
       </motion.div>

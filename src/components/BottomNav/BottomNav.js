@@ -9,19 +9,21 @@ export function BottomNav() {
 
 	return (
 		<div className='bottomNav'>
-			<Link to='/profile'>
+			<Link to='/dashboard/profile'>
 				<Ripple classes='bottomNavButton'>
-					<Star active={location.pathname === '/profile' ? true : false} />
-					<p className={location.pathname === '/profile' ? 'bottomNav__activeLabel' : 'bottomNav__label'}>
+					<Star active={location.pathname === '/dashboard/profile' ? true : false} />
+					<p
+						className={
+							location.pathname === '/dashboard/profile' ? 'bottomNav__activeLabel' : 'bottomNav__label'
+						}
+					>
 						Profile
 					</p>
 				</Ripple>
 			</Link>
 			<Link to='/dashboard'>
 				<Ripple classes='bottomNavButton'>
-					{location.pathname === '/dashboard' ||
-					location.pathname === '/matchPage' ||
-					location.pathname === '/filter' ? (
+					{location.pathname === '/dashboard' || location.pathname === '/dashboard/matchPage' ? (
 						<LogoActive />
 					) : (
 						<Logo />
@@ -29,9 +31,7 @@ export function BottomNav() {
 
 					<p
 						className={
-							location.pathname === '/dashboard' ||
-							location.pathname === '/matchPage' ||
-							location.pathname === '/filter' ? (
+							location.pathname === '/dashboard' || location.pathname === '/dashboard/matchPage' ? (
 								'bottomNav__activeLabel'
 							) : (
 								'bottomNav__label'
@@ -42,10 +42,14 @@ export function BottomNav() {
 					</p>
 				</Ripple>
 			</Link>
-			<Link to='/users'>
+			<Link to='/dashboard/chat'>
 				<Ripple classes='bottomNavButton'>
-					<Heart active={location.pathname === '/users' ? true : false} />
-					<p className={location.pathname === '/users' ? 'bottomNav__activeLabel' : 'bottomNav__label'}>
+					<Heart active={location.pathname === '/dashboard/chat' ? true : false} />
+					<p
+						className={
+							location.pathname === '/dashboard/chat' ? 'bottomNav__activeLabel' : 'bottomNav__label'
+						}
+					>
 						Chat
 					</p>
 				</Ripple>

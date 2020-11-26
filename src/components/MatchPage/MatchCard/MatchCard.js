@@ -112,7 +112,7 @@ export const MatchCard = ({ decision, reset }) => {
       setShowInfo(false);
       reset();
     }
-  }, [decision, reset, filmArray]);
+  }, [decision, reset, filmArray, serverURL]);
 
   return (
     <div className="matchCard">
