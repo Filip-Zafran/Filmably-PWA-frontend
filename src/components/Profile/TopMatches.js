@@ -30,7 +30,7 @@ export function TopMatches() {
 			<div className='liked_movies__all'>
 				{likedFilmsAll.map((film) => (
 					<Fragment>
-						<img className='liked_movies__thumbnail' src={film.image} alt='movie thumbnail' />
+						<img className='liked_movies__thumbnail' src={film.image} key={film.id} alt='movie thumbnail' />
 						<div className='liked_movies__text-container'>
 							<p>{film.title} </p>
 							<div className='liked_movies__year-match'>

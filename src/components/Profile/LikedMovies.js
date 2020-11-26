@@ -18,8 +18,8 @@ export function LikedMovies() {
 	return (
 		<div className='liked_movies__container'>
 			<CirclesBackground />
-			<Link to='/dashboard//Profile'>
-				<TopNav backIcon active={location.pathname === '/dashboard//Profile'} />
+			<Link to='/dashboard/Profile'>
+				<TopNav backIcon active={location.pathname === '/dashboard/Profile'} />
 			</Link>
 
 			<div className='profile__edit-footer'>
@@ -30,7 +30,7 @@ export function LikedMovies() {
 
 			<div className='liked_movies__all'>
 				{likedFilmsAll.map((film) => (
-					<Fragment>
+					<Fragment key={film.id}>
 						<img className='liked_movies__thumbnail' src={film.image} alt='movie thumbnail' />
 						<div className='liked_movies__text-container'>
 							<p>{film.title} </p>
