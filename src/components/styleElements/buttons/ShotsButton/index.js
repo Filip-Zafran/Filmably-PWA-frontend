@@ -43,12 +43,10 @@ export const ShotsButton = ({
   return (
     <ShotButton >
       <ShotButtonBorder like={like} active={active}
-        onTouchStart={like ? clickHandler('like') : clickHandler('dislike')}
-        onMouseDown={like ? clickHandler('like') : clickHandler('dislike')}
+        onTouchStart={clickHandler(like ? 'like' : 'dislike')}
+        onMouseDown={clickHandler(like ? 'like': 'dislike')}
         onTouchEnd={clickHandler('neutral')}
-        onMouseUp={
-          like ? otherClickHandler('like') : otherClickHandler('dislike')
-        }
+        onMouseUp={otherClickHandler(like ? 'like' : 'dislike')}
       />
       <ShotButtonCenter like={like} inactive={inactive}>
         {like ? <Check /> : <X />}
