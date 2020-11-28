@@ -1,7 +1,6 @@
 import React from 'react';
 import { Check, X } from '../../icons';
 import styled from "styled-components";
-import './ShotsButton.css';
 
 const ShotButton = styled.div`
   width: 92px;
