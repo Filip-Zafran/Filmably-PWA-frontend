@@ -44,6 +44,7 @@ export default function RippleButton({
       return spanArray.map((key, index) => {
         return (
           <span
+            data-testid="rippleSpan"
             key={'spanCount_' + index}
             className=""
             style={{ ...spanStyles[key] }}
@@ -59,6 +60,7 @@ export default function RippleButton({
     <RippleStyled className={classes} onClick={onClickHandler}>
       {children}
       <div
+        data-testid="rippleContainer"
         className="rippleContainer"
         onMouseDown={showRipple}
         onMouseUp={callCleanUp(cleanUp, 2000)}

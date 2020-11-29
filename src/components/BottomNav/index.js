@@ -2,7 +2,7 @@ import React from 'react';
 import { Logo, LogoActive, Heart, Star } from '../styleElements/icons';
 import { Link, useLocation } from 'react-router-dom';
 import './BottomNav.css';
-import RippleButton from '../RippleButton';
+import RippleButton from '../styleElements/buttons/RippleButton';
 
 export function BottomNav() {
   const location = useLocation();
