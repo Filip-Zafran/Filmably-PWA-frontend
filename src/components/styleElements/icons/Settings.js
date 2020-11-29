@@ -1,5 +1,5 @@
-import * as React from "react";
-import "./Icon.css";
+import * as React from 'react';
+import './Icon.css';
 
 //I made the size manually adjustable
 //the color will change to match the .inactiveIcon class in "./Icon.css"
@@ -10,7 +10,7 @@ export function Settings({ size }) {
     <svg
       width={size ? size : null}
       height={size ? size : null}
-      className={size ? null : "iconSvg"}
+      className={size ? null : 'iconSvg'}
       viewBox="0 0 24 24"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"

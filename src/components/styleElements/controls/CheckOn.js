@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const CheckOn = () => {
   return (
@@ -17,13 +17,13 @@ const CheckOn = () => {
         rx="10.25"
         fill="#5C77FF"
         stroke="#5C77FF"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
       <path
         d="M7 12.6667L10.5714 16L17 8"
         stroke="white"
-        stroke-width="2"
-        stroke-linecap="round"
+        strokeWidth="2"
+        strokeLinecap="round"
       />
     </svg>
   );

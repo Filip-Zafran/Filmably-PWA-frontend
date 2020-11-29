@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import CheckOff from "./CheckOff";
-import CheckOn from "./CheckOn";
+import React, { useState } from 'react';
+import CheckOff from './CheckOff';
+import CheckOn from './CheckOn';
 
 export const Checkbox = (active) => {
   const [change, setChange] = useState({ active });

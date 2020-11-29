@@ -1,5 +1,5 @@
-import React from "react";
-import "./avatar.css";
+import React from 'react';
+import './avatar.css';
 
 export const AvatarCircles = () => {
   return (

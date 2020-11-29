@@ -3,7 +3,8 @@ import './Icon.css';
 
 export const X = ({ size }) => {
   return (
-    <svg data-testid="x-icon"
+    <svg
+      data-testid="x-icon"
       width={size ? size : null}
       height={size ? size : null}
       className={size ? null : 'iconSvg'}

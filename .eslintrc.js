@@ -12,5 +12,7 @@ module.exports = {
   extends: ['plugin:react/recommended', 'plugin:prettier/recommended'],
   plugins: [],
   // add your custom rules here
-  rules: {},
+  rules: {
+    'react/prop-types': 0,
+  },
 };

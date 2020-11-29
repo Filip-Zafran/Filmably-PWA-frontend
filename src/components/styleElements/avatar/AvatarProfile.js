@@ -1,6 +1,6 @@
-import React from "react";
-import "./avatar.css";
-import { AvatarCircles } from "./AvatarCircles";
+import React from 'react';
+import './avatar.css';
+import { AvatarCircles } from './AvatarCircles';
 
 const AvatarProfile = () => {
   return (

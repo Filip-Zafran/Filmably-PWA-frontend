@@ -1,3 +1,4 @@
+/* eslint-disable react/prop-types */
 import React, { useState, useEffect } from 'react';
 import { FilterGroup } from './FilterGroup';
 import { motion } from 'framer-motion';
@@ -135,6 +136,7 @@ export const FilterPage = ({ toggle, seeFilters, hidden }) => {
       <motion.div layout data-isopen={seeFilters} className="letsStart__border">
         <motion.div layout data-isopen={seeFilters} className="letsStart__card">
           <motion.div layout className="letsStart__title">
+            {/* eslint-disable-next-line react/no-unescaped-entities*/}
             Let's Start
           </motion.div>
           <motion.div layout className="letsStart__content">

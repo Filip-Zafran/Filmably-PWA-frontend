@@ -14,8 +14,10 @@ export const Start = () => {
   return (
     <div className="start">
       <div className={seeFilters ? 'start__hide' : 'start__textBox'}>
+        {/* eslint-disable-next-line react/no-unescaped-entities*/}
         <div className="start__quote">"{quote}"</div>
         <div className="start__space"></div>
+        {/* eslint-disable-next-line react/no-unescaped-entities */}
         <div className="start__noDisplay">"{quote}"</div>
       </div>
       <FilterPage toggle={toggleSeeFilters} seeFilters={seeFilters} />

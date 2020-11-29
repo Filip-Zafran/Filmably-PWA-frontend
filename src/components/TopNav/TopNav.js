@@ -28,7 +28,7 @@ export const TopNav = ({
           <ChevronLeft className="light300" />
         </div>
       ) : (
-        <div classname="topNav__none"></div>
+        <div className="topNav__none"></div>
       )}
       {filterIcon ? (
         <div onClick={displayFilters} className="topNav__button">
@@ -39,7 +39,7 @@ export const TopNav = ({
           <div className="topNav__text">{text}</div>
         </Link>
       ) : (
-        <div classname="topNav__none"></div>
+        <div className="topNav__none"></div>
       )}
     </div>
   );

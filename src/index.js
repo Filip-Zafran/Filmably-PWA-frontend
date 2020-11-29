@@ -10,18 +10,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 let elem = (
-	//the ENTIRE app MUST be mounted WITHIN the Redux provider
-	//Otherwise the Redux store will not be consistantly accessable
-	<Provider store={store}>
-		<App />
-	</Provider>
+  //the ENTIRE app MUST be mounted WITHIN the Redux provider
+  //Otherwise the Redux store will not be consistantly accessable
+  <Provider store={store}>
+    <App />
+  </Provider>
 );
 
-
-ReactDOM.render(
-
-	elem,
-	document.getElementById('root')
-);
+ReactDOM.render(elem, document.getElementById('root'));
 
 reportWebVitals();

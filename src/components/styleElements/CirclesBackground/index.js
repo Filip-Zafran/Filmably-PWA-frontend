@@ -1,1 +1,1 @@
-export { CirclesBackground } from "./CirclesBackground";
+export { CirclesBackground } from './CirclesBackground';

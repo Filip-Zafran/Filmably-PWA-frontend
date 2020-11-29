@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 const CheckOff = () => {
   return (
@@ -16,7 +16,7 @@ const CheckOff = () => {
         height="20.5"
         rx="10.25"
         stroke="#D5D5D5"
-        stroke-width="1.5"
+        strokeWidth="1.5"
       />
     </svg>
   );

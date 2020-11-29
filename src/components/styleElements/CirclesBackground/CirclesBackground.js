@@ -1,5 +1,5 @@
-import React from "react";
-import "./CirclesBackground.css";
+import React from 'react';
+import './CirclesBackground.css';
 
 export const CirclesBackground = () => {
   return (
