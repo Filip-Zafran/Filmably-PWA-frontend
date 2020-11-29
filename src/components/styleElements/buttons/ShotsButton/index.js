@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import React from 'react';
 import { Check, X } from '../../icons';
-import styled from "styled-components";
+import styled from 'styled-components';
 
 const ShotButton = styled.div`
   width: 92px;
@@ -13,9 +14,10 @@ const ShotButtonBorder = styled.div`
   width: 92px;
   height: 92px;
 
-  transform: ${props => props.active && 'scale(1.33)'};
-  transition: ${props => props.active && 'transform 0.3s linear'};
-  background: ${props => props.like ? 'var(--success-500-25)' : 'var(--error-500-25)'} ;
+  transform: ${(props) => props.active && 'scale(1.33)'};
+  transition: ${(props) => props.active && 'transform 0.3s linear'};
+  background: ${(props) =>
+    props.like ? 'var(--success-500-25)' : 'var(--error-500-25)'};
 `;
 
 const ShotButtonCenter = styled.div`
@@ -30,7 +32,14 @@ const ShotButtonCenter = styled.div`
   height: 70px;
   border-radius: 50%;
 
-  background: ${props => (props.like && props.inactive) ? 'var(--success-500-25)' : props.like ? 'var(--success-500)' : props.inactive ? "var(--error-500-25)" : 'var(--error-500)'} ;
+  background: ${(props) =>
+    props.like && props.inactive
+      ? 'var(--success-500-25)'
+      : props.like
+      ? 'var(--success-500)'
+      : props.inactive
+      ? 'var(--error-500-25)'
+      : 'var(--error-500)'};
 `;
 
 export const ShotsButton = ({
@@ -41,10 +50,12 @@ export const ShotsButton = ({
   otherClickHandler,
 }) => {
   return (
-    <ShotButton >
-      <ShotButtonBorder like={like} active={active}
+    <ShotButton>
+      <ShotButtonBorder
+        like={like}
+        active={active}
         onTouchStart={clickHandler(like ? 'like' : 'dislike')}
-        onMouseDown={clickHandler(like ? 'like': 'dislike')}
+        onMouseDown={clickHandler(like ? 'like' : 'dislike')}
         onTouchEnd={clickHandler('neutral')}
         onMouseUp={otherClickHandler(like ? 'like' : 'dislike')}
       />
